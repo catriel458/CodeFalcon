@@ -14,7 +14,7 @@ export const projects: Project[] = [
     description: "Sistema de gestión para biblioteca el IFSD 210 con funciones dinámicas y visuales.",
     url: "https://nec1431.pythonanywhere.com/libros/",
     technologies: ["Django", "Bootstrap"],
-    image: "https://i.imgur.com/yCP1gA6.png" // Modern library management system interface
+    image: "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?q=80&w=1470&auto=format&fit=crop"
   },
   {
     id: 2,
@@ -22,7 +22,7 @@ export const projects: Project[] = [
     description: "E-commerce de indumentaria y artículos del hogar con tecnologías modernas.",
     url: "https://tigrehogar.replit.app/",
     technologies: ["React", "Node.js"],
-    image: "https://i.imgur.com/ZQFmQk0.png" // Modern e-commerce storefront
+    image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=1470&auto=format&fit=crop"
   },
   {
     id: 3,
@@ -30,7 +30,7 @@ export const projects: Project[] = [
     description: "Portal web del prestigioso cinema con los mejores estrenos y series.",
     url: "https://catriel458.pythonanywhere.com/",
     technologies: ["Django"],
-    image: "https://i.imgur.com/L8VtmKj.png" // Cinema website with movie posters
+    image: "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?q=80&w=1470&auto=format&fit=crop"
   },
   {
     id: 4,
@@ -38,7 +38,7 @@ export const projects: Project[] = [
     description: "Portal web Platense de la reconocida academia privada que dicta cursos de informática.",
     url: "https://institutopandas.netlify.app/",
     technologies: ["React", "Tailwind CSS"],
-    image: "https://i.imgur.com/9KYv6mN.png" // Educational platform interface
+    image: "https://images.unsplash.com/photo-1546410531-bb4caa6b424d?q=80&w=1471&auto=format&fit=crop"
   },
   {
     id: 5,
@@ -46,7 +46,7 @@ export const projects: Project[] = [
     description: "E-commerce de la tienda holística que ofrece cursos de yoga y gemoterapia.",
     url: "https://cristalzen.netlify.app/",
     technologies: ["React", "Node.js"],
-    image: "https://i.imgur.com/HqK3YpF.png" // Holistic wellness store design
+    image: "https://images.unsplash.com/photo-1545205597-3d9d02c29597?q=80&w=1470&auto=format&fit=crop"
   },
   {
     id: 6,
@@ -54,7 +54,7 @@ export const projects: Project[] = [
     description: "Landing page para un escribano Platense especializado en homologación de títulos.",
     url: "https://arufeyasociados.com/",
     technologies: ["HTML", "CSS", "JavaScript"],
-    image: "https://i.imgur.com/D2vQjdX.png" // Professional legal services website
+    image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1470&auto=format&fit=crop"
   },
   {
     id: 7,
@@ -62,7 +62,7 @@ export const projects: Project[] = [
     description: "E-commerce sencillo para una pizzeria familiar con carrito de compras y catálogo.",
     url: "https://pizzarica.netlify.app/",
     technologies: ["React", "Firebase"],
-    image: "https://i.imgur.com/mXwP5Hs.png" // Restaurant ordering system
+    image: "https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=1470&auto=format&fit=crop"
   },
   {
     id: 8,
@@ -70,7 +70,7 @@ export const projects: Project[] = [
     description: "Plataforma de coworking inmobiliario e inversiones.",
     url: "https://yoinvierto.com.ar/",
     technologies: ["React", "Node.js", "PostgreSQL"],
-    image: "https://i.imgur.com/RkYv6mN.png" // Real estate investment platform
+    image: "https://images.unsplash.com/photo-1560520653-9e0e4c89eb11?q=80&w=1473&auto=format&fit=crop"
   },
   {
     id: 9,
@@ -78,7 +78,7 @@ export const projects: Project[] = [
     description: "Sistema de turnos para el colegio de médicos con diseño minimalista e intuitivo.",
     url: "https://turneracolegiomedicos.replit.app/",
     technologies: ["React", "Express", "PostgreSQL"],
-    image: "https://i.imgur.com/WqK3YpF.png" // Medical appointment system
+    image: "https://images.unsplash.com/photo-1516549655169-df83a0774514?q=80&w=1470&auto=format&fit=crop"
   },
   {
     id: 10,
@@ -86,7 +86,7 @@ export const projects: Project[] = [
     description: "Buscador de ofertas accesibles con Open Street Map y servicios de accesibilidad.",
     url: "https://buscadorofertasaccesibles.replit.app/",
     technologies: ["React", "Leaflet", "Node.js"],
-    image: "https://i.imgur.com/TkYv6mN.png" // Accessible offers map interface
+    image: "https://images.unsplash.com/photo-1553547274-0df401ae03c9?q=80&w=1472&auto=format&fit=crop"
   },
   {
     id: 11,
@@ -94,6 +94,6 @@ export const projects: Project[] = [
     description: "Prueba técnica con JavaScript demostrando funcionalidades del lenguaje.",
     url: "https://supercalculadora97.netlify.app/",
     technologies: ["JavaScript", "HTML", "CSS"],
-    image: "https://i.imgur.com/VqK3YpF.png" // Modern calculator interface
+    image: "https://images.unsplash.com/photo-1587145820266-a5951ee6f620?q=80&w=1480&auto=format&fit=crop"
   }
 ];

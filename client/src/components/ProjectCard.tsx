@@ -15,12 +15,13 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <Card className="group hover:border-primary/50 transition-colors">
-        <div className="relative aspect-video w-full overflow-hidden rounded-t-lg">
+      <Card className="group overflow-hidden">
+        <div className="relative h-48 overflow-hidden">
+          <div className="absolute inset-0 bg-black/20 z-10 transition-opacity group-hover:opacity-0" />
           <img
             src={project.image}
             alt={project.title}
-            className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
+            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
           />
         </div>
         <CardHeader>
@@ -32,7 +33,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
           <p className="text-sm text-muted-foreground mb-4">{project.description}</p>
           <div className="flex flex-wrap gap-2">
             {project.technologies.map((tech) => (
-              <Badge key={tech} variant="secondary">
+              <Badge key={tech} variant="secondary" className="bg-primary/10">
                 {tech}
               </Badge>
             ))}
@@ -43,7 +44,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
             href={project.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center text-sm text-primary hover:text-primary/80"
+            className="inline-flex items-center text-sm text-primary hover:text-primary/80 transition-colors"
           >
             Visit <ExternalLink className="ml-1 h-4 w-4" />
           </a>
