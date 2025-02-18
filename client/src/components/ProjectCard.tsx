@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Card, CardHeader, CardContent, CardFooter } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ExternalLink } from "lucide-react";
+import { useLanguage } from "@/lib/i18n";
 import type { Project } from "@/data/projects";
 
 interface ProjectCardProps {
@@ -9,6 +10,8 @@ interface ProjectCardProps {
 }
 
 const ProjectCard = ({ project }: ProjectCardProps) => {
+  const { t } = useLanguage();
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -46,7 +49,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
             rel="noopener noreferrer"
             className="inline-flex items-center text-sm text-primary hover:text-primary/80 transition-colors"
           >
-            Visit <ExternalLink className="ml-1 h-4 w-4" />
+            {t('visit')} <ExternalLink className="ml-1 h-4 w-4" />
           </a>
         </CardFooter>
       </Card>

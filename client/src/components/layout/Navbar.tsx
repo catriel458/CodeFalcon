@@ -5,15 +5,18 @@ import {
   NavigationMenuItem,
   NavigationMenuList,
 } from "@/components/ui/navigation-menu";
+import LanguageToggle from "@/components/LanguageToggle";
+import { useLanguage } from "@/lib/i18n";
 
 const Navbar = () => {
   const [location] = useLocation();
+  const { t } = useLanguage();
 
   const navItems = [
     { href: "/", label: "Home" },
-    { href: "/projects", label: "Projects" },
-    { href: "/about", label: "About" },
-    { href: "/contact", label: "Contact" },
+    { href: "/projects", label: t('projects') },
+    { href: "/about", label: t('about') },
+    { href: "/contact", label: t('contact') },
   ];
 
   return (
@@ -30,7 +33,7 @@ const Navbar = () => {
           </span>
         </Link>
         <NavigationMenu className="ml-auto">
-          <NavigationMenuList>
+          <NavigationMenuList className="flex items-center">
             {navItems.map((item) => (
               <NavigationMenuItem key={item.href}>
                 <Link href={item.href}>
@@ -47,6 +50,9 @@ const Navbar = () => {
                 </Link>
               </NavigationMenuItem>
             ))}
+            <NavigationMenuItem>
+              <LanguageToggle />
+            </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
       </div>
