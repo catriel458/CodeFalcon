@@ -12,7 +12,27 @@ interface Language {
   // Home page
   heroTitle: string;
   heroSubtitle: string;
-  services: string;
+  servicesTitle: string;
+  services: {
+    feather: {
+      title: string;
+      description: string;
+      price: string;
+      features: string[];
+    };
+    falcon: {
+      title: string;
+      description: string;
+      price: string;
+      features: string[];
+    };
+    eagle: {
+      title: string;
+      description: string;
+      price: string;
+      features: string[];
+    };
+  };
   whyChooseUs: string;
   ourClients: string;
   technologies: string;
@@ -104,7 +124,45 @@ export const es: Language = {
   // Home page
   heroTitle: 'La precisión de un halcón, la innovación en cada línea de código',
   heroSubtitle: 'Desarrollamos soluciones digitales de alta calidad, fusionando tecnologías modernas con un enfoque estratégico y creativo.',
-  services: 'Nuestros Servicios',
+  servicesTitle: 'Nuestros Servicios',
+  services: {
+    feather: {
+      title: "✒️ Plan Pluma",
+      description: "Ideal para quienes buscan establecer una presencia en línea con estilo.",
+      price: "$200 - $250",
+      features: [
+        "Landing page o sitio web multi-página",
+        "Diseño estético y personalizado",
+        "Funcionalidades simples y efectivas",
+        "Soporte técnico incluido",
+        "Contacto directo con el desarrollador"
+      ]
+    },
+    falcon: {
+      title: "🦅 Plan Halcón",
+      description: "Para negocios que requieren una solución digital más robusta.",
+      price: "$300 - $500",
+      features: [
+        "Desarrollo de web app compleja",
+        "Integración de almacenamiento y bases de datos",
+        "Funciones y diseño personalizado",
+        "Chatbot con IA integrado",
+        "Soporte técnico premium"
+      ]
+    },
+    eagle: {
+      title: "👑 Plan Águila",
+      description: "La solución ideal para proyectos de gran envergadura para organismos públicos y empresas.",
+      price: "Consultar",
+      features: [
+        "Desarrollo completamente a medida",
+        "Integración de sistemas empresariales",
+        "Funcionalidades avanzadas",
+        "Soporte técnico dedicado",
+        "Consultoría estratégica"
+      ]
+    }
+  },
   whyChooseUs: 'Por Qué Elegirnos',
   ourClients: 'Lo que dicen nuestros clientes',
   stats: {
@@ -195,7 +253,45 @@ export const en: Language = {
   // Home page
   heroTitle: 'The precision of a falcon, innovation in every line of code',
   heroSubtitle: 'We develop high-quality digital solutions, merging modern technologies with a strategic and creative approach.',
-  services: 'Our Services',
+  servicesTitle: 'Our Services',
+  services: {
+    feather: {
+      title: "✒️ Feather Plan",
+      description: "Perfect for those looking to establish a stylish online presence.",
+      price: "$200 - $250",
+      features: [
+        "Landing page or multi-page website",
+        "Custom aesthetic design",
+        "Simple and effective functionalities",
+        "Technical support included",
+        "Direct contact with developer"
+      ]
+    },
+    falcon: {
+      title: "🦅 Falcon Plan",
+      description: "For businesses that require a more robust digital solution.",
+      price: "$300 - $500",
+      features: [
+        "Complex web app development",
+        "Storage and database integration",
+        "Custom functions and design",
+        "AI chatbot integration",
+        "Premium technical support"
+      ]
+    },
+    eagle: {
+      title: "👑 Eagle Plan",
+      description: "The ideal solution for large-scale projects for public organizations and companies.",
+      price: "Contact us",
+      features: [
+        "Fully customized development",
+        "Enterprise systems integration",
+        "Advanced functionalities",
+        "Dedicated technical support",
+        "Strategic consulting"
+      ]
+    }
+  },
   whyChooseUs: 'Why Choose Us',
   ourClients: 'What Our Clients Say',
   stats: {
