@@ -3,17 +3,9 @@ import ServiceCard from "@/components/ServiceCard";
 import { Card, CardContent } from "@/components/ui/card";
 import { motion } from "framer-motion";
 import {
-  SiReact,
-  SiNodedotjs,
-  SiPython,
-  SiPostgresql,
-  SiTailwindcss,
-  SiDjango,
-  SiTypescript,
-  SiPhp,
-  SiHtml5,
-  SiCss3,
-  SiFirebase,
+  SiReact, SiNodedotjs, SiPython, SiPostgresql,
+  SiTailwindcss, SiDjango, SiTypescript, SiPhp,
+  SiHtml5, SiCss3, SiFirebase
 } from "react-icons/si";
 import TestimonialCard from "@/components/TestimonialCard";
 import { useLanguage } from "@/lib/i18n";
@@ -75,39 +67,77 @@ const Home = () => {
     },
   ];
 
+  // Animation variants
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5
+      }
+    }
+  };
+
   return (
     <div className="space-y-20">
       <HeroSection />
 
       {/* Servicios */}
-      <section className="py-20 bg-black/50">
+      <motion.section
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-100px" }}
+        variants={containerVariants}
+        className="py-20 bg-black/50"
+      >
         <div className="container max-w-6xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">{t("servicesTitle")}</h2>
           <div className="grid md:grid-cols-3 gap-8">
             {[t("services.feather"), t("services.falcon"), t("services.eagle")].map((service, index) => (
-              <ServiceCard key={index} {...service} />
+              <motion.div key={index} variants={itemVariants}>
+                <ServiceCard {...service} />
+              </motion.div>
             ))}
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Por qué elegirnos */}
-      <section className="py-20 container">
+      <motion.section
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-100px" }}
+        variants={containerVariants}
+        className="py-20 container"
+      >
         <h2 className="text-3xl font-bold text-center mb-12">{t("whyChooseUs")}</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {features.map((feature, index) => (
-            <Card key={index} className="relative overflow-hidden group hover:border-primary/50 transition-colors">
-              <CardContent className="pt-6">
-                <div className="text-4xl mb-4">{feature.icon}</div>
-                <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">
-                  {feature.title}
-                </h3>
-                <p className="text-muted-foreground">{feature.description}</p>
-              </CardContent>
-            </Card>
+            <motion.div key={index} variants={itemVariants}>
+              <Card className="relative overflow-hidden group hover:border-primary/50 transition-colors">
+                <CardContent className="pt-6">
+                  <div className="text-4xl mb-4">{feature.icon}</div>
+                  <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">
+                    {feature.title}
+                  </h3>
+                  <p className="text-muted-foreground">{feature.description}</p>
+                </CardContent>
+              </Card>
+            </motion.div>
           ))}
         </div>
-      </section>
+      </motion.section>
 
       {/* Estadísticas */}
       <section className="py-20 bg-black/50">
@@ -116,9 +146,15 @@ const Home = () => {
             {stats.map((stat, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial={{ opacity: 0, scale: 0.5 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{
+                  duration: 0.5,
+                  delay: index * 0.1,
+                  type: "spring",
+                  stiffness: 100
+                }}
                 className="text-center"
               >
                 <div className="text-4xl font-bold text-primary mb-2">{stat.number}</div>
@@ -130,34 +166,59 @@ const Home = () => {
       </section>
 
       {/* Testimonios */}
-      <section className="py-20 bg-black/50">
+      <motion.section
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-100px" }}
+        variants={containerVariants}
+        className="py-20 bg-black/50"
+      >
         <div className="container">
           <h2 className="text-3xl font-bold text-center mb-12">{t("ourClients")}</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-              <TestimonialCard key={index} {...testimonial} />
+              <motion.div key={index} variants={itemVariants}>
+                <TestimonialCard {...testimonial} />
+              </motion.div>
             ))}
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Tecnologías */}
-      <section className="py-20 container">
+      <motion.section
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={containerVariants}
+        className="py-20 container"
+      >
         <h2 className="text-3xl font-bold text-center mb-12">{t("technologies")}</h2>
         <div className="flex flex-wrap justify-center gap-8">
-          <SiReact className="w-16 h-16 text-[#61DAFB] opacity-75 hover:opacity-100 transition-opacity" />
-          <SiNodedotjs className="w-16 h-16 text-[#339933] opacity-75 hover:opacity-100 transition-opacity" />
-          <SiPython className="w-16 h-16 text-[#3776AB] opacity-75 hover:opacity-100 transition-opacity" />
-          <SiPostgresql className="w-16 h-16 text-[#336791] opacity-75 hover:opacity-100 transition-opacity" />
-          <SiTailwindcss className="w-16 h-16 text-[#06B6D4] opacity-75 hover:opacity-100 transition-opacity" />
-          <SiDjango className="w-16 h-16 text-[#092E20] opacity-75 hover:opacity-100 transition-opacity" />
-          <SiTypescript className="w-16 h-16 text-[#3178C6] opacity-75 hover:opacity-100 transition-opacity" />
-          <SiPhp className="w-16 h-16 text-[#777BB4] opacity-75 hover:opacity-100 transition-opacity" />
-          <SiHtml5 className="w-16 h-16 text-[#E34F26] opacity-75 hover:opacity-100 transition-opacity" />
-          <SiCss3 className="w-16 h-16 text-[#1572B6] opacity-75 hover:opacity-100 transition-opacity" />
-          <SiFirebase className="w-16 h-16 text-[#FFCA28] opacity-75 hover:opacity-100 transition-opacity" />
+          {[
+            { Icon: SiReact, color: "#61DAFB" },
+            { Icon: SiNodedotjs, color: "#339933" },
+            { Icon: SiPython, color: "#3776AB" },
+            { Icon: SiPostgresql, color: "#336791" },
+            { Icon: SiTailwindcss, color: "#06B6D4" },
+            { Icon: SiDjango, color: "#092E20" },
+            { Icon: SiTypescript, color: "#3178C6" },
+            { Icon: SiPhp, color: "#777BB4" },
+            { Icon: SiHtml5, color: "#E34F26" },
+            { Icon: SiCss3, color: "#1572B6" },
+            { Icon: SiFirebase, color: "#FFCA28" }
+          ].map(({ Icon, color }, index) => (
+            <motion.div
+              key={index}
+              variants={itemVariants}
+              whileHover={{ scale: 1.1 }}
+              className="transition-all"
+            >
+              <Icon className="w-16 h-16 opacity-75 hover:opacity-100 transition-opacity" style={{ color }} />
+            </motion.div>
+          ))}
         </div>
-      </section>
+      </motion.section>
     </div>
   );
 };
