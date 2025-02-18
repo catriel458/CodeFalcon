@@ -102,7 +102,7 @@ const Home = () => {
         className="py-20 bg-black/50"
       >
         <div className="container max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">{t("servicesTitle")}</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">Our Services</h2>
           <div className="grid md:grid-cols-3 gap-8">
             {[t("services.feather"), t("services.falcon"), t("services.eagle")].map((service, index) => (
               <motion.div key={index} variants={itemVariants}>

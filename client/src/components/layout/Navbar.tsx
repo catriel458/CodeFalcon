@@ -72,7 +72,7 @@ const Navbar = () => {
             {navItems.map((item) => (
               <NavigationMenuItem key={item.href}>
                 <Link href={item.href}>
-                  <a
+                  <span
                     className={cn(
                       "px-4 py-2 text-sm transition-colors hover:text-primary",
                       location === item.href
@@ -81,7 +81,7 @@ const Navbar = () => {
                     )}
                   >
                     {item.label}
-                  </a>
+                  </span>
                 </Link>
               </NavigationMenuItem>
             ))}
