@@ -3,6 +3,7 @@ import ServiceCard from "@/components/ServiceCard";
 import { Card, CardContent } from "@/components/ui/card";
 import { motion } from "framer-motion";
 import { SiReact, SiNodedotjs, SiPython, SiPostgresql, SiTailwindcss, SiDjango } from "react-icons/si";
+import TestimonialCard from "@/components/TestimonialCard";
 
 const Home = () => {
   const services = [
@@ -74,6 +75,30 @@ const Home = () => {
     { number: "3+", label: "Años de Experiencia" }
   ];
 
+  const testimonials = [
+    {
+      name: "Carolina Martinez",
+      profession: "Abogada",
+      comment: "CodeFalcon transformó mi presencia en línea con un sitio web excepcional. Su profesionalismo y atención al detalle superaron todas mis expectativas.",
+      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1588&auto=format&fit=crop",
+      rating: 5
+    },
+    {
+      name: "Roberto Sánchez",
+      profession: "Ingeniero Industrial",
+      comment: "La relación calidad-precio es excelente. El resultado final fue mejor de lo que esperaba y el soporte técnico es excepcional.",
+      image: "https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=1470&auto=format&fit=crop",
+      rating: 4.5
+    },
+    {
+      name: "María González",
+      profession: "Directora de Marketing",
+      comment: "La creatividad y capacidad técnica de CodeFalcon es impresionante. Lograron captar exactamente lo que necesitábamos y entregaron resultados brillantes.",
+      image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=1522&auto=format&fit=crop",
+      rating: 5
+    }
+  ];
+
   return (
     <div className="space-y-20">
       <HeroSection />
@@ -125,6 +150,18 @@ const Home = () => {
                 <div className="text-4xl font-bold text-primary mb-2">{stat.number}</div>
                 <div className="text-muted-foreground">{stat.label}</div>
               </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonios */}
+      <section className="py-20 bg-black/50">
+        <div className="container">
+          <h2 className="text-3xl font-bold text-center mb-12">Lo que dicen nuestros clientes</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <TestimonialCard key={index} {...testimonial} />
             ))}
           </div>
         </div>
