@@ -1,0 +1,41 @@
+En CodeFalcon trabajas directamente con el desarrollador en cada etapa del proceso, garantizando atención personalizada y resultados excepcionales.
+
+Plan Pluma: Páginas Web de Presentación
+Ideal para quienes buscan establecer una presencia en línea con estilo.
+
+Landing page, página de servicios o sitio web compuesto por secciones o múltiples páginas interconectadas.
+Diseño estético, personalizado y atractivo.
+Funcionalidades simples para mostrar tu negocio de forma efectiva.
+Soporte técnico incluido.
+Contacto directo con el desarrollador vía reuniones virtuales, WhatsApp, correo u otros medios.
+Precio: $200 – $250
+Plan Halcón: Web App Funcional
+Para negocios que requieren una solución digital más robusta.
+
+Desarrollo de una web app compleja, ideal para come…
+Lema:
+"La precisión de un halcón, la innovación en cada línea de código."
+
+Visión:
+Ser un referente en desarrollo web y soluciones digitales, combinando tecnología de vanguardia, creatividad y un enfoque meticuloso para ofrecer productos eficientes, escalables y adaptados a cada cliente.
+
+Misión:
+Desarrollar soluciones digitales de alta calidad, fusionando React, Node.js, Python, Django y las últimas tecnologías con un enfoque estratégico y creativo. Con compromiso, precisión y atención al detalle, cada proyecto se diseña a medida, garantizando funcionalidad, diseño atractivo y rendimiento óptimo.
+"CodeFalcon: Donde la creatividad vuela alto, el código se perfecciona y la innovación cobra vida."
+Footer: "Creatividad en vuelo, precisión en cada línea."
+"Donde el código toma vuelo.
+
+
+Proyectos:
+
+Biblioteca-210: https://nec1431.pythonanywhere.com/libros/ Sistema de gestion para biblioteca el IFSD 210 donde se puede registrar, realizar prestamos y todas las funciones de la biblioteca de forma dinamica, sencilla y visual. Realizado con la tecnología Django y utilizando Bootstrap para el diseño. 
+Tigre-Hogar https://tigrehogar.replit.app/ e-commerce de indumentaria y articulos del hogar para un emprendimiento tigrense se utilizaron tecnologias punta del mercado con react, node.js
+Cinema-Paradiso: https://catriel458.pythonanywhere.com/ Portal web del prestigioso cinema paradiso, un cine platense donde se pueden encontrar los mejores estrenos y las mejores series. Se utilizo Django y tecnologias de diseño para el front
+Instituto Pandas: https://institutopandas.netlify.app/ Portal web Platense de la reconocida academia privada Instituto Pandas que dicta cursos de informática de gran calidad
+Cristal Zen: https://cristalzen.netlify.app/ e-commerce de la tienda holistica Cristal Zen que ademas ofrece cursos de yoga y gemoterapia
+Arufe y asociados: https://arufeyasociados.com/ Landing page sencilla para un escribano Platense que realiza tramites de homologacion de titulos al extranjero. Diseño sencillo y atractivo ofreciendo los servicios realizados.
+PizzaRica: https://pizzarica.netlify.app/ E-commerce sencillo para una pizzeria familiar platense con su carrito de compras, catalogo y pedido
+YoInvierto: https://yoinvierto.com.ar/ Desarrollo de la plataforma de coworking inmobiliario de inversiones. 
+TuneraColegioMedicos: https://turneracolegiomedicos.replit.app/ Sistema de turnos para el colegio de medicos de la provincia de buenos aires. Sistema de gestion con un diseño minimalista e intuitivo. 
+BOA: https://buscadorofertasaccesibles.replit.app/   Open street map Buscador de ofertas accesibles, donde podes encontrar negocios que  tengan servicios de accesibilidad como braile, silla de ruedas, menu apto celiaco entre otros. Diseño intuitivo, atractivo y funcional. Ideal para inversores. 
+Calculadora: https://supercalculadora97.netlify.app/ (como bonus) Trabajo realizado como prueba tecnica con javascript para probar las funciones del lenguaje
