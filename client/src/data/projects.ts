@@ -21,7 +21,7 @@ export const projects: Project[] = [
     title: "Tigre-Hogar",
     description: "E-commerce de indumentaria y artículos del hogar con tecnologías modernas.",
     url: "https://tigrehogar.replit.app/",
-    technologies: ["React", "Node.js"],
+    technologies: ["React", "Node.js", "Express", "MongoDB"],
     image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=1470&auto=format&fit=crop"
   },
   {
@@ -77,7 +77,7 @@ export const projects: Project[] = [
     title: "Turnera Colegio Médicos",
     description: "Sistema de turnos para el colegio de médicos con diseño minimalista e intuitivo.",
     url: "https://turneracolegiomedicos.replit.app/",
-    technologies: ["React", "Express", "PostgreSQL"],
+    technologies: ["React", "Node.js", "Express", "MongoDB"],
     image: "https://images.unsplash.com/photo-1516549655169-df83a0774514?q=80&w=1470&auto=format&fit=crop"
   },
   {
@@ -85,7 +85,7 @@ export const projects: Project[] = [
     title: "BOA",
     description: "Buscador de ofertas accesibles con Open Street Map y servicios de accesibilidad.",
     url: "https://buscadorofertasaccesibles.replit.app/",
-    technologies: ["React", "Leaflet", "Node.js"],
+    technologies: ["React", "Node.js", "Express", "MongoDB"],
     image: "https://images.unsplash.com/photo-1553547274-0df401ae03c9?q=80&w=1472&auto=format&fit=crop"
   },
   {

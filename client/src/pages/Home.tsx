@@ -46,28 +46,32 @@ const Home = () => {
 
   const features = [
     {
+      icon: "💎",
       title: "Atención Personalizada",
       description: "Trabajas directamente con el desarrollador en cada etapa del proceso."
     },
     {
+      icon: "🚀",
       title: "Tecnología de Punta",
       description: "Utilizamos las últimas tecnologías y mejores prácticas de desarrollo."
     },
     {
+      icon: "🎨",
       title: "Diseño Único",
       description: "Cada proyecto es diseñado de manera única y personalizada."
     },
     {
+      icon: "🛠️",
       title: "Soporte Continuo",
       description: "Mantenimiento y soporte técnico incluido en todos los planes."
     }
   ];
 
   const stats = [
-    { number: "50+", label: "Proyectos Completados" },
+    { number: "10+", label: "Proyectos Completados" },
     { number: "100%", label: "Clientes Satisfechos" },
     { number: "24/7", label: "Soporte Técnico" },
-    { number: "5+", label: "Años de Experiencia" }
+    { number: "3+", label: "Años de Experiencia" }
   ];
 
   return (
@@ -76,7 +80,7 @@ const Home = () => {
 
       {/* Servicios */}
       <section className="py-20 bg-black/50">
-        <div className="container">
+        <div className="container max-w-6xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">Nuestros Servicios</h2>
           <div className="grid md:grid-cols-3 gap-8">
             {services.map((service, index) => (
@@ -93,6 +97,7 @@ const Home = () => {
           {features.map((feature, index) => (
             <Card key={index} className="relative overflow-hidden group hover:border-primary/50 transition-colors">
               <CardContent className="pt-6">
+                <div className="text-4xl mb-4">{feature.icon}</div>
                 <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">
                   {feature.title}
                 </h3>
