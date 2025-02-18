@@ -8,12 +8,12 @@ const About = () => {
   const { t } = useLanguage();
 
   const certificates = [
-    { name: t('certificatesList.nodeFullStack'), url: "https://drive.google.com/file/d/1z2i6wPmxXDGDePEk7ClYo-Nifqlzep60/view?usp=sharing" },
-    { name: t('certificatesList.bigData'), url: "https://drive.google.com/file/d/1PVzSSwXd3bChAHwOGAweV-Htbr0WXfId/view" },
-    { name: t('certificatesList.sicosFullStack'), url: "https://drive.google.com/file/d/15GiWdHC1JSah5iDHj46rbe3mEAyL67ys/view?usp=sharing" },
-    { name: t('certificatesList.ethicalHacking'), url: "https://drive.google.com/file/d/1U9xyafQgsptOH1BJVoianYPUU0I2Oh7N/view" },
-    { name: t('certificatesList.webFullStack'), url: "https://drive.google.com/file/d/1q_rP5wA57Kp5LIBqHAz4Ke6yyHNqL7z3/view" },
-    { name: t('certificatesList.argPrograma'), url: "https://drive.google.com/file/d/1oJKtGtEQ6FucG7E5_2TiTmvTDI_0vsrV/view" }
+    { icon: "🎓", name: t('certificatesList.nodeFullStack'), url: "https://drive.google.com/file/d/1z2i6wPmxXDGDePEk7ClYo-Nifqlzep60/view?usp=sharing" },
+    { icon: "📊", name: t('certificatesList.bigData'), url: "https://drive.google.com/file/d/1PVzSSwXd3bChAHwOGAweV-Htbr0WXfId/view" },
+    { icon: "💻", name: t('certificatesList.sicosFullStack'), url: "https://drive.google.com/file/d/15GiWdHC1JSah5iDHj46rbe3mEAyL67ys/view?usp=sharing" },
+    { icon: "🔒", name: t('certificatesList.ethicalHacking'), url: "https://drive.google.com/file/d/1U9xyafQgsptOH1BJVoianYPUU0I2Oh7N/view" },
+    { icon: "🌐", name: t('certificatesList.webFullStack'), url: "https://drive.google.com/file/d/1q_rP5wA57Kp5LIBqHAz4Ke6yyHNqL7z3/view" },
+    { icon: "🚀", name: t('certificatesList.argPrograma'), url: "https://drive.google.com/file/d/1oJKtGtEQ6FucG7E5_2TiTmvTDI_0vsrV/view" }
   ];
 
   return (
@@ -92,7 +92,10 @@ const About = () => {
               >
                 <Card className="transition-colors hover:border-primary/50">
                   <CardContent className="pt-6">
-                    <p className="text-center text-muted-foreground">{cert.name}</p>
+                    <div className="flex items-center justify-center gap-2">
+                      <span className="text-2xl">{cert.icon}</span>
+                      <p className="text-muted-foreground">{cert.name}</p>
+                    </div>
                   </CardContent>
                 </Card>
               </a>

@@ -12,12 +12,19 @@ const Footer = () => {
           <div>
             <h3 className="font-bold mb-4 text-primary">CodeFalcon</h3>
             <p className="text-sm text-muted-foreground">
-              Donde la creatividad vuela alto, el código se perfecciona y la innovación cobra vida.
+              {t('heroSubtitle')}
             </p>
           </div>
           <div>
             <h3 className="font-bold mb-4">{t('quickLinks')}</h3>
             <ul className="space-y-2">
+              <li>
+                <Link href="/">
+                  <a className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                    {t('home')}
+                  </a>
+                </Link>
+              </li>
               <li>
                 <Link href="/projects">
                   <a className="text-sm text-muted-foreground hover:text-primary transition-colors">
@@ -43,15 +50,19 @@ const Footer = () => {
           </div>
           <div>
             <h3 className="font-bold mb-4">{t('socialMedia')}</h3>
-            <div className="flex space-x-4">
+            <div className="flex flex-col gap-4">
               <a
                 href="https://instagram.com/codefalcon"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-primary transition-colors"
+                className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
               >
                 <Instagram className="w-5 h-5" />
+                <span className="text-sm">@codefalcon</span>
               </a>
+              <p className="text-sm text-muted-foreground">
+                {t('availableVia')}
+              </p>
             </div>
           </div>
         </div>
