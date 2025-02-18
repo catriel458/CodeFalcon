@@ -85,15 +85,15 @@ const Home = () => {
     },
     {
       name: "Roberto Sánchez",
-      profession: "Ingeniero Industrial",
-      comment: "La relación calidad-precio es excelente. El resultado final fue mejor de lo que esperaba y el soporte técnico es excepcional.",
+      profession: "Empresario Inmobiliario",
+      comment: "La plataforma de coworking inmobiliario que desarrollaron superó todas nuestras expectativas. El resultado final fue mejor de lo esperado y el soporte técnico es excepcional.",
       image: "https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=1470&auto=format&fit=crop",
       rating: 4.5
     },
     {
       name: "María González",
-      profession: "Directora de Marketing",
-      comment: "La creatividad y capacidad técnica de CodeFalcon es impresionante. Lograron captar exactamente lo que necesitábamos y entregaron resultados brillantes.",
+      profession: "Comerciante",
+      comment: "El e-commerce que desarrollaron para mi negocio es exactamente lo que necesitábamos. La interfaz es intuitiva y las ventas han aumentado significativamente.",
       image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=1522&auto=format&fit=crop",
       rating: 5
     }
