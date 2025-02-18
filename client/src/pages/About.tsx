@@ -1,7 +1,21 @@
 import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Github } from "lucide-react";
+import { useLanguage } from "@/lib/i18n";
 
 const About = () => {
+  const { t } = useLanguage();
+
+  const certificates = [
+    { name: t('certificatesList.nodeFullStack'), url: "https://drive.google.com/file/d/1z2i6wPmxXDGDePEk7ClYo-Nifqlzep60/view?usp=sharing" },
+    { name: t('certificatesList.bigData'), url: "https://drive.google.com/file/d/1PVzSSwXd3bChAHwOGAweV-Htbr0WXfId/view" },
+    { name: t('certificatesList.sicosFullStack'), url: "https://drive.google.com/file/d/15GiWdHC1JSah5iDHj46rbe3mEAyL67ys/view?usp=sharing" },
+    { name: t('certificatesList.ethicalHacking'), url: "https://drive.google.com/file/d/1U9xyafQgsptOH1BJVoianYPUU0I2Oh7N/view" },
+    { name: t('certificatesList.webFullStack'), url: "https://drive.google.com/file/d/1q_rP5wA57Kp5LIBqHAz4Ke6yyHNqL7z3/view" },
+    { name: t('certificatesList.argPrograma'), url: "https://drive.google.com/file/d/1oJKtGtEQ6FucG7E5_2TiTmvTDI_0vsrV/view" }
+  ];
+
   return (
     <div className="container py-20">
       <motion.div
@@ -9,39 +23,81 @@ const About = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <h1 className="text-4xl font-bold mb-12">About CodeFalcon</h1>
-        
+        <h1 className="text-4xl font-bold mb-12">{t('aboutTitle')}</h1>
+
         <div className="grid md:grid-cols-2 gap-8 mb-12">
           <Card>
             <CardContent className="pt-6">
-              <h2 className="text-2xl font-bold mb-4 text-primary">Vision</h2>
+              <h2 className="text-2xl font-bold mb-4 text-primary">{t('vision')}</h2>
               <p className="text-muted-foreground">
-                Ser un referente en desarrollo web y soluciones digitales, combinando tecnología de vanguardia, 
-                creatividad y un enfoque meticuloso para ofrecer productos eficientes, escalables y adaptados a cada cliente.
+                {t('visionText')}
               </p>
             </CardContent>
           </Card>
-          
+
           <Card>
             <CardContent className="pt-6">
-              <h2 className="text-2xl font-bold mb-4 text-primary">Mission</h2>
+              <h2 className="text-2xl font-bold mb-4 text-primary">{t('mission')}</h2>
               <p className="text-muted-foreground">
-                Desarrollar soluciones digitales de alta calidad, fusionando React, Node.js, Python, Django y las últimas 
-                tecnologías con un enfoque estratégico y creativo. Con compromiso, precisión y atención al detalle, 
-                cada proyecto se diseña a medida, garantizando funcionalidad, diseño atractivo y rendimiento óptimo.
+                {t('missionText')}
               </p>
             </CardContent>
           </Card>
         </div>
 
-        <div className="prose prose-invert max-w-none">
-          <h2 className="text-2xl font-bold mb-4">Our Approach</h2>
-          <p className="text-muted-foreground">
-            En CodeFalcon trabajas directamente con el desarrollador en cada etapa del proceso, 
-            garantizando atención personalizada y resultados excepcionales. Nuestro enfoque combina 
-            la precisión técnica con la creatividad para entregar soluciones que no solo cumplen 
-            sino que superan las expectativas.
-          </p>
+        <div className="mb-12">
+          <Card className="overflow-hidden">
+            <CardContent className="pt-6">
+              <div className="flex flex-col md:flex-row items-center gap-8">
+                <div className="relative w-48 h-48 flex-shrink-0">
+                  <div className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-500 via-cyan-500 to-purple-500 animate-pulse blur-xl opacity-50" />
+                  <img
+                    src="https://i.ibb.co/zHXtsggH/61b91680-355e-4c19-8851-271d43c8a54a.jpg"
+                    alt="Catriel - CodeFalcon Developer"
+                    className="relative w-full h-full rounded-full object-cover border-4 border-primary/20"
+                  />
+                </div>
+                <div>
+                  <h2 className="text-2xl font-bold mb-4 text-primary">{t('developerTitle')}</h2>
+                  <p className="text-muted-foreground mb-4">
+                    {t('developerDescription')}
+                  </p>
+                  <a
+                    href="https://github.com/catriel458?tab=repositories"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block"
+                  >
+                    <Button variant="outline" className="gap-2">
+                      <Github className="w-4 h-4" />
+                      {t('githubProfile')}
+                    </Button>
+                  </a>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+
+        <div>
+          <h2 className="text-2xl font-bold mb-6">{t('certifications')}</h2>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {certificates.map((cert, index) => (
+              <a
+                key={index}
+                href={cert.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block"
+              >
+                <Card className="transition-colors hover:border-primary/50">
+                  <CardContent className="pt-6">
+                    <p className="text-center text-muted-foreground">{cert.name}</p>
+                  </CardContent>
+                </Card>
+              </a>
+            ))}
+          </div>
         </div>
       </motion.div>
     </div>

@@ -7,6 +7,7 @@ interface Language {
   contact: string;
   visit: string;
   quickLinks: string;
+  home: string;
 
   // Home page
   heroTitle: string;
@@ -57,6 +58,27 @@ interface Language {
     };
   };
 
+  // About page
+  aboutTitle: string;
+  vision: string;
+  visionText: string;
+  mission: string;
+  missionText: string;
+  approachTitle: string;
+  approachText: string;
+  developerTitle: string;
+  developerDescription: string;
+  certifications: string;
+  certificatesList: {
+    nodeFullStack: string;
+    bigData: string;
+    sicosFullStack: string;
+    ethicalHacking: string;
+    webFullStack: string;
+    argPrograma: string;
+  };
+  githubProfile: string;
+
   // Contact form
   getInTouch: string;
   sendMessage: string;
@@ -66,6 +88,7 @@ interface Language {
   directContact: string;
   ourCommitment: string;
   availableVia: string;
+  socialMedia: string;
 }
 
 export const es: Language = {
@@ -76,6 +99,7 @@ export const es: Language = {
   visit: 'Visitar',
   quickLinks: 'Enlaces Rápidos',
   technologies: 'Tecnologías que Utilizamos',
+  home: 'Inicio',
 
   // Home page
   heroTitle: 'La precisión de un halcón, la innovación en cada línea de código',
@@ -125,8 +149,29 @@ export const es: Language = {
     }
   },
 
+  // About page
+  aboutTitle: 'Sobre CodeFalcon',
+  vision: 'Visión',
+  visionText: 'Ser un referente en desarrollo web y soluciones digitales, combinando tecnología de vanguardia, creatividad y un enfoque meticuloso para ofrecer productos eficientes, escalables y adaptados a cada cliente.',
+  mission: 'Misión',
+  missionText: 'Desarrollar soluciones digitales de alta calidad, fusionando React, Node.js, Python, Django y las últimas tecnologías con un enfoque estratégico y creativo. Con compromiso, precisión y atención al detalle, cada proyecto se diseña a medida, garantizando funcionalidad, diseño atractivo y rendimiento óptimo.',
+  approachTitle: 'Nuestro Enfoque',
+  approachText: 'En CodeFalcon trabajas directamente con el desarrollador en cada etapa del proceso, garantizando atención personalizada y resultados excepcionales.',
+  developerTitle: 'El Desarrollador',
+  developerDescription: 'Soy Catriel, la mente detrás de CodeFalcon. Soy programador Full Stack Python y Full Stack Javascript, manejo múltiples tecnologías, me entusiasma la innovación y el aprendizaje, siempre busco nuevos retos. Soy Analista de sistemas y he realizado múltiples cursos que constatan mis conocimientos, al trabajar conmigo y brindarme tu confianza para tu proyecto estás en las mejores manos.',
+  certifications: 'Certificaciones',
+  certificatesList: {
+    nodeFullStack: 'Codo a Codo Full Stack Node',
+    bigData: 'Codo a Codo Big Data Specialist',
+    sicosFullStack: 'Sicos Informática Full Stack Development',
+    ethicalHacking: 'Academia New Times Hacking Ético',
+    webFullStack: 'Academia New Times Full Stack Web',
+    argPrograma: 'Argentina Programa'
+  },
+  githubProfile: 'Ver mi GitHub',
+
   // Contact form
-  getInTouch: 'Contactanos',
+  getInTouch: 'Contáctanos',
   sendMessage: 'Enviar Mensaje',
   yourName: 'Tu Nombre',
   yourEmail: 'Tu Email',
@@ -134,6 +179,7 @@ export const es: Language = {
   directContact: 'Contacto Directo',
   ourCommitment: 'Nuestro Compromiso',
   availableVia: 'Disponible vía reuniones virtuales, WhatsApp o email.',
+  socialMedia: 'Redes Sociales'
 };
 
 export const en: Language = {
@@ -144,6 +190,7 @@ export const en: Language = {
   visit: 'Visit',
   quickLinks: 'Quick Links',
   technologies: 'Technologies We Use',
+  home: 'Home',
 
   // Home page
   heroTitle: 'The precision of a falcon, innovation in every line of code',
@@ -193,6 +240,27 @@ export const en: Language = {
     }
   },
 
+  // About page
+  aboutTitle: 'About CodeFalcon',
+  vision: 'Vision',
+  visionText: 'To be a reference in web development and digital solutions, combining cutting-edge technology, creativity and a meticulous approach to deliver efficient, scalable products tailored to each client.',
+  mission: 'Mission',
+  missionText: 'Develop high-quality digital solutions, merging React, Node.js, Python, Django and the latest technologies with a strategic and creative approach. With commitment, precision and attention to detail, each project is custom designed, ensuring functionality, attractive design and optimal performance.',
+  approachTitle: 'Our Approach',
+  approachText: 'At CodeFalcon you work directly with the developer at every stage of the process, ensuring personalized attention and exceptional results.',
+  developerTitle: 'The Developer',
+  developerDescription: 'I am Catriel, the mind behind CodeFalcon. I am a Full Stack Python and Full Stack Javascript developer, I handle multiple technologies, I am enthusiastic about innovation and learning, always looking for new challenges. I am a Systems Analyst and I have completed multiple courses that validate my knowledge, when working with me and giving me your trust for your project you are in the best hands.',
+  certifications: 'Certifications',
+  certificatesList: {
+    nodeFullStack: 'Codo a Codo Full Stack Node',
+    bigData: 'Codo a Codo Big Data Specialist',
+    sicosFullStack: 'Sicos Informática Full Stack Development',
+    ethicalHacking: 'Academia New Times Ethical Hacking',
+    webFullStack: 'Academia New Times Full Stack Web',
+    argPrograma: 'Argentina Programa'
+  },
+  githubProfile: 'View my GitHub',
+
   // Contact form
   getInTouch: 'Get in Touch',
   sendMessage: 'Send Message',
@@ -202,6 +270,7 @@ export const en: Language = {
   directContact: 'Direct Contact',
   ourCommitment: 'Our Commitment',
   availableVia: 'Available via virtual meetings, WhatsApp, or email.',
+  socialMedia: 'Social Media'
 };
 
 type LanguageContextType = {
