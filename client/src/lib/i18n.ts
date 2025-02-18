@@ -109,6 +109,7 @@ interface Language {
   ourCommitment: string;
   availableVia: string;
   socialMedia: string;
+  projectsTitle: string;
 }
 
 export const es: Language = {
@@ -237,7 +238,8 @@ export const es: Language = {
   directContact: 'Contacto Directo',
   ourCommitment: 'Nuestro Compromiso',
   availableVia: 'Disponible vía reuniones virtuales, WhatsApp o email.',
-  socialMedia: 'Redes Sociales'
+  socialMedia: 'Redes Sociales',
+  projectsTitle: 'Nuestros Proyectos'
 };
 
 export const en: Language = {
@@ -366,7 +368,8 @@ export const en: Language = {
   directContact: 'Direct Contact',
   ourCommitment: 'Our Commitment',
   availableVia: 'Available via virtual meetings, WhatsApp, or email.',
-  socialMedia: 'Social Media'
+  socialMedia: 'Social Media',
+  projectsTitle: 'Our Projects'
 };
 
 type LanguageContextType = {

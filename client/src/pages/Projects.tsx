@@ -3,9 +3,11 @@ import { motion } from "framer-motion";
 import ProjectCard from "@/components/ProjectCard";
 import { projects } from "@/data/projects";
 import { Badge } from "@/components/ui/badge";
+import { useLanguage } from "@/lib/i18n";
 
 const Projects = () => {
   const [selectedTech, setSelectedTech] = useState<string | null>(null);
+  const { t } = useLanguage();
 
   const technologies = Array.from(
     new Set(projects.flatMap((p) => p.technologies))
@@ -17,7 +19,7 @@ const Projects = () => {
 
   return (
     <div className="container py-20">
-      <h1 className="text-4xl font-bold mb-8">Our Projects</h1>
+      <h1 className="text-4xl font-bold mb-8">{t('projectsTitle')}</h1>
       <div className="mb-8 flex flex-wrap gap-2">
         {technologies.map((tech) => (
           <Badge
