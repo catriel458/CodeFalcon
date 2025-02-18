@@ -2,7 +2,11 @@ import HeroSection from "@/components/HeroSection";
 import ServiceCard from "@/components/ServiceCard";
 import { Card, CardContent } from "@/components/ui/card";
 import { motion } from "framer-motion";
-import { SiReact, SiNodedotjs, SiPython, SiPostgresql, SiTailwindcss, SiDjango } from "react-icons/si";
+import { 
+  SiReact, SiNodedotjs, SiPython, SiPostgresql, 
+  SiTailwindcss, SiDjango, SiTypescript, SiPhp, 
+  SiHtml5, SiCss3
+} from "react-icons/si";
 import TestimonialCard from "@/components/TestimonialCard";
 import { useLanguage } from "@/lib/i18n";
 
@@ -145,6 +149,10 @@ const Home = () => {
           <SiPostgresql className="w-16 h-16 text-[#336791] opacity-75 hover:opacity-100 transition-opacity" />
           <SiTailwindcss className="w-16 h-16 text-[#06B6D4] opacity-75 hover:opacity-100 transition-opacity" />
           <SiDjango className="w-16 h-16 text-[#092E20] opacity-75 hover:opacity-100 transition-opacity" />
+          <SiTypescript className="w-16 h-16 text-[#3178C6] opacity-75 hover:opacity-100 transition-opacity" />
+          <SiPhp className="w-16 h-16 text-[#777BB4] opacity-75 hover:opacity-100 transition-opacity" />
+          <SiHtml5 className="w-16 h-16 text-[#E34F26] opacity-75 hover:opacity-100 transition-opacity" />
+          <SiCss3 className="w-16 h-16 text-[#1572B6] opacity-75 hover:opacity-100 transition-opacity" />
         </div>
       </section>
     </div>
