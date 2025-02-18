@@ -1,4 +1,4 @@
-import { createContext, useContext, useState } from 'react';
+import { createContext, useContext } from 'react';
 
 interface Language {
   // Navigation
@@ -37,6 +37,23 @@ interface Language {
     continuousSupport: {
       title: string;
       description: string;
+    };
+  };
+  testimonials: {
+    lawyer: {
+      name: string;
+      profession: string;
+      comment: string;
+    };
+    businessman: {
+      name: string;
+      profession: string;
+      comment: string;
+    };
+    merchant: {
+      name: string;
+      profession: string;
+      comment: string;
     };
   };
 
@@ -90,6 +107,23 @@ export const es: Language = {
       description: 'Mantenimiento y soporte técnico incluido en todos los planes.'
     }
   },
+  testimonials: {
+    lawyer: {
+      name: "Carolina Martinez",
+      profession: "Abogada",
+      comment: "CodeFalcon transformó mi presencia en línea con un sitio web excepcional. Su profesionalismo y atención al detalle superaron todas mis expectativas."
+    },
+    businessman: {
+      name: "Roberto Sánchez",
+      profession: "Empresario Inmobiliario",
+      comment: "La plataforma de coworking inmobiliario que desarrollaron superó todas nuestras expectativas. El resultado final fue mejor de lo esperado y el soporte técnico es excepcional."
+    },
+    merchant: {
+      name: "María González",
+      profession: "Comerciante",
+      comment: "El e-commerce que desarrollaron para mi negocio es exactamente lo que necesitábamos. La interfaz es intuitiva y las ventas han aumentado significativamente."
+    }
+  },
 
   // Contact form
   getInTouch: 'Contactanos',
@@ -141,6 +175,23 @@ export const en: Language = {
       description: 'Maintenance and technical support included in all plans.'
     }
   },
+  testimonials: {
+    lawyer: {
+      name: "Carolina Martinez",
+      profession: "Lawyer",
+      comment: "CodeFalcon transformed my online presence with an exceptional website. Their professionalism and attention to detail exceeded all my expectations."
+    },
+    businessman: {
+      name: "Roberto Sánchez",
+      profession: "Real Estate Entrepreneur",
+      comment: "The real estate coworking platform they developed exceeded all our expectations. The final result was better than expected and the technical support is exceptional."
+    },
+    merchant: {
+      name: "María González",
+      profession: "Merchant",
+      comment: "The e-commerce they developed for my business is exactly what we needed. The interface is intuitive and sales have increased significantly."
+    }
+  },
 
   // Contact form
   getInTouch: 'Get in Touch',
@@ -156,7 +207,7 @@ export const en: Language = {
 type LanguageContextType = {
   language: 'es' | 'en';
   setLanguage: (lang: 'es' | 'en') => void;
-  t: (key: keyof Language) => string;
+  t: (key: string) => string;
 };
 
 export const LanguageContext = createContext<LanguageContextType | undefined>(undefined);

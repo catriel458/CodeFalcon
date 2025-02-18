@@ -34,7 +34,15 @@ function App() {
   const [language, setLanguage] = useState<'es' | 'en'>('es');
 
   const t = (key: string) => {
-    return language === 'es' ? es[key] : en[key];
+    const keys = key.split('.');
+    let value: any = language === 'es' ? es : en;
+
+    for (const k of keys) {
+      if (value === undefined) return key;
+      value = value[k];
+    }
+
+    return value || key;
   };
 
   return (

@@ -80,23 +80,23 @@ const Home = () => {
 
   const testimonials = [
     {
-      name: "Carolina Martinez",
-      profession: "Abogada",
-      comment: "CodeFalcon transformó mi presencia en línea con un sitio web excepcional. Su profesionalismo y atención al detalle superaron todas mis expectativas.",
+      name: t('testimonials.lawyer.name'),
+      profession: t('testimonials.lawyer.profession'),
+      comment: t('testimonials.lawyer.comment'),
       image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1588&auto=format&fit=crop",
       rating: 5
     },
     {
-      name: "Roberto Sánchez",
-      profession: "Empresario Inmobiliario",
-      comment: "La plataforma de coworking inmobiliario que desarrollaron superó todas nuestras expectativas. El resultado final fue mejor de lo esperado y el soporte técnico es excepcional.",
+      name: t('testimonials.businessman.name'),
+      profession: t('testimonials.businessman.profession'),
+      comment: t('testimonials.businessman.comment'),
       image: "https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=1470&auto=format&fit=crop",
       rating: 4.5
     },
     {
-      name: "María González",
-      profession: "Comerciante",
-      comment: "El e-commerce que desarrollaron para mi negocio es exactamente lo que necesitábamos. La interfaz es intuitiva y las ventas han aumentado significativamente.",
+      name: t('testimonials.merchant.name'),
+      profession: t('testimonials.merchant.profession'),
+      comment: t('testimonials.merchant.comment'),
       image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=1522&auto=format&fit=crop",
       rating: 5
     }
