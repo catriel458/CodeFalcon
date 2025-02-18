@@ -16,15 +16,20 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
       transition={{ duration: 0.5 }}
     >
       <Card className="group hover:border-primary/50 transition-colors">
+        <div className="relative aspect-video w-full overflow-hidden rounded-t-lg">
+          <img
+            src={project.image}
+            alt={project.title}
+            className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
+          />
+        </div>
         <CardHeader>
           <h3 className="text-lg font-bold tracking-tight group-hover:text-primary transition-colors">
             {project.title}
           </h3>
         </CardHeader>
         <CardContent>
-          <p className="text-sm text-muted-foreground">{project.description}</p>
-        </CardContent>
-        <CardFooter className="flex flex-wrap gap-2 justify-between items-center">
+          <p className="text-sm text-muted-foreground mb-4">{project.description}</p>
           <div className="flex flex-wrap gap-2">
             {project.technologies.map((tech) => (
               <Badge key={tech} variant="secondary">
@@ -32,6 +37,8 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
               </Badge>
             ))}
           </div>
+        </CardContent>
+        <CardFooter className="flex justify-end">
           <a
             href={project.url}
             target="_blank"
