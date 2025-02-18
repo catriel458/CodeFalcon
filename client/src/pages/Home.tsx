@@ -4,8 +4,11 @@ import { Card, CardContent } from "@/components/ui/card";
 import { motion } from "framer-motion";
 import { SiReact, SiNodedotjs, SiPython, SiPostgresql, SiTailwindcss, SiDjango } from "react-icons/si";
 import TestimonialCard from "@/components/TestimonialCard";
+import { useLanguage } from "@/lib/i18n";
 
 const Home = () => {
+  const { t } = useLanguage();
+
   const services = [
     {
       title: "✒️ Plan Pluma",
@@ -48,31 +51,31 @@ const Home = () => {
   const features = [
     {
       icon: "💎",
-      title: "Atención Personalizada",
-      description: "Trabajas directamente con el desarrollador en cada etapa del proceso."
+      title: t('features.personalizedAttention.title'),
+      description: t('features.personalizedAttention.description')
     },
     {
       icon: "🚀",
-      title: "Tecnología de Punta",
-      description: "Utilizamos las últimas tecnologías y mejores prácticas de desarrollo."
+      title: t('features.cuttingEdgeTech.title'),
+      description: t('features.cuttingEdgeTech.description')
     },
     {
       icon: "🎨",
-      title: "Diseño Único",
-      description: "Cada proyecto es diseñado de manera única y personalizada."
+      title: t('features.uniqueDesign.title'),
+      description: t('features.uniqueDesign.description')
     },
     {
       icon: "🛠️",
-      title: "Soporte Continuo",
-      description: "Mantenimiento y soporte técnico incluido en todos los planes."
+      title: t('features.continuousSupport.title'),
+      description: t('features.continuousSupport.description')
     }
   ];
 
   const stats = [
-    { number: "10+", label: "Proyectos Completados" },
-    { number: "100%", label: "Clientes Satisfechos" },
-    { number: "24/7", label: "Soporte Técnico" },
-    { number: "3+", label: "Años de Experiencia" }
+    { number: "10+", label: t('stats.projectsCompleted') },
+    { number: "100%", label: t('stats.satisfiedClients') },
+    { number: "24/7", label: t('stats.technicalSupport') },
+    { number: "3+", label: t('stats.yearsExperience') }
   ];
 
   const testimonials = [
@@ -106,7 +109,7 @@ const Home = () => {
       {/* Servicios */}
       <section className="py-20 bg-black/50">
         <div className="container max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">Nuestros Servicios</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">{t('services')}</h2>
           <div className="grid md:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <ServiceCard key={index} {...service} />
@@ -117,7 +120,7 @@ const Home = () => {
 
       {/* Por qué elegirnos */}
       <section className="py-20 container">
-        <h2 className="text-3xl font-bold text-center mb-12">Por Qué Elegirnos</h2>
+        <h2 className="text-3xl font-bold text-center mb-12">{t('whyChooseUs')}</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {features.map((feature, index) => (
             <Card key={index} className="relative overflow-hidden group hover:border-primary/50 transition-colors">
@@ -158,7 +161,7 @@ const Home = () => {
       {/* Testimonios */}
       <section className="py-20 bg-black/50">
         <div className="container">
-          <h2 className="text-3xl font-bold text-center mb-12">Lo que dicen nuestros clientes</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">{t('ourClients')}</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <TestimonialCard key={index} {...testimonial} />
@@ -169,7 +172,7 @@ const Home = () => {
 
       {/* Tecnologías */}
       <section className="py-20 container">
-        <h2 className="text-3xl font-bold text-center mb-12">Tecnologías que Utilizamos</h2>
+        <h2 className="text-3xl font-bold text-center mb-12">{t('technologies')}</h2>
         <div className="flex flex-wrap justify-center gap-8">
           <SiReact className="w-16 h-16 text-[#61DAFB] opacity-75 hover:opacity-100 transition-opacity" />
           <SiNodedotjs className="w-16 h-16 text-[#339933] opacity-75 hover:opacity-100 transition-opacity" />
