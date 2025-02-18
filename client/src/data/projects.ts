@@ -13,7 +13,7 @@ export const projects: Project[] = [
     title: "Biblioteca-210",
     description: "Sistema de gestión para biblioteca el IFSD 210 con funciones dinámicas y visuales.",
     url: "https://nec1431.pythonanywhere.com/libros/",
-    technologies: ["Django", "Bootstrap"],
+    technologies: ["Django", "HTML", "CSS", "Bootstrap"],
     image: "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?q=80&w=1470&auto=format&fit=crop"
   },
   {
@@ -29,7 +29,7 @@ export const projects: Project[] = [
     title: "Cinema-Paradiso",
     description: "Portal web del prestigioso cinema con los mejores estrenos y series.",
     url: "https://catriel458.pythonanywhere.com/",
-    technologies: ["Django"],
+    technologies: ["Django", "HTML", "CSS", "Bootstrap"],
     image: "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?q=80&w=1470&auto=format&fit=crop"
   },
   {
@@ -37,8 +37,8 @@ export const projects: Project[] = [
     title: "Instituto Pandas",
     description: "Portal web Platense de la reconocida academia privada que dicta cursos de informática.",
     url: "https://institutopandas.netlify.app/",
-    technologies: ["React", "Tailwind CSS"],
-    image: "https://images.unsplash.com/photo-1546410531-bb4caa6b424d?q=80&w=1471&auto=format&fit=crop"
+    technologies: ["HTML", "CSS", "JavaScript"],
+    image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=1470&auto=format&fit=crop"
   },
   {
     id: 5,
@@ -61,7 +61,7 @@ export const projects: Project[] = [
     title: "PizzaRica",
     description: "E-commerce sencillo para una pizzeria familiar con carrito de compras y catálogo.",
     url: "https://pizzarica.netlify.app/",
-    technologies: ["React", "Firebase"],
+    technologies: ["HTML", "CSS", "JavaScript"],
     image: "https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=1470&auto=format&fit=crop"
   },
   {
@@ -69,7 +69,7 @@ export const projects: Project[] = [
     title: "YoInvierto",
     description: "Plataforma de coworking inmobiliario e inversiones.",
     url: "https://yoinvierto.com.ar/",
-    technologies: ["React", "Node.js", "PostgreSQL"],
+    technologies: ["React", "Node.js", "Tailwind CSS", "Firebase"],
     image: "https://images.unsplash.com/photo-1560520653-9e0e4c89eb11?q=80&w=1473&auto=format&fit=crop"
   },
   {
