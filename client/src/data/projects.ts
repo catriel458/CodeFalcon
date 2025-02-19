@@ -12,7 +12,7 @@ export const projects: Project[] = [
     id: 1,
     title: "Tigre Hogar",
     description: "E-commerce de indumentaria y artículos del hogar con tecnologías modernas.",
-    url: "https://tigrehogar-gp8v.onrender.com/",
+    url: "https://tigrehogar-replit-production.up.railway.app/",
     technologies: ["React", "TypeScript", "Node.js", "Express", "PostgreSQL"],
     image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=1470&auto=format&fit=crop"
   },
@@ -20,7 +20,7 @@ export const projects: Project[] = [
     id: 2,
     title: "Turnera Colegio Médicos",
     description: "Sistema de turnos para el colegio de médicos con diseño minimalista e intuitivo.",
-    url: "https://colegiomedicosturnera-rm8j.onrender.com/",
+    url: "https://medical-appointments-production.up.railway.app/",
     technologies: ["React", "TypeScript", "Node.js", "Express", "PostgreSQL"],
     image: "https://images.unsplash.com/photo-1516549655169-df83a0774514?q=80&w=1470&auto=format&fit=crop"
   },
@@ -28,7 +28,7 @@ export const projects: Project[] = [
     id: 3,
     title: "BOA",
     description: "Buscador de ofertas accesibles con Open Street Map y servicios de accesibilidad.",
-    url: "https://boa-final-node-replit.onrender.com/",
+    url: "https://boa-final-node-replit-production.up.railway.app/",
     technologies: ["React", "TypeScript", "Node.js", "Express", "PostgreSQL"],
     image: "https://images.unsplash.com/photo-1553547274-0df401ae03c9?q=80&w=1472&auto=format&fit=crop"
   },
