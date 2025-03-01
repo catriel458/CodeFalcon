@@ -1,25 +1,41 @@
 Portafolio Profesional de CodeFalcon
 
-CodeFalcon es una empresa dedicada a ofrecer soluciones de desarrollo de software personalizadas. Nos especializamos en la creación de aplicaciones web modernas, eficientes y fáciles de usar. Con una fuerte pasión por la tecnología y la innovación, trabajamos para transformar ideas en soluciones digitales de alto rendimiento.
+CodeFalcon es una empresa líder en el desarrollo de software, especializada en ofrecer soluciones personalizadas de alta calidad para empresas y emprendedores. Creamos aplicaciones web eficientes, interactivas y escalables que permiten transformar ideas innovadoras en productos digitales exitosos.
 
-Este portafolio es una demostración de nuestras habilidades y enfoque en la creación de experiencias web atractivas, desarrolladas con las últimas tecnologías.
+Este portafolio es una muestra de nuestro trabajo, desarrollado con las últimas tecnologías para ofrecerte la mejor experiencia posible.
 🚀 Tecnologías Utilizadas
 
-    HTML5: Estructuración semántica y diseño accesible.
-    React: Interactividad moderna y dinámica con una experiencia de usuario fluida.
-    Tailwind CSS: Estilo ágil y adaptativo para crear interfaces visualmente impresionantes sin sacrificar el rendimiento.
+    Frontend:
+        HTML5: Estructuración semántica y diseño accesible.
+        React: Desarrollo de interfaces dinámicas e interactivas, ofreciendo una experiencia de usuario fluida y moderna.
+        Tailwind CSS: Framework de diseño ágil y personalizable para una interfaz atractiva y responsiva.
+        Vite: Herramienta de construcción rápida para un desarrollo más eficiente y rápido.
 
-    Nota: Este proyecto no utiliza un backend, se basa completamente en el frontend para mostrar nuestras capacidades de diseño y desarrollo.
+    Backend:
+        Grizzle: Framework de desarrollo backend rápido y eficiente para manejar las solicitudes y la lógica de negocio.
+        PostgreSQL: Sistema de gestión de bases de datos relacional para almacenar y gestionar datos de manera segura y eficiente.
 
 🎯 Características del Proyecto
 
-    Diseño Responsivo: Adaptación perfecta a cualquier dispositivo, desde móviles hasta pantallas grandes, garantizando una experiencia óptima para todos los usuarios.
-    Interactividad con React: Elementos dinámicos y modernos para una interfaz fácil de usar.
-    Estilo único con Tailwind: Un diseño limpio, profesional y totalmente personalizado para reflejar nuestra marca.
+    Diseño Responsivo: La aplicación se adapta perfectamente a todos los dispositivos, asegurando una experiencia de usuario fluida en móviles, tablets y escritorios.
+    Interactividad con React: Componentes dinámicos y un flujo de trabajo eficiente para proporcionar una experiencia web interactiva y atractiva.
+    Backend con Grizzle y PostgreSQL: Potente arquitectura para manejar las peticiones del servidor, interactuar con bases de datos y ofrecer una plataforma robusta.
+    Estilo moderno con Tailwind CSS: Un diseño elegante, simple y totalmente personalizable para ofrecer una interfaz de usuario atractiva y profesional.
 
 🌐 Visita el Sitio
 
-Este proyecto está disponible para su visualización en línea. ¡Echa un vistazo a nuestro portafolio y descubre cómo podemos ayudarte a transformar tus ideas en software de calidad!
+Este proyecto está disponible para su visualización en línea. Echa un vistazo a nuestro portafolio y descubre cómo podemos ayudarte a llevar tus proyectos digitales al siguiente nivel.
 
 https://codefalcon.onrender.com/
+
+🛠️ Servicios Ofrecidos
+
+En CodeFalcon, ofrecemos una amplia gama de servicios de desarrollo de software, incluyendo:
+
+    Desarrollo Web Personalizado: Desde sitios web simples hasta plataformas web complejas, diseñadas según las necesidades de tu negocio.
+    Desarrollo con React: Creación de interfaces de usuario interactivas y eficientes utilizando React.js.
+    Backend con Grizzle: Soluciones de backend robustas y eficientes para gestionar la lógica de negocio, la seguridad y las bases de datos.
+    Gestión de Bases de Datos con PostgreSQL: Implementación y gestión de bases de datos confiables y escalables para tus aplicaciones.
+    Consultoría Técnica: Asesoría en la elección de tecnologías, arquitectura de software y optimización de tus aplicaciones.
+
 
