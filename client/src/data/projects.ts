@@ -52,7 +52,7 @@ export const projects: Project[] = [
    {
     id: 6,
     title: "TuCV",
-    description: "App Web que genera CV elegante y profesional a partir de un formulario",
+    description: "App Web que genera CV elegante y profesional a partir de un formulario.",
     url: "https://tucv.vercel.app/",
     technologies: ["React", "Tailwind CSS"],
     image: "https://images.unsplash.com/photo-1602407294553-6ac9170b3ed0?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -61,7 +61,7 @@ export const projects: Project[] = [
    {
     id: 7,
     title: "Funny Editor",
-    description: "Editor de Imagenes dinámico",
+    description: "Editor de Imagenes dinámico.",
     url: "https://funnyeditor.vercel.app/",
     technologies: ["React", "Tailwind CSS"],
     image: "https://images.unsplash.com/photo-1605826832916-d0ea9d6fe71e?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -70,7 +70,7 @@ export const projects: Project[] = [
   {
     id: 8,
     title: "Portafolio Personal",
-    description: "Portafolio Personal con un diseño Cyberpunk atrayente",
+    description: "Portafolio Personal con un diseño Cyberpunk atrayente.",
     url: "https://catriel.netlify.app/",
     technologies: ["HTML", "CSS", "JavaScript"],
     image: "https://images.unsplash.com/photo-1510682469697-f2953374f076?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
