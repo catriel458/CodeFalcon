@@ -35,7 +35,7 @@ En CodeFalcon, ofrecemos una amplia gama de servicios de desarrollo de software,
     Desarrollo Web Personalizado: Desde sitios web simples hasta plataformas web complejas, diseñadas según las necesidades de tu negocio.
     Desarrollo con React: Creación de interfaces de usuario interactivas y eficientes utilizando React.js.
     Backend con Grizzle: Soluciones de backend robustas y eficientes para gestionar la lógica de negocio, la seguridad y las bases de datos.
-    Gestión de Bases de Datos con PostgreSQL: Implementación y gestión de bases de datos confiables y escalables para tus aplicaciones.
+    Gestión de Bases de Datos con SQlite (volumenes pequeños/medianos de datos) y PostgreSQL (grandes volumenes de datos): Implementación y gestión de bases de datos confiables y            escalables para tus aplicaciones.
     Consultoría Técnica: Asesoría en la elección de tecnologías, arquitectura de software y optimización de tus aplicaciones.
 
 
