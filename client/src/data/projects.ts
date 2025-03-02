@@ -29,7 +29,7 @@ export const projects: Project[] = [
     title: "YoInvierto",
     description: "Plataforma de coworking inmobiliario e inversiones.",
     url: "https://yoinvierto.com.ar/",
-    technologies: ["React", "TypeScript", "Node.js", "Tailwind CSS", "Firebase"],
+    technologies: ["React", "TypeScript", "Node.js", "Tailwind", "Firebase"],
     image: "https://images.unsplash.com/photo-1560520653-9e0e4c89eb11?q=80&w=1473&auto=format&fit=crop"
   },
   {
@@ -54,7 +54,7 @@ export const projects: Project[] = [
     title: "TuCV",
     description: "App Web que genera CV elegante y profesional a partir de un formulario.",
     url: "https://tucv.vercel.app/",
-    technologies: ["React", "Tailwind CSS"],
+    technologies: ["React", "Tailwind"],
     image: "https://images.unsplash.com/photo-1602407294553-6ac9170b3ed0?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
 
@@ -63,7 +63,7 @@ export const projects: Project[] = [
     title: "Funny Editor",
     description: "Editor de Imagenes dinámico.",
     url: "https://funnyeditor.vercel.app/",
-    technologies: ["React", "Tailwind CSS"],
+    technologies: ["React", "Tailwind"],
     image: "https://images.unsplash.com/photo-1605826832916-d0ea9d6fe71e?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   
