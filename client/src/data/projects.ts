@@ -59,7 +59,7 @@ export const projects: Project[] = [
   },
 
    {
-    id: 6,
+    id: 7,
     title: "TuCV",
     description: "App Web que genera CV elegante y profesional a partir de un formulario.",
     url: "https://tucv.vercel.app/",
@@ -68,7 +68,7 @@ export const projects: Project[] = [
   },
 
    {
-    id: 7,
+    id: 8,
     title: "Funny Editor",
     description: "Editor de Imagenes dinámico.",
     url: "https://funnyeditor.vercel.app/",
@@ -77,7 +77,7 @@ export const projects: Project[] = [
   },
   
   {
-    id: 8,
+    id: 9,
     title: "Portafolio Personal",
     description: "Portafolio Personal con un diseño Cyberpunk atrayente.",
     url: "https://catriel.netlify.app/",
@@ -86,7 +86,7 @@ export const projects: Project[] = [
   },
   
   {
-    id: 9,
+    id: 10,
     title: "Cristal Zen",
     description: "E-commerce de la tienda holística que ofrece cursos de yoga y gemoterapia.",
     url: "https://cristalzen.netlify.app/",
@@ -94,7 +94,7 @@ export const projects: Project[] = [
     image: "https://images.unsplash.com/photo-1545205597-3d9d02c29597?q=80&w=1470&auto=format&fit=crop"
   },
   {
-    id: 10,
+    id: 11,
     title: "Instituto Pandas",
     description: "Portal web Platense de la reconocida academia privada que dicta cursos de informática.",
     url: "https://institutopandas.netlify.app/",
@@ -102,7 +102,7 @@ export const projects: Project[] = [
     image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=1470&auto=format&fit=crop"
   },
   {
-    id: 11,
+    id: 12,
     title: "Arufe y Asociados",
     description: "Landing page para un escribano Platense especializado en homologación de títulos.",
     url: "https://arufeyasociados.com/",
@@ -110,7 +110,7 @@ export const projects: Project[] = [
     image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1470&auto=format&fit=crop"
   },
   {
-    id: 12,
+    id: 13,
     title: "PizzaRica",
     description: "E-commerce sencillo para una pizzeria familiar con carrito de compras y catálogo.",
     url: "https://pizzarica.netlify.app/",
@@ -118,7 +118,7 @@ export const projects: Project[] = [
     image: "https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=1470&auto=format&fit=crop"
   },
   {
-    id: 13,
+    id: 14,
     title: "Calculadora",
     description: "Prueba técnica con JavaScript demostrando funcionalidades del lenguaje.",
     url: "https://supercalculadora97.netlify.app/",
