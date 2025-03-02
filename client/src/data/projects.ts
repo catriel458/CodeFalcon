@@ -51,6 +51,15 @@ export const projects: Project[] = [
 
    {
     id: 6,
+    title: "¿Qué Película Miro?",
+    description: "Elegí entre miles de peliculas cual querés ver.",
+    url: "https://que-pelicula-miro.vercel.app/",
+    technologies: ["React", "Tailwind", "Framer Motion", "TMDb API"],
+    image: "https://images.unsplash.com/photo-1616530940355-351fabd9524b?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+
+   {
+    id: 6,
     title: "TuCV",
     description: "App Web que genera CV elegante y profesional a partir de un formulario.",
     url: "https://tucv.vercel.app/",
