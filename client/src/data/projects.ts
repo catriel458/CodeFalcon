@@ -12,7 +12,7 @@ export const projects: Project[] = [
    {
     id: 1,
     title: "FiloSharp",
-    description: "Tienda Cuchillos Artesanales",
+    description: "Tienda Cuchillos Artesanales.",
     url: "https://github.com/catriel458/FiloSharp",
     technologies: ["React", "TypeScript", "Node.js", "Express", "SQLite", "Vite", "Tailwind"],
     image: "https://images.unsplash.com/photo-1579232308946-36e64f99016b?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -21,7 +21,7 @@ export const projects: Project[] = [
    {
     id: 2,
     title: "TallerSoft",
-    description: "Sistema Integrado de Gestión para talleres Mecanicos",
+    description: "Sistema Integrado de Gestión para talleres Mecanicos.",
     url: "https://tallersoft.com.ar/",
     technologies: ["React", "TypeScript", "Node.js", "Express", "SQLite", "Vite", "Tailwind"],
     image: "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
