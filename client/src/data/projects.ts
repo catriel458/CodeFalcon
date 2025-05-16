@@ -31,7 +31,7 @@ export const projects: Project[] = [
     id: 3,
     title: "Tigre Hogar",
     description: "E-commerce de indumentaria y artículos del hogar con tecnologías modernas.",
-    url: "https://tigrehogar.up.railway.app/",
+    url: "https://github.com/catriel458/tigrehogar",
     technologies: ["React", "TypeScript", "Node.js", "Express", "SQLite", "Vite", "Tailwind", "Drizzle"],
     image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=1470&auto=format&fit=crop"
   },
@@ -39,7 +39,7 @@ export const projects: Project[] = [
     id: 4,
     title: "Turnera Colegio Médicos",
     description: "Sistema de turnos para el colegio de médicos con diseño minimalista e intuitivo.",
-    url: "https://colegiomedicos.up.railway.app/",
+    url: "https://github.com/catriel458/colegioMedicos",
     technologies: ["React", "TypeScript", "Node.js", "Express", "SQLite", "Vite", "Tailwind", "Drizzle"],
     image: "https://images.unsplash.com/photo-1516549655169-df83a0774514?q=80&w=1470&auto=format&fit=crop"
   },
@@ -63,7 +63,7 @@ export const projects: Project[] = [
     id: 7,
     title: "Cinema Paradiso",
     description: "Portal web del prestigioso cinema con los mejores estrenos y series.",
-    url: "https://catriel458.pythonanywhere.com/",
+    url: "https://github.com/catriel458/cinema-paradiso",
     technologies: ["Django", "HTML", "CSS", "Bootstrap"],
     image: "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?q=80&w=1470&auto=format&fit=crop"
   },
