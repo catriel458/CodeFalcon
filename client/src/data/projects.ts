@@ -55,7 +55,7 @@ export const projects: Project[] = [
     id: 6,
     title: "Biblioteca ISFD 210",
     description: "Sistema de gestión para biblioteca el IFSD 210 con funciones dinámicas y visuales.",
-    url: "https://nec1431.pythonanywhere.com/libros/",
+    url: "https://github.com/catriel458/biblioteca-210.git",
     technologies: ["Django", "HTML", "CSS", "Bootstrap"],
     image: "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?q=80&w=1470&auto=format&fit=crop"
   },
