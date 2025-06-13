@@ -26,9 +26,18 @@ export const projects: Project[] = [
     technologies: ["React", "TypeScript", "Node.js", "Express", "SQLite", "Vite", "Tailwind"],
     image: "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
+
+    {
+    id: 3,
+    title: "YouTube Downloader Pro",
+    description: "Programa Desktop para descargar videos de youtube en simultaneo, mejor calidad de video y sonido",
+    url: "https://github.com/catriel458/YouTube_Downloader",
+    technologies: ["Python", "Tkinter", "yt-dlp", "FFmpeg", "PyInstaller"],
+    image: "https://i.ibb.co/ycxGxdqS/yt.jpg"
+  },
   
   {
-    id: 3,
+    id: 4,
     title: "Tigre Hogar",
     description: "E-commerce de indumentaria y artículos del hogar con tecnologías modernas.",
     url: "https://github.com/catriel458/tigrehogar",
@@ -36,7 +45,7 @@ export const projects: Project[] = [
     image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=1470&auto=format&fit=crop"
   },
   {
-    id: 4,
+    id: 5,
     title: "Turnera Colegio Médicos",
     description: "Sistema de turnos para el colegio de médicos con diseño minimalista e intuitivo.",
     url: "https://github.com/catriel458/colegioMedicos",
@@ -44,7 +53,7 @@ export const projects: Project[] = [
     image: "https://images.unsplash.com/photo-1516549655169-df83a0774514?q=80&w=1470&auto=format&fit=crop"
   },
   {
-    id: 5,
+    id: 6,
     title: "YoInvierto",
     description: "Plataforma de coworking inmobiliario e inversiones.",
     url: "https://yoinvierto.com.ar/",
@@ -52,7 +61,7 @@ export const projects: Project[] = [
     image: "https://images.unsplash.com/photo-1560520653-9e0e4c89eb11?q=80&w=1473&auto=format&fit=crop"
   },
   {
-    id: 6,
+    id: 7,
     title: "Biblioteca ISFD 210",
     description: "Sistema de gestión para biblioteca el IFSD 210 con funciones dinámicas y visuales.",
     url: "https://github.com/catriel458/biblioteca-210.git",
@@ -60,7 +69,7 @@ export const projects: Project[] = [
     image: "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?q=80&w=1470&auto=format&fit=crop"
   },
   {
-    id: 7,
+    id: 8,
     title: "Cinema Paradiso",
     description: "Portal web del prestigioso cinema con los mejores estrenos y series.",
     url: "https://github.com/catriel458/cinema-paradiso",
@@ -69,7 +78,7 @@ export const projects: Project[] = [
   },
 
    {
-    id: 8,
+    id: 9,
     title: "¿Qué Película Miro?",
     description: "Elegí entre miles de peliculas cual querés ver.",
     url: "https://que-pelicula-miro.vercel.app/",
@@ -78,7 +87,7 @@ export const projects: Project[] = [
   },
 
    {
-    id: 9,
+    id: 10,
     title: "TuCV",
     description: "App Web que genera CV elegante y profesional a partir de un formulario.",
     url: "https://tucv.vercel.app/",
@@ -87,7 +96,7 @@ export const projects: Project[] = [
   },
 
    {
-    id: 10,
+    id: 11,
     title: "Funny Editor",
     description: "Editor de Imagenes dinámico.",
     url: "https://funnyeditor.vercel.app/",
@@ -96,7 +105,7 @@ export const projects: Project[] = [
   },
   
   {
-    id: 11,
+    id: 12,
     title: "Portafolio Personal",
     description: "Portafolio Personal con un diseño Cyberpunk atrayente.",
     url: "https://catriel.netlify.app/",
@@ -105,7 +114,7 @@ export const projects: Project[] = [
   },
   
   {
-    id: 12,
+    id: 13,
     title: "Cristal Zen",
     description: "E-commerce de la tienda holística que ofrece cursos de yoga y gemoterapia.",
     url: "https://cristalzen.netlify.app/",
@@ -113,7 +122,7 @@ export const projects: Project[] = [
     image: "https://images.unsplash.com/photo-1545205597-3d9d02c29597?q=80&w=1470&auto=format&fit=crop"
   },
   {
-    id: 13,
+    id: 14,
     title: "Instituto Pandas",
     description: "Portal web Platense de la reconocida academia privada que dicta cursos de informática.",
     url: "https://institutopandas.netlify.app/",
@@ -121,7 +130,7 @@ export const projects: Project[] = [
     image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=1470&auto=format&fit=crop"
   },
   {
-    id: 14,
+    id: 15,
     title: "Arufe y Asociados",
     description: "Landing page para un escribano Platense especializado en homologación de títulos.",
     url: "https://arufeyasociados.com/",
@@ -129,7 +138,7 @@ export const projects: Project[] = [
     image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1470&auto=format&fit=crop"
   },
   {
-    id: 15,
+    id: 16,
     title: "PizzaRica",
     description: "E-commerce sencillo para una pizzeria familiar con carrito de compras y catálogo.",
     url: "https://pizzarica.netlify.app/",
@@ -137,7 +146,7 @@ export const projects: Project[] = [
     image: "https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=1470&auto=format&fit=crop"
   },
   {
-    id: 16,
+    id: 17,
     title: "Calculadora",
     description: "Prueba técnica con JavaScript demostrando funcionalidades del lenguaje.",
     url: "https://supercalculadora97.netlify.app/",
