@@ -37,7 +37,7 @@ const Home = () => {
   ];
 
   const stats = [
-    { number: "14+", label: t("stats.projectsCompleted") },
+    { number: "18+", label: t("stats.projectsCompleted") },
     { number: "100%", label: t("stats.satisfiedClients") },
     { number: "24/7", label: t("stats.technicalSupport") },
     { number: "3+", label: t("stats.yearsExperience") },
