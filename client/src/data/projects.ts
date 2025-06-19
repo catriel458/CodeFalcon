@@ -41,7 +41,7 @@ export const projects: Project[] = [
     title: "Tigre Hogar",
     description: "E-commerce de indumentaria y artículos del hogar con tecnologías modernas.",
     url: "https://github.com/catriel458/tigrehogar",
-    technologies: ["Python", "Tkinter", "PyPDF2", "Threading", "PyInstaller"],
+    technologies: ["React", "TypeScript", "Node.js", "Express", "SQLite", "Vite", "Tailwind", "Drizzle"],
     image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=1470&auto=format&fit=crop"
   },
 
@@ -50,7 +50,7 @@ export const projects: Project[] = [
     title: "PdfAnalyzer",
     description: "Analizador de PDFs Inteligente.",
     url: "https://github.com/catriel458/PdfAnalyzer",
-    technologies: ["React", "TypeScript", "Node.js", "Express", "SQLite", "Vite", "Tailwind", "Drizzle"],
+    technologies: ["Python", "Tkinter", "PyPDF2", "Threading", "PyInstaller"],
     image: "https://i.ibb.co/qMdxw2SH/Captura.jpg"
   },
   
