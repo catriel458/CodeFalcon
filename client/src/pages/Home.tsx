@@ -90,7 +90,7 @@ const Home = () => {
   };
 
   return (
-    <div className="space-y-20">
+    <div className="w-full overflow-x-hidden">
       <HeroSection />
 
       {/* Servicios */}
@@ -99,11 +99,11 @@ const Home = () => {
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
         variants={containerVariants}
-        className="py-20 bg-black/50"
+        className="py-20 bg-black/50 w-full"
       >
-        <div className="container max-w-6xl mx-auto px-4">
+        <div className="container max-w-6xl mx-auto px-4 w-full">
           <h2 className="text-3xl font-bold text-center mb-12">Nuestros Servicios</h2>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-8 w-full">
             {[t("services.feather"), t("services.falcon"), t("services.eagle")].map((service, index) => (
               <motion.div key={index} variants={itemVariants}>
                 <ServiceCard {...service} />
@@ -119,30 +119,32 @@ const Home = () => {
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
         variants={containerVariants}
-        className="py-20 container"
+        className="py-20 w-full"
       >
-        <h2 className="text-3xl font-bold text-center mb-12">{t("whyChooseUs")}</h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {features.map((feature, index) => (
-            <motion.div key={index} variants={itemVariants}>
-              <Card className="relative overflow-hidden group hover:border-primary/50 transition-colors">
-                <CardContent className="pt-6">
-                  <div className="text-4xl mb-4">{feature.icon}</div>
-                  <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">
-                    {feature.title}
-                  </h3>
-                  <p className="text-muted-foreground">{feature.description}</p>
-                </CardContent>
-              </Card>
-            </motion.div>
-          ))}
+        <div className="container mx-auto px-4 w-full max-w-7xl">
+          <h2 className="text-3xl font-bold text-center mb-12">{t("whyChooseUs")}</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 w-full">
+            {features.map((feature, index) => (
+              <motion.div key={index} variants={itemVariants}>
+                <Card className="relative overflow-hidden group hover:border-primary/50 transition-colors">
+                  <CardContent className="pt-6">
+                    <div className="text-4xl mb-4">{feature.icon}</div>
+                    <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">
+                      {feature.title}
+                    </h3>
+                    <p className="text-muted-foreground">{feature.description}</p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </motion.section>
 
       {/* Estadísticas */}
-      <section className="py-20 bg-black/50">
-        <div className="container">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+      <section className="py-20 bg-black/50 w-full">
+        <div className="container mx-auto px-4 w-full max-w-7xl">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 w-full">
             {stats.map((stat, index) => (
               <motion.div
                 key={index}
@@ -171,11 +173,11 @@ const Home = () => {
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
         variants={containerVariants}
-        className="py-20 bg-black/50"
+        className="py-20 bg-black/50 w-full"
       >
-        <div className="container">
+        <div className="container mx-auto px-4 w-full max-w-7xl">
           <h2 className="text-3xl font-bold text-center mb-12">{t("ourClients")}</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
             {testimonials.map((testimonial, index) => (
               <motion.div key={index} variants={itemVariants}>
                 <TestimonialCard {...testimonial} />
@@ -191,32 +193,34 @@ const Home = () => {
         whileInView="visible"
         viewport={{ once: true }}
         variants={containerVariants}
-        className="py-20 container"
+        className="py-20 w-full"
       >
-        <h2 className="text-3xl font-bold text-center mb-12">{t("technologies")}</h2>
-        <div className="flex flex-wrap justify-center gap-8">
-          {[
-            { Icon: SiReact, color: "#61DAFB" },
-            { Icon: SiNodedotjs, color: "#339933" },
-            { Icon: SiPython, color: "#3776AB" },
-            { Icon: SiPostgresql, color: "#336791" },
-            { Icon: SiTailwindcss, color: "#06B6D4" },
-            { Icon: SiDjango, color: "#092E20" },
-            { Icon: SiTypescript, color: "#3178C6" },
-            { Icon: SiPhp, color: "#777BB4" },
-            { Icon: SiHtml5, color: "#E34F26" },
-            { Icon: SiCss3, color: "#1572B6" },
-            { Icon: SiFirebase, color: "#FFCA28" }
-          ].map(({ Icon, color }, index) => (
-            <motion.div
-              key={index}
-              variants={itemVariants}
-              whileHover={{ scale: 1.1 }}
-              className="transition-all"
-            >
-              <Icon className="w-16 h-16 opacity-75 hover:opacity-100 transition-opacity" style={{ color }} />
-            </motion.div>
-          ))}
+        <div className="container mx-auto px-4 w-full max-w-7xl">
+          <h2 className="text-3xl font-bold text-center mb-12">{t("technologies")}</h2>
+          <div className="flex flex-wrap justify-center gap-8 w-full">
+            {[
+              { Icon: SiReact, color: "#61DAFB" },
+              { Icon: SiNodedotjs, color: "#339933" },
+              { Icon: SiPython, color: "#3776AB" },
+              { Icon: SiPostgresql, color: "#336791" },
+              { Icon: SiTailwindcss, color: "#06B6D4" },
+              { Icon: SiDjango, color: "#092E20" },
+              { Icon: SiTypescript, color: "#3178C6" },
+              { Icon: SiPhp, color: "#777BB4" },
+              { Icon: SiHtml5, color: "#E34F26" },
+              { Icon: SiCss3, color: "#1572B6" },
+              { Icon: SiFirebase, color: "#FFCA28" }
+            ].map(({ Icon, color }, index) => (
+              <motion.div
+                key={index}
+                variants={itemVariants}
+                whileHover={{ scale: 1.1 }}
+                className="transition-all"
+              >
+                <Icon className="w-16 h-16 opacity-75 hover:opacity-100 transition-opacity" style={{ color }} />
+              </motion.div>
+            ))}
+          </div>
         </div>
       </motion.section>
     </div>
