@@ -13,7 +13,7 @@ export const projects: Project[] = [
     id: 1,
     title: "FiloSharp",
     description: "Tienda Cuchillos Artesanales.",
-    url: "https://filo-sharp-knife.vercel.app/",
+    url: "https://filo-sharp.vercel.app/",
     technologies: ["React", "TypeScript", "Node.js", "Express", "SQLite", "Vite", "Tailwind"],
     image: "https://images.unsplash.com/photo-1579232308946-36e64f99016b?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
