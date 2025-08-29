@@ -16,18 +16,15 @@ import {
 import { Button } from "@/components/ui/button";
 import LanguageToggle from "@/components/LanguageToggle";
 import { useLanguage } from "@/lib/i18n";
-
 const Navbar = () => {
   const [location] = useLocation();
   const { t } = useLanguage();
-
   const navItems = [
     { href: "/", label: "Home" },
     { href: "/projects", label: t('projects') },
     { href: "/about", label: t('about') },
     { href: "/contact", label: t('contact') },
   ];
-
   const Logo = () => (
     <Link href="/" className="flex items-center space-x-2">
       <img 
@@ -40,12 +37,11 @@ const Navbar = () => {
       </span>
     </Link>
   );
-
   const NavLinks = ({ className, onClick }: { className?: string, onClick?: () => void }) => (
     <div className={className}>
       {navItems.map((item) => (
         <Link key={item.href} href={item.href}>
-          
+
             onClick={onClick}
             className={cn(
               "block px-4 py-2 text-sm transition-colors hover:text-primary",
@@ -60,13 +56,11 @@ const Navbar = () => {
       ))}
     </div>
   );
-
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto px-4 w-full max-w-7xl flex h-16 items-center justify-between">
         <Logo />
-
-        {/* Desktop Navigation */}
+        {/* Desktop Navigation /}
         <NavigationMenu className="hidden md:flex">
           <NavigationMenuList className="flex items-center">
             {navItems.map((item) => (
@@ -90,8 +84,7 @@ const Navbar = () => {
             </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
-
-        {/* Mobile Navigation */}
+        {/ Mobile Navigation */}
         <div className="md:hidden flex items-center gap-2">
           <LanguageToggle />
           <Sheet>
@@ -116,5 +109,4 @@ const Navbar = () => {
     </header>
   );
 };
-
 export default Navbar;
