@@ -13,7 +13,10 @@ const About = () => {
     { icon: "💻", name: t('certificatesList.sicosFullStack'), url: "https://drive.google.com/file/d/15GiWdHC1JSah5iDHj46rbe3mEAyL67ys/view?usp=sharing" },
     { icon: "🔒", name: t('certificatesList.ethicalHacking'), url: "https://drive.google.com/file/d/1U9xyafQgsptOH1BJVoianYPUU0I2Oh7N/view" },
     { icon: "🌐", name: t('certificatesList.webFullStack'), url: "https://drive.google.com/file/d/1q_rP5wA57Kp5LIBqHAz4Ke6yyHNqL7z3/view" },
-    { icon: "🚀", name: t('certificatesList.argPrograma'), url: "https://drive.google.com/file/d/1oJKtGtEQ6FucG7E5_2TiTmvTDI_0vsrV/view" }
+    { icon: "🚀", name: t('certificatesList.argPrograma'), url: "https://drive.google.com/file/d/1oJKtGtEQ6FucG7E5_2TiTmvTDI_0vsrV/view" },
+    { icon: "⚛️", name: t('certificatesList.reactTalentoTech'), url: "https://drive.google.com/file/d/1fh8EyGNCtRp9WIekskRkBmuqBIEKxQu2/view?usp=sharing" },
+    { icon: "🤖", name: t('certificatesList.fundamentosIA'), url: "https://drive.google.com/file/d/1xY3LEf2qHT7vQ4tNw6XF-p4Ym-fQL8hB/view?usp=sharing" }
+    
   ];
 
   return (
