@@ -57,12 +57,13 @@ const Footer = () => {
           <div>
             <h3 className="font-bold mb-4">{t('socialMedia')}</h3>
             <div className="flex flex-col gap-4">
-              
+              <a
                 href="https://instagram.com/codefalcon"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
-              >
+                >
+              
                 <Instagram className="w-5 h-5" />
                 <span className="text-sm">@codefalcon</span>
               </a>
