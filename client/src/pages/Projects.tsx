@@ -18,7 +18,7 @@ const Projects = () => {
     : projects;
 
   return (
-    <div className="container py-20">
+    <div className="container mx-auto px-4 w-full max-w-7xl py-20">
       <h1 className="text-4xl font-bold mb-8">{t('projectsTitle')}</h1>
       <div className="mb-8 flex flex-wrap gap-2">
         {technologies.map((tech) => (
