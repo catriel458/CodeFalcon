@@ -3,17 +3,17 @@ import { useLanguage } from "@/lib/i18n";
 
 const HeroSection = () => {
   const { t } = useLanguage();
-
+  
   return (
-    <section className="relative overflow-hidden py-20 sm:py-32">
-      <div className="container relative z-10">
+    <section className="relative overflow-hidden py-20 sm:py-32 w-full">
+      <div className="container mx-auto px-4 w-full max-w-7xl relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-center"
+          className="text-center w-full"
         >
-          <h1 className="text-4xl sm:text-6xl font-bold tracking-tight mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-500 via-cyan-500 to-purple-500">
+          <h1 className="text-4xl sm:text-6xl font-bold tracking-tight mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-500 via-cyan-500 to-purple-500 break-words">
             {t('heroTitle')}
           </h1>
           <p className="max-w-2xl mx-auto text-xl text-muted-foreground mb-8">
