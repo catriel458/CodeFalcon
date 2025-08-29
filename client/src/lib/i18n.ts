@@ -96,6 +96,8 @@ interface Language {
     ethicalHacking: string;
     webFullStack: string;
     argPrograma: string;
+    reactTalentoTech: string;      
+    fundamentosIA: string;           
   };
   githubProfile: string;
 
@@ -225,7 +227,9 @@ export const es: Language = {
     sicosFullStack: 'Sicos Informática Full Stack Development',
     ethicalHacking: 'Academia New Times Hacking Ético',
     webFullStack: 'Academia New Times Full Stack Web',
-    argPrograma: 'Argentina Programa'
+    argPrograma: 'Argentina Programa',
+    reactTalentoTech: 'React - Talento Tech',           
+    fundamentosIA: 'Fundamentos de IA - Talento Tech' 
   },
   githubProfile: 'Ver mi GitHub',
 
@@ -355,7 +359,10 @@ export const en: Language = {
     sicosFullStack: 'Sicos Informática Full Stack Development',
     ethicalHacking: 'Academia New Times Ethical Hacking',
     webFullStack: 'Academia New Times Full Stack Web',
-    argPrograma: 'Argentina Programa'
+    argPrograma: 'Argentina Programa',
+    reactTalentoTech: 'React - Talento Tech',          
+    fundamentosIA: 'AI Fundamentals - Talento Tech'   
+
   },
   githubProfile: 'View my GitHub',
 
