@@ -45,7 +45,7 @@ const Navbar = () => {
     <div className={className}>
       {navItems.map((item) => (
         <Link key={item.href} href={item.href}>
-          <a
+          
             onClick={onClick}
             className={cn(
               "block px-4 py-2 text-sm transition-colors hover:text-primary",
@@ -63,7 +63,7 @@ const Navbar = () => {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-16 items-center justify-between">
+      <div className="container mx-auto px-4 w-full max-w-7xl flex h-16 items-center justify-between">
         <Logo />
 
         {/* Desktop Navigation */}
