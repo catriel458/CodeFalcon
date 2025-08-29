@@ -14,9 +14,9 @@ import NotFound from "@/pages/not-found";
 
 function Router() {
   return (
-    <div className="min-h-screen bg-background flex flex-col">
+    <div className="min-h-screen bg-background flex flex-col w-full overflow-x-hidden">
       <Navbar />
-      <main className="flex-grow">
+      <main className="flex-grow w-full overflow-x-hidden">
         <Switch>
           <Route path="/" component={Home} />
           <Route path="/projects" component={Projects} />
@@ -32,27 +32,25 @@ function Router() {
 
 function App() {
   const [language, setLanguage] = useState<'es' | 'en'>('es');
-
+  
   const t = (key: string) => {
     const keys = key.split('.');
     let value: any = language === 'es' ? es : en;
-
     for (const k of keys) {
       if (value === undefined) return key;
       value = value[k];
     }
-
     return value || key;
   };
 
   return (
-    <LanguageContext.Provider value={{ language, setLanguage, t }}>
-      <QueryClientProvider client={queryClient}>
-        <Router />
-        <Toaster />
-      </QueryClientProvider>
-    </LanguageContext.Provider>
+    <div className="w-full overflow-x-hidden">
+      <LanguageContext.Provider value={{ language, setLanguage, t }}>
+        <QueryClientProvider client={queryClient}>
+          <Router />
+          <Toaster />
+        </QueryClientProvider>
+      </LanguageContext.Provider>
+    </div>
   );
 }
-
-export default App;
