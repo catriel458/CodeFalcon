@@ -96,8 +96,17 @@ export const projects: Project[] = [
     image: "https://images.unsplash.com/photo-1616530940355-351fabd9524b?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
 
-   {
+  {
     id: 11,
+    title: "CyberGames",
+    description: "Elegí entre miles de juegos cual jugar.",
+    url: "https://cyber-games-ten.vercel.app/",
+    technologies: ["React", "RAWG"],
+    image: "https://plus.unsplash.com/premium_photo-1677870728110-3b3b41677a9b?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  
+   {
+    id: 12,
     title: "TuCV",
     description: "App Web que genera CV elegante y profesional a partir de un formulario.",
     url: "https://tucv.vercel.app/",
@@ -106,7 +115,7 @@ export const projects: Project[] = [
   },
 
    {
-    id: 12,
+    id: 13,
     title: "Funny Editor",
     description: "Editor de Imagenes dinámico.",
     url: "https://funnyeditor.vercel.app/",
@@ -115,7 +124,7 @@ export const projects: Project[] = [
   },
   
   {
-    id: 13,
+    id: 14,
     title: "Portafolio Personal",
     description: "Portafolio Personal con un diseño Cyberpunk atrayente.",
     url: "https://catriel.netlify.app/",
@@ -124,7 +133,7 @@ export const projects: Project[] = [
   },
   
   {
-    id: 14,
+    id: 15,
     title: "Cristal Zen",
     description: "E-commerce de la tienda holística que ofrece cursos de yoga y gemoterapia.",
     url: "https://cristalzen.netlify.app/",
@@ -132,7 +141,7 @@ export const projects: Project[] = [
     image: "https://images.unsplash.com/photo-1545205597-3d9d02c29597?q=80&w=1470&auto=format&fit=crop"
   },
   {
-    id: 15,
+    id: 16,
     title: "Instituto Pandas",
     description: "Portal web Platense de la reconocida academia privada que dicta cursos de informática.",
     url: "https://institutopandas.netlify.app/",
@@ -140,7 +149,7 @@ export const projects: Project[] = [
     image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=1470&auto=format&fit=crop"
   },
   {
-    id: 16,
+    id: 17,
     title: "Arufe y Asociados",
     description: "Landing page para un escribano Platense especializado en homologación de títulos.",
     url: "https://arufeyasociados.com/",
@@ -148,7 +157,7 @@ export const projects: Project[] = [
     image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1470&auto=format&fit=crop"
   },
   {
-    id: 17,
+    id: 18,
     title: "PizzaRica",
     description: "E-commerce sencillo para una pizzeria familiar con carrito de compras y catálogo.",
     url: "https://pizzarica.netlify.app/",
@@ -156,7 +165,7 @@ export const projects: Project[] = [
     image: "https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=1470&auto=format&fit=crop"
   },
   {
-    id: 18,
+    id: 19,
     title: "Calculadora",
     description: "Prueba técnica con JavaScript demostrando funcionalidades del lenguaje.",
     url: "https://supercalculadora97.netlify.app/",
