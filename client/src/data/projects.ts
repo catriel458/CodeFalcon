@@ -12,14 +12,23 @@ export const projects: Project[] = [
    {
     id: 1,
     title: "FiloSharp",
-    description: "Tienda Cuchillos Artesanales.",
+    description: "Web App de Cuchillos Artesanales.",
     url: "https://filo-sharp.vercel.app/",
     technologies: ["React", "TypeScript", "Node.js", "Express", "SQLite", "Vite", "Tailwind"],
     image: "https://images.unsplash.com/photo-1579232308946-36e64f99016b?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
+
+  {
+    id: 2,
+    title: "Tigre Hogar",
+    description: "E-commerce de indumentaria y artículos del hogar con tecnologías modernas.",
+    url: "https://tigrehogar.onrender.com/",
+    technologies: ["React", "TypeScript", "Node.js", "Express", "postgreSQL", "Vite", "Tailwind", "Drizzle"],
+    image: "https://i.ibb.co/v4x3D32r/tigrehogar.jpg"
+  },
   
    {
-    id: 2,
+    id: 3,
     title: "TallerSoft",
     description: "Sistema Integrado de Gestión para talleres Mecanicos.",
     url: "https://tallersoft.com.ar/",
@@ -27,8 +36,17 @@ export const projects: Project[] = [
     image: "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
 
+  {
+    id: 4,
+    title: "Biblioteca ISFDyT 210",
+    description: "Sistema integral de gestión para la biblioteca del IFSDyT 210.",
+    url: "https://biblioteca-210-insti.vercel.app/libros/home/",
+    technologies: ["Django", "HTML5", "CSS3", "Bootstrap","postgreSQL"],
+    image: "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?q=80&w=1470&auto=format&fit=crop"
+  },
+
     {
-    id: 3,
+    id: 5,
     title: "YouTube Downloader Pro",
     description: "Programa Desktop para descargar videos de youtube en simultaneo, mejor calidad de video y sonido",
     url: "https://github.com/catriel458/YouTube_Downloader",
@@ -36,17 +54,10 @@ export const projects: Project[] = [
     image: "https://i.ibb.co/ycxGxdqS/yt.jpg"
   },
   
-  {
-    id: 4,
-    title: "Tigre Hogar",
-    description: "E-commerce de indumentaria y artículos del hogar con tecnologías modernas.",
-    url: "https://github.com/catriel458/tigrehogar",
-    technologies: ["React", "TypeScript", "Node.js", "Express", "SQLite", "Vite", "Tailwind", "Drizzle"],
-    image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=1470&auto=format&fit=crop"
-  },
+  
 
   {
-    id: 5,
+    id: 6,
     title: "PdfAnalyzer",
     description: "Analizador de PDFs Inteligente.",
     url: "https://github.com/catriel458/PdfAnalyzer",
@@ -55,7 +66,7 @@ export const projects: Project[] = [
   },
   
   {
-    id: 6,
+    id: 7,
     title: "Turnera Colegio Médicos",
     description: "Sistema de turnos para el colegio de médicos con diseño minimalista e intuitivo.",
     url: "https://github.com/catriel458/colegioMedicos",
@@ -63,21 +74,14 @@ export const projects: Project[] = [
     image: "https://images.unsplash.com/photo-1516549655169-df83a0774514?q=80&w=1470&auto=format&fit=crop"
   },
   {
-    id: 7,
+    id: 8,
     title: "YoInvierto",
     description: "Plataforma de coworking inmobiliario e inversiones.",
     url: "https://yoinvierto.com.ar/",
     technologies: ["React", "TypeScript", "Node.js", "Tailwind", "Firebase"],
     image: "https://images.unsplash.com/photo-1560520653-9e0e4c89eb11?q=80&w=1473&auto=format&fit=crop"
   },
-  {
-    id: 8,
-    title: "Biblioteca ISFD 210",
-    description: "Sistema de gestión para biblioteca el IFSD 210 con funciones dinámicas y visuales.",
-    url: "https://github.com/catriel458/biblioteca-210.git",
-    technologies: ["Django", "HTML", "CSS", "Bootstrap"],
-    image: "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?q=80&w=1470&auto=format&fit=crop"
-  },
+  
   {
     id: 9,
     title: "Cinema Paradiso",
