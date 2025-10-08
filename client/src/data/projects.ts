@@ -15,7 +15,7 @@ export const projects: Project[] = [
     description: "Web App de Cuchillos Artesanales.",
     url: "https://filo-sharp.vercel.app/",
     technologies: ["React", "TypeScript", "Node.js", "Express", "SQLite", "Vite", "Tailwind"],
-    image: "https://images.unsplash.com/photo-1579232308946-36e64f99016b?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    image: "https://i.ibb.co/Q3rM4CBf/filosharp.jpg"
   },
 
   {
@@ -23,7 +23,7 @@ export const projects: Project[] = [
     title: "Tigre Hogar",
     description: "E-commerce de indumentaria y artículos del hogar con tecnologías modernas.",
     url: "https://tigrehogar.onrender.com/",
-    technologies: ["React", "TypeScript", "Node.js", "Express", "postgreSQL", "Vite", "Tailwind", "Drizzle"],
+    technologies: ["React", "TypeScript", "Node.js", "Express", "PostgreSQL", "Vite", "Tailwind", "Drizzle"],
     image: "https://i.ibb.co/v4x3D32r/tigrehogar.jpg"
   },
   
@@ -33,7 +33,7 @@ export const projects: Project[] = [
     description: "Sistema Integrado de Gestión para talleres Mecanicos.",
     url: "https://tallersoft.com.ar/",
     technologies: ["React", "TypeScript", "Node.js", "Express", "SQLite", "Vite", "Tailwind"],
-    image: "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    image: "https://i.ibb.co/ZRvZffp6/tallersoft.jpg"
   },
 
   {
@@ -41,8 +41,8 @@ export const projects: Project[] = [
     title: "Biblioteca ISFDyT 210",
     description: "Sistema integral de gestión para la biblioteca del IFSDyT 210.",
     url: "https://biblioteca-210-insti.vercel.app/libros/home/",
-    technologies: ["Django", "HTML5", "CSS3", "Bootstrap","postgreSQL"],
-    image: "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?q=80&w=1470&auto=format&fit=crop"
+    technologies: ["Django", "HTML5", "CSS3", "Bootstrap","PostgreSQL"],
+    image: "https://i.ibb.co/ksHgfYxk/biblio-210.jpg"
   },
 
     {
@@ -79,7 +79,7 @@ export const projects: Project[] = [
     description: "Plataforma de coworking inmobiliario e inversiones.",
     url: "https://yoinvierto.com.ar/",
     technologies: ["React", "TypeScript", "Node.js", "Tailwind", "Firebase"],
-    image: "https://images.unsplash.com/photo-1560520653-9e0e4c89eb11?q=80&w=1473&auto=format&fit=crop"
+    image: "https://i.ibb.co/HDM1s07p/yoinvierto.jpg"
   },
   
   {
@@ -97,7 +97,7 @@ export const projects: Project[] = [
     description: "Elegí entre miles de peliculas cual querés ver.",
     url: "https://que-pelicula-miro.vercel.app/",
     technologies: ["React", "Tailwind", "Framer Motion", "TMDb API"],
-    image: "https://images.unsplash.com/photo-1616530940355-351fabd9524b?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    image: "https://i.ibb.co/xq9VX2GH/peliculas.jpg"
   },
 
   {
@@ -106,7 +106,7 @@ export const projects: Project[] = [
     description: "Elegí entre miles de juegos cual jugar.",
     url: "https://cyber-games-ten.vercel.app/",
     technologies: ["React", "RAWG"],
-    image: "https://plus.unsplash.com/premium_photo-1677870728110-3b3b41677a9b?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    image: "https://i.ibb.co/KjkBdhd8/cybergames.jpg"
   },
   
    {
@@ -115,7 +115,7 @@ export const projects: Project[] = [
     description: "App Web que genera CV elegante y profesional a partir de un formulario.",
     url: "https://tucv.vercel.app/",
     technologies: ["React", "Tailwind"],
-    image: "https://images.unsplash.com/photo-1602407294553-6ac9170b3ed0?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    image: "https://i.ibb.co/5hR9xfL8/cv.jpg"
   },
 
    {
@@ -124,7 +124,7 @@ export const projects: Project[] = [
     description: "Editor de Imagenes dinámico.",
     url: "https://funnyeditor.vercel.app/",
     technologies: ["React", "Tailwind"],
-    image: "https://images.unsplash.com/photo-1605826832916-d0ea9d6fe71e?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    image: "https://i.ibb.co/4n4GwZJ3/editor.jpg"
   },
   
   {
@@ -133,7 +133,7 @@ export const projects: Project[] = [
     description: "Portafolio Personal con un diseño Cyberpunk atrayente.",
     url: "https://catriel.netlify.app/",
     technologies: ["HTML", "CSS", "JavaScript"],
-    image: "https://images.unsplash.com/photo-1510682469697-f2953374f076?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    image: "https://i.ibb.co/9mTXz5vQ/portafolio.jpg"
   },
   
   {
@@ -142,7 +142,7 @@ export const projects: Project[] = [
     description: "E-commerce de la tienda holística que ofrece cursos de yoga y gemoterapia.",
     url: "https://cristalzen.netlify.app/",
     technologies: ["HTML", "CSS", "JavaScript"],
-    image: "https://images.unsplash.com/photo-1545205597-3d9d02c29597?q=80&w=1470&auto=format&fit=crop"
+    image: "https://i.ibb.co/ccGcX7sS/zen.jpg"
   },
   {
     id: 16,
@@ -150,7 +150,7 @@ export const projects: Project[] = [
     description: "Portal web Platense de la reconocida academia privada que dicta cursos de informática.",
     url: "https://institutopandas.netlify.app/",
     technologies: ["HTML", "CSS", "JavaScript", "Bootstrap"],
-    image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=1470&auto=format&fit=crop"
+    image: "https://i.ibb.co/0jVnsGQy/pandas.jpg"
   },
   {
     id: 17,
@@ -158,22 +158,22 @@ export const projects: Project[] = [
     description: "Landing page para un escribano Platense especializado en homologación de títulos.",
     url: "https://arufeyasociados.com/",
     technologies: ["HTML", "CSS", "JavaScript"],
-    image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1470&auto=format&fit=crop"
+    image: "https://i.ibb.co/B5yyLNL2/arufe.jpg"
   },
   {
     id: 18,
     title: "PizzaRica",
     description: "E-commerce sencillo para una pizzeria familiar con carrito de compras y catálogo.",
     url: "https://pizzarica.netlify.app/",
-    technologies: ["HTML", "CSS", "JavaScript"],
-    image: "https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=1470&auto=format&fit=crop"
+    technologies: ["HTML5", "CSS3", "JavaScript"],
+    image: "https://i.ibb.co/tM5TZsV0/pizza.jpg"
   },
   {
     id: 19,
     title: "Calculadora",
     description: "Prueba técnica con JavaScript demostrando funcionalidades del lenguaje.",
     url: "https://supercalculadora97.netlify.app/",
-    technologies: ["JavaScript", "HTML", "CSS"],
-    image: "https://images.unsplash.com/photo-1587145820266-a5951ee6f620?q=80&w=1480&auto=format&fit=crop"
+    technologies: ["JavaScript", "HTML5", "CSS3"],
+    image: "https://i.ibb.co/tph6rQPc/calculadora.jpg"
   }
 ];
