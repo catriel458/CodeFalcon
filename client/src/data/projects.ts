@@ -12,7 +12,7 @@ export const projects: Project[] = [
    {
     id: 1,
     title: "FiloSharp",
-    description: "Web App de Cuchillos Artesanales.",
+    description: "E-commerce FiloSharp especializada en cuchillos artesanales",
     url: "https://filo-sharp.vercel.app/",
     technologies: ["React", "TypeScript", "Node.js", "Express", "SQLite", "Vite", "Tailwind"],
     image: "https://i.ibb.co/Q3rM4CBf/filosharp.jpg"
