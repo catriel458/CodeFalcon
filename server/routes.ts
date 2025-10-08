@@ -3,15 +3,14 @@ import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import { insertProjectSchema, insertClientSchema } from "@shared/schema";
 import { fromZodError } from "zod-validation-error";
-import { createTransport } from "nodemailer";
+import * as brevo from "@getbrevo/brevo";
 
-const transporter = createTransport({
-  service: 'gmail',
-  auth: {
-    user: 'catrielcabrera97@gmail.com',
-    pass: process.env.GMAIL_APP_PASSWORD
-  }
-});
+// Configurar Brevo API
+const apiInstance = new brevo.TransactionalEmailsApi();
+apiInstance.setApiKey(
+  brevo.TransactionalEmailsApiApiKeys.apiKey,
+  process.env.BREVO_API_KEY || ""
+);
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // Contact route
@@ -19,24 +18,30 @@ export async function registerRoutes(app: Express): Promise<Server> {
     try {
       const { name, email, message } = req.body;
 
-      await transporter.sendMail({
-        from: `"CodeFalcon Contact" <catrielcabrera97@gmail.com>`,
-        to: "catrielcabrera97@gmail.com",
-        subject: `Nuevo mensaje de contacto de ${name}`,
-        text: `
+      const sendSmtpEmail = new brevo.SendSmtpEmail();
+      sendSmtpEmail.subject = `Nuevo mensaje de contacto de ${name}`;
+      sendSmtpEmail.to = [
+        { email: "catrielcabrera97@gmail.com", name: "CodeFalcon" }
+      ];
+      sendSmtpEmail.sender = {
+        email: "catrielcabrera97@gmail.com",
+        name: "CodeFalcon Contact"
+      };
+      sendSmtpEmail.replyTo = { email: email, name: name };
+      sendSmtpEmail.htmlContent = `
+        <h2>Nuevo mensaje de contacto</h2>
+        <p><strong>Nombre:</strong> ${name}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Mensaje:</strong></p>
+        <p>${message}</p>
+      `;
+      sendSmtpEmail.textContent = `
 Nombre: ${name}
 Email: ${email}
 Mensaje: ${message}
-        `,
-        html: `
-<h2>Nuevo mensaje de contacto</h2>
-<p><strong>Nombre:</strong> ${name}</p>
-<p><strong>Email:</strong> ${email}</p>
-<p><strong>Mensaje:</strong></p>
-<p>${message}</p>
-        `
-      });
+      `;
 
+      await apiInstance.sendTransacEmail(sendSmtpEmail);
       res.status(200).json({ message: "Mensaje enviado correctamente" });
     } catch (error) {
       console.error("Error sending email:", error);
