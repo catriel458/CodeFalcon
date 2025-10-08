@@ -12,7 +12,7 @@ export const projects: Project[] = [
    {
     id: 1,
     title: "FiloSharp",
-    description: "E-commerce FiloSharp especializada en cuchillos artesanales",
+    description: "E-commerce FiloSharp especializada en cuchillos artesanales.",
     url: "https://filo-sharp.vercel.app/",
     technologies: ["React", "TypeScript", "Node.js", "Express", "SQLite", "Vite", "Tailwind"],
     image: "https://i.ibb.co/Q3rM4CBf/filosharp.jpg"
@@ -30,7 +30,7 @@ export const projects: Project[] = [
    {
     id: 3,
     title: "TallerSoft",
-    description: "Sistema Integrado de Gestión para talleres Mecanicos.",
+    description: "Sistema Integrado de Gestión para talleres mecanicos.",
     url: "https://tallersoft.com.ar/",
     technologies: ["React", "TypeScript", "Node.js", "Express", "SQLite", "Vite", "Tailwind"],
     image: "https://i.ibb.co/ZRvZffp6/tallersoft.jpg"
