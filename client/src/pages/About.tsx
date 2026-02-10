@@ -5,19 +5,54 @@ import { Github } from "lucide-react";
 import { useLanguage } from "@/lib/i18n";
 
 const About = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   const certificates = [
-    { icon: "📈", name: t('certificatesList.analistaData'), url: "https://openbadgefactory.com/obv3/credentials/36e66ddceca33dd75a75eb133ad14b2711efba43" },
-    { icon: "🎓", name: t('certificatesList.nodeFullStack'), url: "https://drive.google.com/file/d/1z2i6wPmxXDGDePEk7ClYo-Nifqlzep60/view?usp=sharing" },
-    { icon: "📊", name: t('certificatesList.bigData'), url: "https://drive.google.com/file/d/1PVzSSwXd3bChAHwOGAweV-Htbr0WXfId/view" },
-    { icon: "💻", name: t('certificatesList.sicosFullStack'), url: "https://drive.google.com/file/d/15GiWdHC1JSah5iDHj46rbe3mEAyL67ys/view?usp=sharing" },
-    { icon: "🔒", name: t('certificatesList.ethicalHacking'), url: "https://drive.google.com/file/d/1U9xyafQgsptOH1BJVoianYPUU0I2Oh7N/view" },
-    { icon: "🌐", name: t('certificatesList.webFullStack'), url: "https://drive.google.com/file/d/1q_rP5wA57Kp5LIBqHAz4Ke6yyHNqL7z3/view" },
-    { icon: "🚀", name: t('certificatesList.argPrograma'), url: "https://drive.google.com/file/d/1oJKtGtEQ6FucG7E5_2TiTmvTDI_0vsrV/view" },
-    { icon: "⚛️", name: t('certificatesList.reactTalentoTech'), url: "https://drive.google.com/file/d/1fh8EyGNCtRp9WIekskRkBmuqBIEKxQu2/view?usp=sharing" },
-    { icon: "🤖", name: t('certificatesList.fundamentosIA'), url: "https://drive.google.com/file/d/1xY3LEf2qHT7vQ4tNw6XF-p4Ym-fQL8hB/view?usp=sharing" }
-    
+    { 
+      icon: "📈", 
+      name: language === 'es' ? 'Analista de Datos - Talento Tech' : 'Data Analyst - Talento Tech',
+      url: "https://openbadgefactory.com/obv3/credentials/36e66ddceca33dd75a75eb133ad14b2711efba43" 
+    },
+    { 
+      icon: "🎓", 
+      name: "Codo a Codo Full Stack Node",
+      url: "https://drive.google.com/file/d/1z2i6wPmxXDGDePEk7ClYo-Nifqlzep60/view?usp=sharing" 
+    },
+    { 
+      icon: "📊", 
+      name: "Codo a Codo Big Data Specialist",
+      url: "https://drive.google.com/file/d/1PVzSSwXd3bChAHwOGAweV-Htbr0WXfId/view" 
+    },
+    { 
+      icon: "💻", 
+      name: language === 'es' ? 'Sicos Informática Full Stack Development' : 'Sicos Informática Full Stack Development',
+      url: "https://drive.google.com/file/d/15GiWdHC1JSah5iDHj46rbe3mEAyL67ys/view?usp=sharing" 
+    },
+    { 
+      icon: "🔒", 
+      name: language === 'es' ? 'Academia New Times Hacking Ético' : 'Academia New Times Ethical Hacking',
+      url: "https://drive.google.com/file/d/1U9xyafQgsptOH1BJVoianYPUU0I2Oh7N/view" 
+    },
+    { 
+      icon: "🌐", 
+      name: "Academia New Times Full Stack Web",
+      url: "https://drive.google.com/file/d/1q_rP5wA57Kp5LIBqHAz4Ke6yyHNqL7z3/view" 
+    },
+    { 
+      icon: "🚀", 
+      name: "Argentina Programa",
+      url: "https://drive.google.com/file/d/1oJKtGtEQ6FucG7E5_2TiTmvTDI_0vsrV/view" 
+    },
+    { 
+      icon: "⚛️", 
+      name: "React - Talento Tech",
+      url: "https://drive.google.com/file/d/1fh8EyGNCtRp9WIekskRkBmuqBIEKxQu2/view?usp=sharing" 
+    },
+    { 
+      icon: "🤖", 
+      name: language === 'es' ? 'Fundamentos de IA - Talento Tech' : 'AI Fundamentals - Talento Tech',
+      url: "https://drive.google.com/file/d/1xY3LEf2qHT7vQ4tNw6XF-p4Ym-fQL8hB/view?usp=sharing" 
+    }
   ];
 
   return (
