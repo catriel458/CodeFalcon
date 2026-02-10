@@ -23,7 +23,7 @@ export const projects: Project[] = [
     description: "E-commerce especializado en tecnología.",
     url: "https://tech-ecommerce-lemon.vercel.app/",
     technologies: ["React", "TypeScript", "Next.js", "Express", "Postgre/Neon", "Vite", "Tailwind"],
-    image: "https://i.ibb.co/Q3rM4CBf/filosharp.jpg"
+    image: "https://i.ibb.co/67KycrMx/tech.jpg"
   },
   {
     id: 3,
