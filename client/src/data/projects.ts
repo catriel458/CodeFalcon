@@ -17,9 +17,16 @@ export const projects: Project[] = [
     technologies: ["React", "TypeScript", "Node.js", "Express", "SQLite", "Vite", "Tailwind"],
     image: "https://i.ibb.co/Q3rM4CBf/filosharp.jpg"
   },
-
-  {
+ {
     id: 2,
+    title: "TechStore",
+    description: "E-commerce especializado en tecnología.",
+    url: "https://tech-ecommerce-lemon.vercel.app/",
+    technologies: ["React", "TypeScript", "Next.js", "Express", "Postgre/Neon", "Vite", "Tailwind"],
+    image: "https://i.ibb.co/Q3rM4CBf/filosharp.jpg"
+  },
+  {
+    id: 3,
     title: "Sportek",
     description: "Tecnología deportiva de élite",
     url: "https://sportek-mauve.vercel.app/",
@@ -28,7 +35,7 @@ export const projects: Project[] = [
   },
 
    {
-    id: 3,
+    id: 4,
     title: "HCT",
     description: "Empresa tecnológica de alto nivel",
     url: "https://hct-rho.vercel.app/",
@@ -37,16 +44,16 @@ export const projects: Project[] = [
   },
 
   {
-    id: 4,
+    id: 5,
     title: "Tigre Hogar",
     description: "E-commerce de indumentaria y artículos del hogar con tecnologías modernas.",
-    url: "https://github.com/catriel458/tigrehogar",
+    url: "https://tigrehogar.vercel.app/",
     technologies: ["React", "TypeScript", "Node.js", "Express", "PostgreSQL", "Vite", "Tailwind", "Drizzle"],
     image: "https://i.ibb.co/v4x3D32r/tigrehogar.jpg"
   },
   
    {
-    id: 5,
+    id: 6,
     title: "TallerSoft",
     description: "Sistema Integrado de Gestión para talleres mecanicos.",
     url: "https://github.com/catriel458/TallerSoft",
@@ -55,7 +62,7 @@ export const projects: Project[] = [
   },
 
   {
-    id: 6,
+    id: 7,
     title: "Biblioteca ISFDyT 210",
     description: "Sistema integral de gestión para la biblioteca del IFSDyT 210.",
     url: "https://biblioteca-210-insti.vercel.app/libros/",
@@ -64,7 +71,7 @@ export const projects: Project[] = [
   },
 
    {
-    id: 7,
+    id: 8,
     title: "SIMEF ISFDyT 210",
     description: "Sistema carreras, finales, materias, alumnos, directivos del IFSDyT 210.",
     url: "https://simef-back-ynfm.vercel.app/",
@@ -73,7 +80,7 @@ export const projects: Project[] = [
   },
 
     {
-    id: 8,
+    id: 9,
     title: "YouTube Downloader Pro",
     description: "Programa Desktop para descargar videos de youtube en simultaneo, mejor calidad de video y sonido",
     url: "https://github.com/catriel458/YouTube_Downloader",
@@ -84,7 +91,7 @@ export const projects: Project[] = [
   
 
   {
-    id: 9,
+    id: 10,
     title: "PdfAnalyzer",
     description: "Analizador de PDFs Inteligente.",
     url: "https://github.com/catriel458/PdfAnalyzer",
@@ -93,7 +100,7 @@ export const projects: Project[] = [
   },
   
   {
-    id: 10,
+    id: 11,
     title: "Turnera Colegio Médicos",
     description: "Sistema de turnos para el colegio de médicos con diseño minimalista e intuitivo.",
     url: "https://github.com/catriel458/colegioMedicos",
@@ -101,7 +108,7 @@ export const projects: Project[] = [
     image: "https://images.unsplash.com/photo-1516549655169-df83a0774514?q=80&w=1470&auto=format&fit=crop"
   },
   {
-    id: 11,
+    id: 12,
     title: "YoInvierto",
     description: "Plataforma de coworking inmobiliario e inversiones.",
     url: "https://yoinvierto.com.ar/",
@@ -110,7 +117,7 @@ export const projects: Project[] = [
   },
   
   {
-    id: 12,
+    id: 13,
     title: "Cinema Paradiso",
     description: "Portal web del prestigioso cinema con los mejores estrenos y series.",
     url: "https://github.com/catriel458/cinema-paradiso",
@@ -119,7 +126,7 @@ export const projects: Project[] = [
   },
 
    {
-    id: 13,
+    id: 14,
     title: "¿Qué Película Miro?",
     description: "Elegí entre miles de peliculas cual querés ver.",
     url: "https://que-pelicula-miro.vercel.app/",
@@ -128,7 +135,7 @@ export const projects: Project[] = [
   },
 
   {
-    id: 14,
+    id: 15,
     title: "CyberGames",
     description: "Elegí entre miles de juegos cual jugar.",
     url: "https://cyber-games-ten.vercel.app/",
@@ -137,7 +144,7 @@ export const projects: Project[] = [
   },
   
    {
-    id: 15,
+    id: 16,
     title: "TuCV",
     description: "App Web que genera CV elegante y profesional a partir de un formulario.",
     url: "https://tucv.vercel.app/",
@@ -146,7 +153,7 @@ export const projects: Project[] = [
   },
 
    {
-    id: 16,
+    id: 17,
     title: "Funny Editor",
     description: "Editor de Imagenes dinámico.",
     url: "https://funnyeditor.vercel.app/",
@@ -155,7 +162,7 @@ export const projects: Project[] = [
   },
   
   {
-    id: 17,
+    id: 18,
     title: "Portafolio Personal",
     description: "Portafolio Personal con un diseño Cyberpunk atrayente.",
     url: "https://catriel.netlify.app/",
@@ -164,7 +171,7 @@ export const projects: Project[] = [
   },
   
   {
-    id: 18,
+    id: 19,
     title: "Cristal Zen",
     description: "E-commerce de la tienda holística que ofrece cursos de yoga y gemoterapia.",
     url: "https://cristalzen.netlify.app/",
@@ -172,7 +179,7 @@ export const projects: Project[] = [
     image: "https://i.ibb.co/ccGcX7sS/zen.jpg"
   },
   {
-    id: 19,
+    id: 20,
     title: "Instituto Pandas",
     description: "Portal web Platense de la reconocida academia privada que dicta cursos de informática.",
     url: "https://institutopandas.netlify.app/",
@@ -180,7 +187,7 @@ export const projects: Project[] = [
     image: "https://i.ibb.co/0jVnsGQy/pandas.jpg"
   },
   {
-    id: 20,
+    id: 21,
     title: "Arufe y Asociados",
     description: "Landing page para un escribano Platense especializado en homologación de títulos.",
     url: "https://arufeyasociados.com/",
@@ -188,7 +195,7 @@ export const projects: Project[] = [
     image: "https://i.ibb.co/B5yyLNL2/arufe.jpg"
   },
   {
-    id: 21,
+    id: 22,
     title: "PizzaRica",
     description: "E-commerce sencillo para una pizzeria familiar con carrito de compras y catálogo.",
     url: "https://pizzarica.netlify.app/",
@@ -196,7 +203,7 @@ export const projects: Project[] = [
     image: "https://i.ibb.co/tM5TZsV0/pizza.jpg"
   },
   {
-    id: 22,
+    id: 23,
     title: "Calculadora",
     description: "Prueba técnica con JavaScript demostrando funcionalidades del lenguaje.",
     url: "https://supercalculadora97.netlify.app/",
