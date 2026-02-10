@@ -8,6 +8,7 @@ const About = () => {
   const { t } = useLanguage();
 
   const certificates = [
+    { icon: "📈", name: t('certificatesList.analistaData'), url: "https://openbadgefactory.com/obv3/credentials/36e66ddceca33dd75a75eb133ad14b2711efba43" },
     { icon: "🎓", name: t('certificatesList.nodeFullStack'), url: "https://drive.google.com/file/d/1z2i6wPmxXDGDePEk7ClYo-Nifqlzep60/view?usp=sharing" },
     { icon: "📊", name: t('certificatesList.bigData'), url: "https://drive.google.com/file/d/1PVzSSwXd3bChAHwOGAweV-Htbr0WXfId/view" },
     { icon: "💻", name: t('certificatesList.sicosFullStack'), url: "https://drive.google.com/file/d/15GiWdHC1JSah5iDHj46rbe3mEAyL67ys/view?usp=sharing" },
