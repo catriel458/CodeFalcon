@@ -90,6 +90,7 @@ interface Language {
   developerDescription: string;
   certifications: string;
   certificatesList: {
+    analistaData: string;
     nodeFullStack: string;
     bigData: string;
     sicosFullStack: string;
@@ -222,6 +223,7 @@ export const es: Language = {
   developerDescription: 'Soy Catriel, la mente detrás de CodeFalcon. Soy programador Full Stack Python y Full Stack Javascript, manejo múltiples tecnologías, me entusiasma la innovación y el aprendizaje, siempre busco nuevos retos. Soy Analista de sistemas y he realizado múltiples cursos que constatan mis conocimientos, al trabajar conmigo y brindarme tu confianza para tu proyecto estás en las mejores manos.',
   certifications: 'Certificaciones',
   certificatesList: {
+    analistaData: 'Analista de Datos - Talento Tech',
     nodeFullStack: 'Codo a Codo Full Stack Node',
     bigData: 'Codo a Codo Big Data Specialist',
     sicosFullStack: 'Sicos Informática Full Stack Development',
@@ -354,6 +356,7 @@ export const en: Language = {
   developerDescription: 'I am Catriel, the mind behind CodeFalcon. I am a Full Stack Python and Full Stack Javascript developer, I handle multiple technologies, I am enthusiastic about innovation and learning, always looking for new challenges. I am a Systems Analyst and I have completed multiple courses that validate my knowledge, when working with me and giving me your trust for your project you are in the best hands.',
   certifications: 'Certifications',
   certificatesList: {
+    analistaData: 'Data Analyst - Talento Tech',
     nodeFullStack: 'Codo a Codo Full Stack Node',
     bigData: 'Codo a Codo Big Data Specialist',
     sicosFullStack: 'Sicos Informática Full Stack Development',
