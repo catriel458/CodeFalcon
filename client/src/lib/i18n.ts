@@ -87,6 +87,7 @@ interface Language {
   approachTitle: string;
   approachText: string;
   developerTitle: string;
+  developerCredential: string;
   developerDescription: string;
   certifications: string;
   githubProfile: string;
@@ -205,11 +206,12 @@ export const es: Language = {
   vision: 'Visión',
   visionText: 'Ser un referente en desarrollo web y soluciones digitales, combinando tecnología de vanguardia, creatividad y un enfoque meticuloso para ofrecer productos eficientes, escalables y adaptados a cada cliente.',
   mission: 'Misión',
-  missionText: 'Desarrollar soluciones digitales de alta calidad, fusionando React, Node.js, Python, Django y las últimas tecnologías con un enfoque estratégico y creativo. Con compromiso, precisión y atención al detalle, cada proyecto se diseña a medida, garantizando funcionalidad, diseño atractivo y rendimiento óptimo.',
+  missionText: 'Desarrollar soluciones digitales de alta calidad, fusionando React, Node.js, Python, Django y las últimas tecnologías con un enfoque estratégico y creativo, impulsado por un stack moderno que incluye Next.js, Neon y Vercel Blob. Con compromiso, precisión y atención al detalle, cada proyecto se diseña a medida, garantizando funcionalidad, diseño atractivo y rendimiento óptimo.',
   approachTitle: 'Nuestro Enfoque',
   approachText: 'En CodeFalcon trabajas directamente con el desarrollador en cada etapa del proceso, garantizando atención personalizada y resultados excepcionales.',
   developerTitle: 'El Desarrollador',
-  developerDescription: 'Soy Catriel, la mente detrás de CodeFalcon. Soy programador Full Stack Python y Full Stack Javascript, manejo múltiples tecnologías, me entusiasma la innovación y el aprendizaje, siempre busco nuevos retos. Soy Analista de sistemas y he realizado múltiples cursos que constatan mis conocimientos, al trabajar conmigo y brindarme tu confianza para tu proyecto estás en las mejores manos.',
+  developerCredential: 'Analista de Sistemas Matriculado — M.P. 2777',
+  developerDescription: 'Soy Catriel, la mente detrás de CodeFalcon. Soy programador Full Stack Python y Full Stack Javascript, manejo múltiples tecnologías, me entusiasma la innovación y el aprendizaje, siempre busco nuevos retos. He realizado múltiples cursos y capacitaciones de especialización que constatan mis conocimientos. Al trabajar conmigo y brindarme tu confianza para tu proyecto, estás en las mejores manos.',
   certifications: 'Certificaciones',
   githubProfile: 'Ver mi GitHub',
 
@@ -221,7 +223,7 @@ export const es: Language = {
   yourMessage: 'Tu Mensaje',
   directContact: 'Contacto Directo',
   ourCommitment: 'Nuestro Compromiso',
-  availableVia: 'Disponible vía reuniones virtuales, WhatsApp o email.',
+  availableVia: 'Disponible vía reuniones presenciales en La Plata (Buenos Aires - Argentina), reuniones virtuales, WhatsApp o email.',
   socialMedia: 'Redes Sociales',
   projectsTitle: 'Nuestros Proyectos'
 };
@@ -327,11 +329,12 @@ export const en: Language = {
   vision: 'Vision',
   visionText: 'To be a reference in web development and digital solutions, combining cutting-edge technology, creativity and a meticulous approach to deliver efficient, scalable products tailored to each client.',
   mission: 'Mission',
-  missionText: 'Develop high-quality digital solutions, merging React, Node.js, Python, Django and the latest technologies with a strategic and creative approach. With commitment, precision and attention to detail, each project is custom designed, ensuring functionality, attractive design and optimal performance.',
+  missionText: 'Develop high-quality digital solutions, merging React, Node.js, Python, Django and the latest technologies with a strategic and creative approach, powered by a modern stack featuring Next.js, Neon, and Vercel Blob. With commitment, precision and attention to detail, each project is custom designed, ensuring functionality, attractive design and optimal performance.',
   approachTitle: 'Our Approach',
   approachText: 'At CodeFalcon you work directly with the developer at every stage of the process, ensuring personalized attention and exceptional results.',
   developerTitle: 'The Developer',
-  developerDescription: 'I am Catriel, the mind behind CodeFalcon. I am a Full Stack Python and Full Stack Javascript developer, I handle multiple technologies, I am enthusiastic about innovation and learning, always looking for new challenges. I am a Systems Analyst and I have completed multiple courses that validate my knowledge, when working with me and giving me your trust for your project you are in the best hands.',
+  developerCredential: 'Registered Systems Analyst — M.P. 2777',
+  developerDescription: 'I am Catriel, the mind behind CodeFalcon. I am a Full Stack Python and Full Stack Javascript developer, I handle multiple technologies, I am enthusiastic about innovation and learning, always looking for new challenges. I have completed multiple specialized courses that validate my knowledge. When working with me and giving me your trust for your project, you are in the best hands.',
   certifications: 'Certifications',
   githubProfile: 'View my GitHub',
 
@@ -343,7 +346,7 @@ export const en: Language = {
   yourMessage: 'Your Message',
   directContact: 'Direct Contact',
   ourCommitment: 'Our Commitment',
-  availableVia: 'Available via virtual meetings, WhatsApp, or email.',
+  availableVia: 'Available via in-person meetings in La Plata (Buenos Aires - Argentina), virtual meetings, WhatsApp, or email.',
   socialMedia: 'Social Media',
   projectsTitle: 'Our Projects'
 };
@@ -351,7 +354,7 @@ export const en: Language = {
 type LanguageContextType = {
   language: 'es' | 'en';
   setLanguage: (lang: 'es' | 'en') => void;
-  t: (key: string) => string;
+  t: (key: string) => any;
 };
 
 export const LanguageContext = createContext<LanguageContextType | undefined>(undefined);

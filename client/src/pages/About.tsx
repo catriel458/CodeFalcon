@@ -97,7 +97,12 @@ const About = () => {
                   />
                 </div>
                 <div>
-                  <h2 className="text-2xl font-bold mb-4 text-primary">{t('developerTitle')}</h2>
+                  <div className="flex flex-col md:flex-row md:items-center gap-3 mb-4">
+                    <h2 className="text-2xl font-bold text-primary">{t('developerTitle')}</h2>
+                    <span className="inline-flex items-center rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold text-primary border border-primary/20 w-fit">
+                      {t('developerCredential')}
+                    </span>
+                  </div>
                   <p className="text-muted-foreground mb-4">
                     {t('developerDescription')}
                   </p>

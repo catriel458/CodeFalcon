@@ -8,7 +8,14 @@ export interface Project {
 }
 
 export const projects: Project[] = [
-
+  {
+    id: 24,
+    title: "TnB: Try and Buy",
+    description: "Sistema web con shopping virtual modular, probador avanzado con IA para probarse ropa de forma hiperrealista, API de integración, sistema de cupones, recompensas, niveles y chatbot integrado.",
+    url: "https://fashion-puce-gamma.vercel.app/",
+    technologies: ["React", "TypeScript", "Next.js", "Tailwind", "AI", "API", "Chatbot"],
+    image: "/assets/tnb.PNG"
+  },
    {
     id: 1,
     title: "FiloSharp",
@@ -17,30 +24,37 @@ export const projects: Project[] = [
     technologies: ["React", "TypeScript", "Node.js", "Express", "SQLite", "Vite", "Tailwind"],
     image: "https://i.ibb.co/Q3rM4CBf/filosharp.jpg"
   },
- {
+  {
+    id: 21,
+    title: "Arufe y Asociados",
+    description: "Landing page para un escribano Platense especializado en homologación de títulos.",
+    url: "https://arufeyasociados.com/",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    image: "https://i.ibb.co/B5yyLNL2/arufe.jpg"
+  },
+  {
+    id: 3,
+    title: "Sportek",
+    description: "Tecnología deportiva de élite",
+    url: "https://www.sportekweb.com.ar/",
+    technologies: ["React", "Tailwind"],
+    image: "https://i.ibb.co/RG6kZ5nb/sportek.jpg"
+  },
+  {
+    id: 4,
+    title: "HCT",
+    description: "Empresa tecnológica de alto nivel",
+    url: "https://www.hctgroup.com.ar/",
+    technologies: ["React", "Tailwind"],
+    image: "https://i.ibb.co/svk8Bvy8/hct.jpg"
+  },
+  {
     id: 2,
     title: "TechStore",
     description: "E-commerce especializado en tecnología.",
     url: "https://tech-ecommerce-lemon.vercel.app/",
     technologies: ["React", "TypeScript", "Next.js", "Express", "Postgre/Neon", "Vite", "Tailwind"],
     image: "https://i.ibb.co/67KycrMx/tech.jpg"
-  },
-  {
-    id: 3,
-    title: "Sportek",
-    description: "Tecnología deportiva de élite",
-    url: "https://sportek-mauve.vercel.app/",
-    technologies: ["React", "Tailwind"],
-    image: "https://i.ibb.co/RG6kZ5nb/sportek.jpg"
-  },
-
-   {
-    id: 4,
-    title: "HCT",
-    description: "Empresa tecnológica de alto nivel",
-    url: "https://hct-rho.vercel.app/",
-    technologies: ["React", "Tailwind"],
-    image: "https://i.ibb.co/svk8Bvy8/hct.jpg"
   },
 
   {
@@ -56,7 +70,7 @@ export const projects: Project[] = [
     id: 6,
     title: "TallerSoft",
     description: "Sistema Integrado de Gestión para talleres mecanicos.",
-    url: "https://github.com/catriel458/TallerSoft",
+    url: "https://meca-sys.vercel.app/",
     technologies: ["React", "TypeScript", "Node.js", "Express", "SQLite", "Vite", "Tailwind"],
     image: "https://i.ibb.co/ZRvZffp6/tallersoft.jpg"
   },
@@ -185,14 +199,6 @@ export const projects: Project[] = [
     url: "https://institutopandas.netlify.app/",
     technologies: ["HTML", "CSS", "JavaScript", "Bootstrap"],
     image: "https://i.ibb.co/0jVnsGQy/pandas.jpg"
-  },
-  {
-    id: 21,
-    title: "Arufe y Asociados",
-    description: "Landing page para un escribano Platense especializado en homologación de títulos.",
-    url: "https://arufeyasociados.com/",
-    technologies: ["HTML", "CSS", "JavaScript"],
-    image: "https://i.ibb.co/B5yyLNL2/arufe.jpg"
   },
   {
     id: 22,
