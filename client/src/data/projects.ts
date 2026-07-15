@@ -30,7 +30,7 @@ export const projects: Project[] = [
     description: "Landing page para un escribano Platense especializado en homologación de títulos.",
     url: "https://arufeyasociados.com/",
     technologies: ["HTML", "CSS", "JavaScript"],
-    image: "https://i.ibb.co/B5yyLNL2/arufe.jpg"
+    image: "/assets/arufe.PNG"
   },
   {
     id: 3,
