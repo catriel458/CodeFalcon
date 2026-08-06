@@ -47,7 +47,7 @@ export const projects: Project[] = [
     url: "https://www.sportekweb.com.ar/",
     technologies: ["React", "Tailwind"],
     image: "https://i.ibb.co/RG6kZ5nb/sportek.jpg",
-    categoria: "ecommerce",
+    categoria: "landing",
     estado: "produccion"
   },
   {

@@ -113,6 +113,9 @@ interface Language {
   statusArchivado: string;
   visitSite: string;
   visitStudy: string;
+  viewStack: string;
+  hideStack: string;
+  emptyCategory: string;
 }
 
 export const es: Language = {
@@ -236,16 +239,19 @@ export const es: Language = {
   availableVia: 'Disponible vía reuniones presenciales en La Plata (Buenos Aires - Argentina), reuniones virtuales, WhatsApp o email.',
   socialMedia: 'Redes Sociales',
   projectsTitle: 'Nuestros Proyectos',
-  categoryAll: 'Todos',
-  categorySaas: 'SaaS / Web Apps',
-  categoryEcommerce: 'E-commerce',
-  categoryLanding: 'Landings / Sitios',
-  categoryHerramientas: 'Herramientas',
-  statusProduccion: 'producción',
-  statusDesarrollo: 'desarrollo',
+  categoryAll: 'todos',
+  categorySaas: 'saas / apps',
+  categoryEcommerce: 'e-commerce',
+  categoryLanding: 'landing',
+  categoryHerramientas: 'herramientas',
+  statusProduccion: 'en producción',
+  statusDesarrollo: 'en desarrollo',
   statusArchivado: 'archivado',
   visitSite: 'Visitar sitio',
-  visitStudy: 'Ver caso de estudio'
+  visitStudy: 'Ver caso de estudio',
+  viewStack: 'Ver stack completo',
+  hideStack: 'Ocultar stack',
+  emptyCategory: 'Todavía no publicaste proyectos acá'
 };
 
 export const en: Language = {
@@ -369,16 +375,19 @@ export const en: Language = {
   availableVia: 'Available via in-person meetings in La Plata (Buenos Aires - Argentina), virtual meetings, WhatsApp, or email.',
   socialMedia: 'Social Media',
   projectsTitle: 'Our Projects',
-  categoryAll: 'All',
-  categorySaas: 'SaaS / Web Apps',
-  categoryEcommerce: 'E-commerce',
-  categoryLanding: 'Landings / Sites',
-  categoryHerramientas: 'Tools',
-  statusProduccion: 'production',
-  statusDesarrollo: 'in dev',
+  categoryAll: 'all',
+  categorySaas: 'saas / apps',
+  categoryEcommerce: 'e-commerce',
+  categoryLanding: 'landing',
+  categoryHerramientas: 'tools',
+  statusProduccion: 'in production',
+  statusDesarrollo: 'in development',
   statusArchivado: 'archived',
   visitSite: 'Visit site',
-  visitStudy: 'View case study'
+  visitStudy: 'View case study',
+  viewStack: 'View full stack',
+  hideStack: 'Hide stack',
+  emptyCategory: 'No projects published here yet'
 };
 
 type LanguageContextType = {
