@@ -5,11 +5,12 @@ import { projects } from "@/data/projects";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { useLanguage } from "@/lib/i18n";
-import { ExternalLink, FileText, Terminal } from "lucide-react";
+import { Terminal } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const Projects = () => {
   const [activeCategory, setActiveCategory] = useState<string>("all");
+  const [showStack, setShowStack] = useState<boolean>(false);
   const { t, language } = useLanguage();
 
   const categories = [
@@ -26,15 +27,21 @@ const Projects = () => {
   // The rest of the projects exclude TnB
   const otherProjects = projects.filter((p) => p.id !== 24);
 
-  // Filter projects by category
+  // Filter projects for the grid
   const filteredProjects = activeCategory === "all"
     ? otherProjects
     : otherProjects.filter((p) => p.categoria === activeCategory);
 
-  // Group filtered projects by category for rendering sections
+  // Helper to count projects including TnB
+  const getCount = (cat: string) => {
+    if (cat === "all") return projects.length;
+    return projects.filter((p) => p.categoria === cat).length;
+  };
+
+  // Group order for grid rendering
   const groupOrder = ["saas", "ecommerce", "landing", "herramientas"];
   
-  // Get unique categories present in the filtered projects list
+  // Active groups to render
   const activeGroups = groupOrder.filter(cat => 
     filteredProjects.some(p => p.categoria === cat)
   );
@@ -42,7 +49,7 @@ const Projects = () => {
   const getCategoryPath = (cat: string) => {
     switch (cat) {
       case "saas":
-        return "/saas";
+        return "/saas-apps";
       case "ecommerce":
         return "/e-commerce";
       case "landing":
@@ -73,123 +80,169 @@ const Projects = () => {
     ? "Plataforma revolucionaria de e-commerce con un probador virtual modular con IA para probarse prendas de forma hiperrealista en tiempo real. Cuenta con API de integración, sistema de cupones, recompensas por niveles y un chatbot inteligente integrado para una experiencia de usuario sin precedentes."
     : "A revolutionary e-commerce platform featuring an AI-powered virtual dressing room for hyper-realistic real-time clothing trials. Built with an integration API, coupon system, level-based rewards, and an intelligent chatbot for an unprecedented user experience.";
 
-  // Show hero block only if "all" or "saas" is selected
+  // Show hero only when "all" or "saas" is selected
   const showHero = heroProject && (activeCategory === "all" || activeCategory === "saas");
 
   return (
     <div className="container mx-auto px-4 w-full max-w-7xl py-20">
-      {/* Title */}
+      {/* Title in Space Grotesk */}
       <div className="flex items-center gap-3 mb-10">
         <Terminal className="h-8 w-8 text-primary" />
-        <h1 className="text-4xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-foreground via-foreground to-primary">
+        <h1 className="text-4xl font-bold tracking-tight font-heading bg-clip-text text-transparent bg-gradient-to-r from-foreground via-foreground to-primary">
           {t("projectsTitle")}
         </h1>
       </div>
 
-      {/* Filter Buttons in JetBrains Mono */}
-      <div className="mb-12 flex flex-wrap gap-2.5 p-1.5 rounded-lg border border-border/40 bg-card/20 backdrop-blur-md w-fit font-mono">
-        {categories.map((cat) => (
-          <Button
-            key={cat.id}
-            variant="ghost"
-            size="sm"
-            onClick={() => setActiveCategory(cat.id)}
-            className={cn(
-              "text-xs md:text-sm font-mono transition-all duration-300 py-1.5 px-4 h-9 rounded-md",
-              activeCategory === cat.id
-                ? "bg-primary text-primary-foreground shadow-[0_0_15px_rgba(168,85,247,0.35)] hover:bg-primary/95"
-                : "text-muted-foreground hover:text-foreground hover:bg-muted/50"
-            )}
-          >
-            {cat.label}
-          </Button>
-        ))}
+      {/* IDE-style Category Tabs Menu in JetBrains Mono */}
+      <div className="border-b border-border/40 mb-12 overflow-x-auto scrollbar-none">
+        <div className="flex w-max md:w-full border-l border-border/20">
+          {categories.map((cat) => {
+            const isActive = activeCategory === cat.id;
+            return (
+              <button
+                key={cat.id}
+                onClick={() => {
+                  setActiveCategory(cat.id);
+                  setShowStack(false); // Reset accordion state on category switch
+                }}
+                className={cn(
+                  "relative py-3.5 px-6 font-mono text-xs md:text-sm transition-all duration-300 flex items-center gap-2 border-r border-t border-border/20 select-none outline-none",
+                  isActive 
+                    ? "bg-card/45 text-foreground font-semibold" 
+                    : "bg-background/5 text-muted-foreground hover:bg-card/20 hover:text-foreground"
+                )}
+              >
+                <span className="text-primary/70">#</span>
+                <span>{cat.label}</span>
+                <span className="text-[10px] opacity-60 font-mono">({getCount(cat.id)})</span>
+                
+                {isActive && (
+                  <motion.div 
+                    layoutId="activeTabBorder"
+                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-primary to-purple-600 shadow-[0_0_8px_rgba(168,85,247,0.5)]" 
+                  />
+                )}
+              </button>
+            );
+          })}
+        </div>
       </div>
 
-      {/* Hero Section for TnB */}
+      {/* Hero Section for TnB: Full-Bleed background */}
       <AnimatePresence mode="wait">
         {showHero && heroProject && (
           <motion.div
-            key="hero-project"
+            key="hero-project-v2"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            className="p-6 md:p-10 rounded-xl border border-border/40 bg-card/30 backdrop-blur-md relative overflow-hidden mb-16 shadow-[0_0_50px_rgba(168,85,247,0.06)] group"
+            className="relative w-full rounded-2xl overflow-hidden border border-border/40 min-h-[500px] flex items-end p-8 md:p-12 mb-16 shadow-[0_0_50px_rgba(168,85,247,0.06)] group"
           >
-            {/* Ambient background glow */}
-            <div className="absolute -top-40 -right-40 w-96 h-96 bg-primary/10 rounded-full blur-[100px] pointer-events-none group-hover:bg-primary/15 transition-all duration-500" />
-            
-            <div className="grid md:grid-cols-12 gap-8 items-center">
-              {/* Left Column: Context & Copy */}
-              <div className="md:col-span-7 flex flex-col justify-center z-10">
-                {/* Status Dot */}
-                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-background/85 border border-border/60 text-[10px] font-mono uppercase tracking-wider text-foreground shadow-sm w-fit mb-4">
-                  <span className="w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.8)] animate-pulse" />
-                  <span>{t("statusProduccion")}</span>
-                </div>
+            {/* Background image covering full space */}
+            <div 
+              className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-103"
+              style={{ backgroundImage: `url(${heroProject.image})` }}
+            />
+            {/* Radial Gradient Overlay (magenta/violet) to protect text legibility */}
+            <div className="absolute inset-0 bg-gradient-to-t from-background via-background/90 to-background/50 z-10" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(168,85,247,0.18),transparent_75%)] z-10" />
+            <div className="absolute inset-0 bg-black/35 z-10" />
 
-                <h2 className="text-2xl md:text-3xl font-extrabold tracking-tight mb-4 group-hover:text-primary transition-colors duration-300">
-                  {heroProject.title}
-                </h2>
-
-                <p className="text-base text-muted-foreground mb-6 leading-relaxed">
-                  {heroDescription}
-                </p>
-
-                {/* Tech tags in JetBrains Mono */}
-                <div className="flex flex-wrap gap-2 mb-8">
-                  {heroProject.technologies.map((tech) => (
-                    <Badge
-                      key={tech}
-                      variant="secondary"
-                      className="bg-primary/5 text-primary border border-primary/15 font-mono text-xs px-2.5 py-0.5 rounded-sm"
-                    >
-                      {tech}
-                    </Badge>
-                  ))}
-                </div>
-
-                {/* CTAs */}
-                <div className="flex flex-wrap gap-4">
-                  <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold shadow-[0_0_20px_rgba(168,85,247,0.3)] transition-all duration-300">
-                    <a
-                      href={heroProject.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2"
-                    >
-                      {t("visitSite")}
-                      <ExternalLink className="h-4 w-4" />
-                    </a>
-                  </Button>
-                  <Button asChild size="lg" variant="outline" className="border-border hover:bg-muted/40 transition-all duration-300">
-                    <a href="#" className="flex items-center gap-2">
-                      <FileText className="h-4 w-4 text-primary" />
-                      {t("visitStudy")}
-                    </a>
-                  </Button>
-                </div>
+            {/* Content overlaid on image */}
+            <div className="relative z-20 w-full max-w-3xl flex flex-col items-start text-left">
+              {/* Status Chip in JetBrains Mono */}
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-background/80 border border-border/60 text-[10px] font-mono uppercase tracking-wider text-foreground shadow-lg backdrop-blur-sm mb-5">
+                <span className="w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.8)] animate-pulse" />
+                <span>{t("statusProduccion")}</span>
               </div>
 
-              {/* Right Column: Hero Image/Gif */}
-              <div className="md:col-span-5 z-10 w-full">
-                <div className="relative rounded-lg overflow-hidden border border-border/50 aspect-video md:aspect-square w-full shadow-2xl">
-                  <div className="absolute inset-0 bg-black/20 group-hover:opacity-0 transition-opacity duration-300 z-10" />
-                  <img
-                    src={heroProject.image}
-                    alt={heroProject.title}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
-                </div>
+              {/* Title in Space Grotesk - 60-80px desktop, ~48px mobile */}
+              <h2 className="text-4xl sm:text-5xl md:text-7xl font-bold font-heading tracking-tight leading-none mb-4">
+                <span className="text-foreground">TnB:</span>
+                <span className="block mt-1 bg-clip-text text-transparent bg-gradient-to-r from-primary to-purple-500">
+                  Try and Buy
+                </span>
+              </h2>
+
+              {/* Short Description */}
+              <p className="text-sm sm:text-base md:text-lg text-muted-foreground mb-6 leading-relaxed max-w-2xl">
+                {heroDescription}
+              </p>
+
+              {/* Action Buttons */}
+              <div className="flex flex-wrap gap-4 mb-6">
+                <Button asChild size="lg" className="bg-primary hover:bg-primary/95 text-primary-foreground font-semibold shadow-[0_0_20px_rgba(168,85,247,0.3)] transition-all duration-300">
+                  <a
+                    href={heroProject.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2"
+                  >
+                    {t("visitSite")} ↗
+                  </a>
+                </Button>
+                
+                <Button 
+                  type="button"
+                  variant="outline" 
+                  size="lg" 
+                  onClick={() => setShowStack(!showStack)}
+                  className="border-border hover:bg-muted/40 transition-all duration-300 font-medium"
+                >
+                  <span>{t(showStack ? "hideStack" : "viewStack")}</span>
+                  <motion.span
+                    animate={{ rotate: showStack ? 180 : 0 }}
+                    transition={{ duration: 0.3 }}
+                    className="inline-block ml-2 text-xs"
+                  >
+                    ▼
+                  </motion.span>
+                </Button>
               </div>
+
+              {/* Expandable Technologies Accordion */}
+              <motion.div
+                initial={false}
+                animate={{ height: showStack ? "auto" : 0, opacity: showStack ? 1 : 0 }}
+                transition={{ duration: 0.35, ease: "easeInOut" }}
+                className="overflow-hidden w-full max-w-xl bg-background/80 border border-border/40 rounded-lg backdrop-blur-md"
+              >
+                <div className="p-4">
+                  <div className="text-[10px] font-mono text-muted-foreground uppercase tracking-widest mb-3 border-b border-border/20 pb-1.5 flex items-center gap-1.5">
+                    <Terminal className="h-3 w-3 text-primary" />
+                    <span>System Stack_</span>
+                  </div>
+                  <div className="flex flex-wrap gap-1.5">
+                    {heroProject.technologies.map((tech) => (
+                      <Badge
+                        key={tech}
+                        variant="secondary"
+                        className="bg-primary/5 text-primary border border-primary/15 font-mono text-[10px] px-2 py-0.5 rounded-sm"
+                      >
+                        {tech}
+                      </Badge>
+                    ))}
+                  </div>
+                </div>
+              </motion.div>
             </div>
           </motion.div>
         )}
       </AnimatePresence>
 
-      {/* Grouped Projects Grid */}
+      {/* Grid of Projects */}
       <div className="space-y-16">
+        {/* Render empty state if no projects match */}
+        {filteredProjects.length === 0 && (
+          <div className="flex flex-col items-center justify-center py-20 border border-dashed border-border/40 rounded-2xl bg-card/5 backdrop-blur-sm">
+            <Terminal className="h-10 w-10 text-primary animate-pulse mb-4" />
+            <p className="text-muted-foreground font-mono text-sm">
+              {t("emptyCategory")}
+            </p>
+          </div>
+        )}
+
         {activeGroups.map((cat) => {
           const catProjects = filteredProjects.filter((p) => p.categoria === cat);
           
@@ -209,13 +262,13 @@ const Projects = () => {
                 <h3 className="font-mono text-xl md:text-2xl font-bold tracking-tight text-foreground lowercase">
                   {getCategoryPath(cat).substring(1)}
                 </h3>
-                <span className="text-primary font-mono text-xs ml-2 bg-primary/10 border border-primary/20 px-2 py-0.5 rounded-sm uppercase tracking-wider hidden sm:inline-block">
+                <span className="text-primary font-mono text-[10px] ml-2 bg-primary/5 border border-primary/20 px-2 py-0.5 rounded-sm uppercase tracking-wider hidden sm:inline-block">
                   {getCategoryTitle(cat)}
                 </span>
                 <span className="animate-pulse text-primary font-mono text-xl md:text-2xl ml-0.5">_</span>
               </div>
 
-              {/* Grid of cards - collapses to 1 col in mobile */}
+              {/* Grid of cards - responsive columns */}
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {catProjects.map((project) => (
                   <ProjectCard key={project.id} project={project} />
