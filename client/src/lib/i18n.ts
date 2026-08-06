@@ -103,6 +103,16 @@ interface Language {
   availableVia: string;
   socialMedia: string;
   projectsTitle: string;
+  categoryAll: string;
+  categorySaas: string;
+  categoryEcommerce: string;
+  categoryLanding: string;
+  categoryHerramientas: string;
+  statusProduccion: string;
+  statusDesarrollo: string;
+  statusArchivado: string;
+  visitSite: string;
+  visitStudy: string;
 }
 
 export const es: Language = {
@@ -225,7 +235,17 @@ export const es: Language = {
   ourCommitment: 'Nuestro Compromiso',
   availableVia: 'Disponible vía reuniones presenciales en La Plata (Buenos Aires - Argentina), reuniones virtuales, WhatsApp o email.',
   socialMedia: 'Redes Sociales',
-  projectsTitle: 'Nuestros Proyectos'
+  projectsTitle: 'Nuestros Proyectos',
+  categoryAll: 'Todos',
+  categorySaas: 'SaaS / Web Apps',
+  categoryEcommerce: 'E-commerce',
+  categoryLanding: 'Landings / Sitios',
+  categoryHerramientas: 'Herramientas',
+  statusProduccion: 'producción',
+  statusDesarrollo: 'desarrollo',
+  statusArchivado: 'archivado',
+  visitSite: 'Visitar sitio',
+  visitStudy: 'Ver caso de estudio'
 };
 
 export const en: Language = {
@@ -348,7 +368,17 @@ export const en: Language = {
   ourCommitment: 'Our Commitment',
   availableVia: 'Available via in-person meetings in La Plata (Buenos Aires - Argentina), virtual meetings, WhatsApp, or email.',
   socialMedia: 'Social Media',
-  projectsTitle: 'Our Projects'
+  projectsTitle: 'Our Projects',
+  categoryAll: 'All',
+  categorySaas: 'SaaS / Web Apps',
+  categoryEcommerce: 'E-commerce',
+  categoryLanding: 'Landings / Sites',
+  categoryHerramientas: 'Tools',
+  statusProduccion: 'production',
+  statusDesarrollo: 'in dev',
+  statusArchivado: 'archived',
+  visitSite: 'Visit site',
+  visitStudy: 'View case study'
 };
 
 type LanguageContextType = {
