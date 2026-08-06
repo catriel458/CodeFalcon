@@ -13,17 +13,17 @@ export const projects: Project[] = [
   {
     id: 24,
     title: "TnB: Try and Buy",
-    description: "Sistema web con shopping virtual modular, probador avanzado con IA para probarse ropa de forma hiperrealista, API de integración, sistema de cupones, recompensas, niveles y chatbot integrado.",
+    description: "Plataforma web de e-commerce con probador virtual con IA que permite probarse ropa de forma hiperrealista en tiempo real, aumentando ventas y reduciendo devoluciones.",
     url: "https://fashion-puce-gamma.vercel.app/",
     technologies: ["React", "TypeScript", "Next.js", "Tailwind", "AI", "API", "Chatbot"],
     image: "/assets/tnb.PNG",
     categoria: "saas",
     estado: "produccion"
   },
-   {
+  {
     id: 1,
     title: "FiloSharp",
-    description: "E-commerce FiloSharp especializada en cuchillos artesanales.",
+    description: "Tienda online veloz y segura para vender y cobrar cuchillos artesanales directamente al público sin intermediarios.",
     url: "https://filo-sharp.vercel.app/",
     technologies: ["React", "TypeScript", "Node.js", "Express", "SQLite", "Vite", "Tailwind"],
     image: "https://i.ibb.co/Q3rM4CBf/filosharp.jpg",
@@ -33,7 +33,7 @@ export const projects: Project[] = [
   {
     id: 21,
     title: "Arufe y Asociados",
-    description: "Landing page para un escribano Platense especializado en homologación de títulos.",
+    description: "Página web optimizada que digitaliza y agiliza la captación de profesionales interesados en homologar sus títulos universitarios.",
     url: "https://arufeyasociados.com/",
     technologies: ["HTML", "CSS", "JavaScript"],
     image: "/assets/arufe.PNG",
@@ -43,7 +43,7 @@ export const projects: Project[] = [
   {
     id: 3,
     title: "Sportek",
-    description: "Tecnología deportiva de élite",
+    description: "Landing page de alto rendimiento que posiciona la marca y conecta atletas directamente con equipamiento deportivo de élite.",
     url: "https://www.sportekweb.com.ar/",
     technologies: ["React", "Tailwind"],
     image: "https://i.ibb.co/RG6kZ5nb/sportek.jpg",
@@ -53,7 +53,7 @@ export const projects: Project[] = [
   {
     id: 4,
     title: "HCT",
-    description: "Empresa tecnológica de alto nivel",
+    description: "Sitio web corporativo que transmite solidez y capta empresas interesadas en consultoría y servicios tecnológicos premium.",
     url: "https://www.hctgroup.com.ar/",
     technologies: ["React", "Tailwind"],
     image: "https://i.ibb.co/svk8Bvy8/hct.jpg",
@@ -63,86 +63,77 @@ export const projects: Project[] = [
   {
     id: 2,
     title: "TechStore",
-    description: "E-commerce especializado en tecnología.",
+    description: "Plataforma de ventas en línea para comercios de tecnología, permitiendo automatizar ventas las 24 horas.",
     url: "https://tech-ecommerce-lemon.vercel.app/",
     technologies: ["React", "TypeScript", "Next.js", "Express", "Postgre/Neon", "Vite", "Tailwind"],
     image: "https://i.ibb.co/67KycrMx/tech.jpg",
     categoria: "ecommerce",
     estado: "produccion"
   },
-
   {
     id: 5,
     title: "Tigre Hogar",
-    description: "E-commerce de indumentaria y artículos del hogar con tecnologías modernas.",
+    description: "Tienda online rápida con pasarela de pagos integrada para simplificar la compra de artículos para el hogar.",
     url: "https://tigrehogar.vercel.app/",
     technologies: ["React", "TypeScript", "Node.js", "Express", "PostgreSQL", "Vite", "Tailwind", "Drizzle"],
     image: "https://i.ibb.co/v4x3D32r/tigrehogar.jpg",
     categoria: "ecommerce",
     estado: "produccion"
   },
-  
-   {
+  {
     id: 6,
     title: "TallerSoft",
-    description: "Sistema Integrado de Gestión para talleres mecanicos.",
+    description: "Sistema de gestión para talleres mecánicos que automatiza turnos, fichas de vehículos e historial de reparaciones.",
     url: "https://meca-sys.vercel.app/",
     technologies: ["React", "TypeScript", "Node.js", "Express", "SQLite", "Vite", "Tailwind"],
     image: "https://i.ibb.co/ZRvZffp6/tallersoft.jpg",
     categoria: "saas",
     estado: "produccion"
   },
-
   {
     id: 7,
     title: "Biblioteca ISFDyT 210",
-    description: "Sistema integral de gestión para la biblioteca del IFSDyT 210.",
+    description: "Buscador y gestor digital de biblioteca que elimina el papeleo físico y acelera la reserva de libros para estudiantes.",
     url: "https://biblioteca-210-insti.vercel.app/libros/",
     technologies: ["Django", "HTML5", "CSS3", "Bootstrap","PostgreSQL"],
     image: "https://i.ibb.co/ksHgfYxk/biblio-210.jpg",
     categoria: "saas",
     estado: "produccion"
   },
-
-   {
+  {
     id: 8,
     title: "SIMEF ISFDyT 210",
-    description: "Sistema carreras, finales, materias, alumnos, directivos del IFSDyT 210.",
+    description: "Plataforma académica que agiliza la inscripción a exámenes, carga de actas y gestión de planes de estudio.",
     url: "https://simef-back-ynfm.vercel.app/",
     technologies: ["Django", "HTML5", "CSS3", "Bootstrap","PostgreSQL"],
     image: "https://i.ibb.co/Wpj9jsDd/simef.jpg",
     categoria: "saas",
     estado: "produccion"
   },
-
-    {
+  {
     id: 9,
     title: "YouTube Downloader Pro",
-    description: "Programa Desktop para descargar videos de youtube en simultaneo, mejor calidad de video y sonido",
+    description: "Programa de escritorio de alto rendimiento para descargar múltiples videos en alta definición en simultáneo y sin publicidad.",
     url: "https://github.com/catriel458/YouTube_Downloader",
     technologies: ["Python", "Tkinter", "yt-dlp", "FFmpeg", "PyInstaller"],
     image: "https://i.ibb.co/ycxGxdqS/yt.jpg",
     categoria: "herramientas",
     estado: "produccion"
   },
-  
-  
-
   {
     id: 10,
     title: "PdfAnalyzer",
-    description: "Analizador de PDFs Inteligente.",
+    description: "Herramienta que automatiza el análisis y la extracción de datos de múltiples documentos PDF en segundos.",
     url: "https://github.com/catriel458/PdfAnalyzer",
     technologies: ["Python", "Tkinter", "PyPDF2", "Threading", "PyInstaller"],
     image: "https://i.ibb.co/qMdxw2SH/Captura.jpg",
     categoria: "herramientas",
     estado: "produccion"
   },
-  
   {
     id: 11,
     title: "Turnera Colegio Médicos",
-    description: "Sistema de turnos para el colegio de médicos con diseño minimalista e intuitivo.",
+    description: "Los médicos gestionan su agenda y los pacientes reservan turno de forma online y sin demoras telefónicas.",
     url: "https://github.com/catriel458/colegioMedicos",
     technologies: ["React", "TypeScript", "Node.js", "Express", "SQLite", "Vite", "Tailwind", "Drizzle"],
     image: "https://images.unsplash.com/photo-1516549655169-df83a0774514?q=80&w=1470&auto=format&fit=crop",
@@ -152,84 +143,77 @@ export const projects: Project[] = [
   {
     id: 12,
     title: "YoInvierto",
-    description: "Plataforma de coworking inmobiliario e inversiones.",
+    description: "Plataforma digital para conectar inversores y facilitar el financiamiento colectivo de proyectos inmobiliarios.",
     url: "https://yoinvierto.com.ar/",
     technologies: ["React", "TypeScript", "Node.js", "Tailwind", "Firebase"],
     image: "https://i.ibb.co/HDM1s07p/yoinvierto.jpg",
     categoria: "saas",
     estado: "produccion"
   },
-  
   {
     id: 13,
     title: "Cinema Paradiso",
-    description: "Portal web del prestigioso cinema con los mejores estrenos y series.",
+    description: "Cartelera digital interactiva donde los cinéfilos consultan horarios, estrenos y reservan sus ubicaciones al instante.",
     url: "https://github.com/catriel458/cinema-paradiso",
     technologies: ["Django", "HTML", "CSS", "Bootstrap"],
     image: "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?q=80&w=1470&auto=format&fit=crop",
     categoria: "landing",
     estado: "desarrollo"
   },
-
-   {
+  {
     id: 14,
     title: "¿Qué Película Miro?",
-    description: "Elegí entre miles de peliculas cual querés ver.",
+    description: "Recomendador inteligente que ayuda a los usuarios a decidir qué película ver en segundos basándose en sus gustos.",
     url: "https://que-pelicula-miro.vercel.app/",
     technologies: ["React", "Tailwind", "Framer Motion", "TMDb API"],
     image: "https://i.ibb.co/xq9VX2GH/peliculas.jpg",
     categoria: "herramientas",
     estado: "produccion"
   },
-
   {
     id: 15,
     title: "CyberGames",
-    description: "Elegí entre miles de juegos cual jugar.",
+    description: "Explorador interactivo de videojuegos que facilita buscar títulos, valoraciones y plataformas de juego en un solo lugar.",
     url: "https://cyber-games-ten.vercel.app/",
     technologies: ["React", "RAWG"],
     image: "https://i.ibb.co/KjkBdhd8/cybergames.jpg",
     categoria: "herramientas",
     estado: "produccion"
   },
-  
-   {
+  {
     id: 16,
     title: "TuCV",
-    description: "App Web que genera CV elegante y profesional a partir de un formulario.",
+    description: "Herramienta digital que convierte datos básicos en un currículum profesional y estético listo para descargar en PDF.",
     url: "https://tucv.vercel.app/",
     technologies: ["React", "Tailwind"],
     image: "https://i.ibb.co/5hR9xfL8/cv.jpg",
     categoria: "herramientas",
     estado: "produccion"
   },
-
-   {
+  {
     id: 17,
     title: "Funny Editor",
-    description: "Editor de Imagenes dinámico.",
+    description: "Editor web intuitivo para retocar, redimensionar y aplicar efectos visuales a imágenes al instante sin programas complejos.",
     url: "https://funnyeditor.vercel.app/",
     technologies: ["React", "Tailwind"],
     image: "https://i.ibb.co/4n4GwZJ3/editor.jpg",
     categoria: "herramientas",
     estado: "produccion"
   },
-  
   {
     id: 18,
     title: "Portafolio Personal",
-    description: "Portafolio Personal con un diseño Cyberpunk atrayente.",
+    description: "Presentación digital interactiva de alto impacto que capta potenciales clientes mostrando habilidades y proyectos en un entorno Cyberpunk.",
     url: "https://catriel.netlify.app/",
     technologies: ["HTML", "CSS", "JavaScript"],
     image: "https://i.ibb.co/9mTXz5vQ/portafolio.jpg",
     categoria: "landing",
     estado: "produccion"
   },
-  
   {
     id: 19,
     title: "Cristal Zen",
-    description: "E-commerce de la tienda holística que ofrece cursos de yoga y gemoterapia.",
+    description: "Tienda en línea holística para comercializar de forma directa cursos de yoga, gemas y terapias alternativas.",
     url: "https://cristalzen.netlify.app/",
     technologies: ["HTML", "CSS", "JavaScript"],
     image: "https://i.ibb.co/ccGcX7sS/zen.jpg",
@@ -239,7 +223,7 @@ export const projects: Project[] = [
   {
     id: 20,
     title: "Instituto Pandas",
-    description: "Portal web Platense de la reconocida academia privada que dicta cursos de informática.",
+    description: "Sitio web de inscripción que centraliza la oferta de cursos informáticos del instituto y atrae nuevos alumnos en la región.",
     url: "https://institutopandas.netlify.app/",
     technologies: ["HTML", "CSS", "JavaScript", "Bootstrap"],
     image: "https://i.ibb.co/0jVnsGQy/pandas.jpg",
@@ -249,7 +233,7 @@ export const projects: Project[] = [
   {
     id: 22,
     title: "PizzaRica",
-    description: "E-commerce sencillo para una pizzeria familiar con carrito de compras y catálogo.",
+    description: "Catálogo interactivo y carrito digital rápido para que la pizzería reciba pedidos directo por la web optimizando su cocina.",
     url: "https://pizzarica.netlify.app/",
     technologies: ["HTML5", "CSS3", "JavaScript"],
     image: "https://i.ibb.co/tM5TZsV0/pizza.jpg",
@@ -259,7 +243,7 @@ export const projects: Project[] = [
   {
     id: 23,
     title: "Calculadora",
-    description: "Prueba técnica con JavaScript demostrando funcionalidades del lenguaje.",
+    description: "Herramienta de cálculo rápido que resuelve operaciones matemáticas en tiempo real directamente desde el navegador.",
     url: "https://supercalculadora97.netlify.app/",
     technologies: ["JavaScript", "HTML5", "CSS3"],
     image: "https://i.ibb.co/tph6rQPc/calculadora.jpg",

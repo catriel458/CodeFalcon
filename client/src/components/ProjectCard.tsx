@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { Card, CardHeader, CardContent, CardFooter } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { ArrowUpRight } from "lucide-react";
 import { useLanguage } from "@/lib/i18n";
 import { cn } from "@/lib/utils";
@@ -16,23 +15,26 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
   const displayTechs = project.technologies.slice(0, 3);
   const extraTechsCount = project.technologies.length - 3;
 
+  // Monospace tech stack line formatting (e.g. react • typescript • tailwind (+2))
+  const techText = displayTechs.join(" • ") + (extraTechsCount > 0 ? ` (+${extraTechsCount})` : "");
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <Card className="group overflow-hidden border border-border/40 bg-card/45 backdrop-blur supports-[backdrop-filter]:bg-card/25 transition-all duration-300 hover:border-primary/45 hover:shadow-[0_0_30px_rgba(168,85,247,0.15)] flex flex-col h-full">
-        {/* Card Image with Duotone Effect & Top Left Status Badge */}
+      <Card className="group overflow-hidden border border-border/40 bg-card/45 backdrop-blur supports-[backdrop-filter]:bg-card/25 transition-all duration-300 hover:border-primary/45 flex flex-col h-full shadow-none hover:shadow-none">
+        {/* Card Image and Status Chip */}
         <div className="relative h-48 w-full overflow-hidden">
-          {/* Dark overlay for base contrast */}
-          <div className="absolute inset-0 bg-black/25 z-10 transition-opacity duration-300 group-hover:opacity-0 group-hover:pointer-events-none" />
-          
-          {/* Duotone tint overlay using mix-blend-color */}
-          <div className="absolute inset-0 bg-gradient-to-tr from-primary to-purple-600 mix-blend-color opacity-35 z-10 transition-opacity duration-300 group-hover:opacity-0 group-hover:pointer-events-none" />
-          
-          {/* Status Badge - Semi-transparent dark background for readability */}
-          <div className="absolute top-3 left-3 z-20 flex items-center gap-1.5 px-2.5 py-1 rounded bg-black/65 border border-border/30 text-[9px] font-mono uppercase tracking-wider text-foreground shadow-md backdrop-blur-xs select-none">
+          {/* Subtle dark gradient overlay at the top corner to guarantee chip legibility */}
+          <div 
+            className="absolute inset-0 z-10 pointer-events-none" 
+            style={{ backgroundImage: 'linear-gradient(180deg, rgba(0,0,0,0.35) 0%, transparent 26%)' }}
+          />
+
+          {/* Status Badge overlayed on top left corner */}
+          <div className="absolute top-3 left-3 z-20 flex items-center gap-1.5 px-2.5 py-1 rounded bg-black/65 border border-border/30 text-[9px] font-mono uppercase tracking-wider text-foreground backdrop-blur-xs select-none">
             <span className={cn(
               "w-1.5 h-1.5 rounded-full animate-pulse",
               project.estado === "produccion" 
@@ -45,7 +47,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
           <img
             src={project.image}
             alt={project.title}
-            className="w-full h-full object-cover transition-all duration-350 grayscale group-hover:grayscale-0 group-hover:scale-105"
+            className="w-full h-full object-cover transition-transform duration-[350ms] ease-out group-hover:scale-[1.06]"
           />
         </div>
 
@@ -56,41 +58,27 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
           </h3>
         </CardHeader>
 
-        {/* Card Description and Tags */}
+        {/* Card Content: Description and Expandable Tech Stack */}
         <CardContent className="px-5 pb-4 flex-grow flex flex-col justify-between">
-          <p className="text-sm text-muted-foreground mb-4 line-clamp-1 h-5" title={project.description}>
+          <p className="text-sm text-muted-foreground mb-1 line-clamp-1 h-5" title={project.description}>
             {project.description}
           </p>
           
-          {/* Tech tags in JetBrains Mono */}
-          <div className="flex flex-wrap gap-1.5 items-center">
-            {displayTechs.map((tech) => (
-              <Badge 
-                key={tech} 
-                variant="secondary" 
-                className="bg-primary/5 text-primary border border-primary/15 font-mono text-[9px] px-2 py-0.5 font-medium rounded-sm"
-              >
-                {tech}
-              </Badge>
-            ))}
-            {extraTechsCount > 0 && (
-              <Badge 
-                variant="outline" 
-                className="border-dashed border-border/80 font-mono text-[9px] px-2 py-0.5 text-muted-foreground rounded-sm"
-              >
-                +{extraTechsCount}
-              </Badge>
-            )}
+          {/* Hidden tech stack text, expands and fades in on hover */}
+          <div className="overflow-hidden max-h-0 opacity-0 group-hover:max-h-12 group-hover:opacity-100 transition-all duration-500 ease-in-out">
+            <div className="font-mono text-[10.5px] text-muted-foreground uppercase tracking-wider mt-3 pt-2.5 border-t border-border/20">
+              {techText}
+            </div>
           </div>
         </CardContent>
 
-        {/* Circular Visits button */}
+        {/* Card Footer: Visit Arrow Icon Button */}
         <CardFooter className="p-5 pt-0 flex justify-end mt-auto">
           <a
             href={project.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center w-9 h-9 rounded-full border border-border/80 text-foreground transition-all duration-300 hover:border-transparent hover:bg-gradient-to-r hover:from-primary hover:to-purple-600 hover:text-primary-foreground shadow-sm"
+            className="flex items-center justify-center w-9 h-9 rounded-full border border-border/80 text-foreground transition-all duration-300 hover:border-transparent hover:bg-gradient-to-r hover:from-primary hover:to-purple-600 hover:text-primary-foreground"
           >
             <ArrowUpRight className="h-4.5 w-4.5" />
           </a>
