@@ -7,6 +7,7 @@ import { Badge } from "@/components/ui/badge";
 import { useLanguage } from "@/lib/i18n";
 import { Terminal } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { Link } from "wouter";
 
 const Projects = () => {
   const [activeCategory, setActiveCategory] = useState<string>("all");
@@ -77,8 +78,8 @@ const Projects = () => {
   };
 
   const heroDescription = language === "es"
-    ? "Plataforma revolucionaria de e-commerce con un probador virtual modular con IA para probarse prendas de forma hiperrealista en tiempo real. Cuenta con API de integración, sistema de cupones, recompensas por niveles y un chatbot inteligente integrado para una experiencia de usuario sin precedentes."
-    : "A revolutionary e-commerce platform featuring an AI-powered virtual dressing room for hyper-realistic real-time clothing trials. Built with an integration API, coupon system, level-based rewards, and an intelligent chatbot for an unprecedented user experience.";
+    ? "Plataforma revolucionaria de e-commerce con un probador virtual modular con IA para probarse prendas de forma hiperrealista en tiempo real, aumentando ventas y reduciendo devoluciones."
+    : "A revolutionary e-commerce platform featuring an AI-powered virtual dressing room for hyper-realistic real-time clothing trials, increasing sales and reducing returns.";
 
   // Show hero only when "all" or "saas" is selected
   const showHero = heroProject && (activeCategory === "all" || activeCategory === "saas");
@@ -93,67 +94,34 @@ const Projects = () => {
         </h1>
       </div>
 
-      {/* IDE-style Category Tabs Menu in JetBrains Mono */}
-      <div className="border-b border-border/40 mb-12 overflow-x-auto scrollbar-none">
-        <div className="flex w-max md:w-full border-l border-border/20">
-          {categories.map((cat) => {
-            const isActive = activeCategory === cat.id;
-            return (
-              <button
-                key={cat.id}
-                onClick={() => {
-                  setActiveCategory(cat.id);
-                  setShowStack(false); // Reset accordion state on category switch
-                }}
-                className={cn(
-                  "relative py-3.5 px-6 font-mono text-xs md:text-sm transition-all duration-300 flex items-center gap-2 border-r border-t border-border/20 select-none outline-none",
-                  isActive 
-                    ? "bg-card/45 text-foreground font-semibold" 
-                    : "bg-background/5 text-muted-foreground hover:bg-card/20 hover:text-foreground"
-                )}
-              >
-                <span className="text-primary/70">#</span>
-                <span>{cat.label}</span>
-                <span className="text-[10px] opacity-60 font-mono">({getCount(cat.id)})</span>
-                
-                {isActive && (
-                  <motion.div 
-                    layoutId="activeTabBorder"
-                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-primary to-purple-600 shadow-[0_0_8px_rgba(168,85,247,0.5)]" 
-                  />
-                )}
-              </button>
-            );
-          })}
-        </div>
-      </div>
-
-      {/* Hero Section for TnB: Full-Bleed background */}
+      {/* Hero Section for TnB: Full-Bleed background with left-to-right scrim and grid mask */}
       <AnimatePresence mode="wait">
         {showHero && heroProject && (
           <motion.div
-            key="hero-project-v2"
+            key="hero-project-v4"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            className="relative w-full rounded-2xl overflow-hidden border border-border/40 min-h-[500px] flex items-end p-8 md:p-12 mb-16 shadow-[0_0_50px_rgba(168,85,247,0.06)] group"
+            className="relative w-full rounded-2xl overflow-hidden border border-border/40 min-h-[520px] flex items-end p-8 md:p-12 mb-8 shadow-none group"
           >
             {/* Background image covering full space */}
             <div 
-              className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-103"
+              className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-102"
               style={{ backgroundImage: `url(${heroProject.image})` }}
             />
-            {/* Radial Gradient Overlay (magenta/violet) to protect text legibility */}
-            <div className="absolute inset-0 bg-gradient-to-t from-background via-background/90 to-background/50 z-10" />
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(168,85,247,0.18),transparent_75%)] z-10" />
-            <div className="absolute inset-0 bg-black/35 z-10" />
+            {/* Left-to-right Scrim Gradient to protect text legibility */}
+            <div className="absolute inset-0 bg-gradient-to-r from-background via-background/85 to-transparent z-10" />
+            <div className="absolute inset-0 bg-gradient-to-t from-background/95 via-transparent to-transparent z-10" />
+            
+            {/* Soft grid lines in the background */}
+            <div className="absolute inset-0 grid-pattern opacity-45 z-10 pointer-events-none" />
 
             {/* Content overlaid on image */}
-            <div className="relative z-20 w-full max-w-3xl flex flex-col items-start text-left">
+            <div className="relative z-20 w-full max-w-2xl flex flex-col items-start text-left">
               {/* Status Chip in JetBrains Mono */}
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-background/80 border border-border/60 text-[10px] font-mono uppercase tracking-wider text-foreground shadow-lg backdrop-blur-sm mb-5">
-                <span className="w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.8)] animate-pulse" />
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded bg-black/65 border border-border/30 text-[9px] font-mono uppercase tracking-wider text-foreground shadow-md backdrop-blur-sm mb-5">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.8)] animate-pulse" />
                 <span>{t("statusProduccion")}</span>
               </div>
 
@@ -166,13 +134,14 @@ const Projects = () => {
               </h2>
 
               {/* Short Description */}
-              <p className="text-sm sm:text-base md:text-lg text-muted-foreground mb-6 leading-relaxed max-w-2xl">
+              <p className="text-sm sm:text-base md:text-lg text-muted-foreground mb-6 leading-relaxed max-w-xl">
                 {heroDescription}
               </p>
 
               {/* Action Buttons */}
               <div className="flex flex-wrap gap-4 mb-6">
-                <Button asChild size="lg" className="bg-primary hover:bg-primary/95 text-primary-foreground font-semibold shadow-[0_0_20px_rgba(168,85,247,0.3)] transition-all duration-300">
+                {/* CTA Primario with moderate glow */}
+                <Button asChild size="lg" className="bg-primary hover:bg-primary/95 text-primary-foreground font-semibold shadow-[0_0_20px_rgba(168,85,247,0.4)] transition-all duration-300">
                   <a
                     href={heroProject.url}
                     target="_blank"
@@ -231,6 +200,73 @@ const Projects = () => {
         )}
       </AnimatePresence>
 
+      {/* Trust Bar (Franja de confianza) */}
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 py-6 border-y border-border/30 mb-10">
+        <div className="flex items-center gap-3 justify-center sm:justify-start">
+          <span className="text-3xl md:text-4xl font-extrabold font-heading text-primary">24</span>
+          <span className="text-[11px] text-muted-foreground uppercase tracking-wider font-semibold border-l border-border/40 pl-3">
+            {t("trustProjectsCount")}
+          </span>
+        </div>
+        <div className="flex items-center gap-3 justify-center sm:justify-start">
+          <span className="text-3xl md:text-4xl font-extrabold font-heading text-primary">4</span>
+          <span className="text-[11px] text-muted-foreground uppercase tracking-wider font-semibold border-l border-border/40 pl-3">
+            {t("trustCategoriesCount")}
+          </span>
+        </div>
+        <div className="flex items-center gap-3 justify-center sm:justify-start">
+          <span className="text-3xl md:text-4xl font-extrabold font-heading text-primary">100%</span>
+          <span className="text-[11px] text-muted-foreground uppercase tracking-wider font-semibold border-l border-border/40 pl-3">
+            {t("trustCustomCode")}
+          </span>
+        </div>
+      </div>
+
+      {/* Introductory Paragraph */}
+      <div className="mb-6 max-w-2xl text-left">
+        <h3 className="text-lg font-bold font-heading mb-1.5 text-foreground">
+          {t("introTitle")}
+        </h3>
+        <p className="text-sm text-muted-foreground leading-relaxed">
+          {t("introSubtitle")}
+        </p>
+      </div>
+
+      {/* IDE-style Category Tabs Menu in JetBrains Mono */}
+      <div className="border-b border-border/40 mb-12 overflow-x-auto scrollbar-none">
+        <div className="flex w-max md:w-full border-l border-border/20">
+          {categories.map((cat) => {
+            const isActive = activeCategory === cat.id;
+            return (
+              <button
+                key={cat.id}
+                onClick={() => {
+                  setActiveCategory(cat.id);
+                  setShowStack(false); // Reset accordion state
+                }}
+                className={cn(
+                  "relative py-3.5 px-6 font-mono text-xs md:text-sm transition-all duration-300 flex items-center gap-2 border-r border-t border-border/20 select-none outline-none",
+                  isActive 
+                    ? "bg-card/45 text-foreground font-semibold" 
+                    : "bg-background/5 text-muted-foreground hover:bg-card/20 hover:text-foreground"
+                )}
+              >
+                <span className="text-primary/70">#</span>
+                <span>{cat.label}</span>
+                <span className="text-[10px] opacity-60 font-mono">({getCount(cat.id)})</span>
+                
+                {isActive && (
+                  <motion.div 
+                    layoutId="activeTabBorder"
+                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-primary to-purple-600 shadow-[0_0_8px_rgba(168,85,247,0.5)]" 
+                  />
+                )}
+              </button>
+            );
+          })}
+        </div>
+      </div>
+
       {/* Grid of Projects */}
       <div className="space-y-16">
         {/* Render empty state if no projects match */}
@@ -268,7 +304,7 @@ const Projects = () => {
                 <span className="animate-pulse text-primary font-mono text-xl md:text-2xl ml-0.5">_</span>
               </div>
 
-              {/* Grid of cards - responsive columns */}
+              {/* Grid of cards */}
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {catProjects.map((project) => (
                   <ProjectCard key={project.id} project={project} />
@@ -277,6 +313,26 @@ const Projects = () => {
             </motion.section>
           );
         })}
+      </div>
+
+      {/* Closing CTA Band Section */}
+      <div className="mt-24 p-8 md:p-16 rounded-xl border border-border/40 bg-card/25 backdrop-blur-md relative overflow-hidden shadow-[0_0_50px_rgba(168,85,247,0.035)] text-center group">
+        {/* Subtly textured background */}
+        <div className="absolute inset-0 grid-pattern opacity-40 z-0 pointer-events-none" />
+        
+        <div className="relative z-10 max-w-2xl mx-auto flex flex-col items-center">
+          <h3 className="text-2xl md:text-4xl font-extrabold font-heading mb-4 text-foreground">
+            {t("ctaTitle")}
+          </h3>
+          <p className="text-sm md:text-base text-muted-foreground mb-8 leading-relaxed">
+            {t("ctaSubtitle")}
+          </p>
+          <Button asChild size="lg" className="bg-primary hover:bg-primary/95 text-primary-foreground font-semibold shadow-[0_0_20px_rgba(168,85,247,0.4)] transition-all duration-300">
+            <Link href="/contact">
+              {t("ctaButton")}
+            </Link>
+          </Button>
+        </div>
       </div>
     </div>
   );

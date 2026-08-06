@@ -116,6 +116,14 @@ interface Language {
   viewStack: string;
   hideStack: string;
   emptyCategory: string;
+  introTitle: string;
+  introSubtitle: string;
+  trustProjectsCount: string;
+  trustCategoriesCount: string;
+  trustCustomCode: string;
+  ctaTitle: string;
+  ctaSubtitle: string;
+  ctaButton: string;
 }
 
 export const es: Language = {
@@ -240,18 +248,26 @@ export const es: Language = {
   socialMedia: 'Redes Sociales',
   projectsTitle: 'Nuestros Proyectos',
   categoryAll: 'todos',
-  categorySaas: 'saas / apps',
-  categoryEcommerce: 'e-commerce',
-  categoryLanding: 'landing',
+  categorySaas: 'sistemas / apps',
+  categoryEcommerce: 'tiendas online',
+  categoryLanding: 'sitios / landings',
   categoryHerramientas: 'herramientas',
-  statusProduccion: 'en producción',
+  statusProduccion: 'en funcionamiento',
   statusDesarrollo: 'en desarrollo',
   statusArchivado: 'archivado',
   visitSite: 'Visitar sitio',
   visitStudy: 'Ver caso de estudio',
   viewStack: 'Ver stack completo',
   hideStack: 'Ocultar stack',
-  emptyCategory: 'Todavía no publicaste proyectos acá'
+  emptyCategory: 'Todavía no publicaste proyectos acá',
+  introTitle: '¿Qué estás buscando?',
+  introSubtitle: 'Elegí la categoría que mejor se adapte al proyecto o solución digital que tenés en mente.',
+  trustProjectsCount: 'proyectos entregados',
+  trustCategoriesCount: 'rubros distintos',
+  trustCustomCode: 'a medida, sin plantillas',
+  ctaTitle: '¿Tenés un proyecto en mente?',
+  ctaSubtitle: 'Escribime y contame tu idea. Diseñemos una solución digital a la medida de tu negocio.',
+  ctaButton: 'Iniciar proyecto'
 };
 
 export const en: Language = {
@@ -376,18 +392,26 @@ export const en: Language = {
   socialMedia: 'Social Media',
   projectsTitle: 'Our Projects',
   categoryAll: 'all',
-  categorySaas: 'saas / apps',
-  categoryEcommerce: 'e-commerce',
-  categoryLanding: 'landing',
+  categorySaas: 'systems / apps',
+  categoryEcommerce: 'online stores',
+  categoryLanding: 'sites / landings',
   categoryHerramientas: 'tools',
-  statusProduccion: 'in production',
+  statusProduccion: 'live & running',
   statusDesarrollo: 'in development',
   statusArchivado: 'archived',
   visitSite: 'Visit site',
   visitStudy: 'View case study',
   viewStack: 'View full stack',
   hideStack: 'Hide stack',
-  emptyCategory: 'No projects published here yet'
+  emptyCategory: 'No projects published here yet',
+  introTitle: 'What are you looking for?',
+  introSubtitle: 'Select the category that best fits the digital solution or project you have in mind.',
+  trustProjectsCount: 'projects delivered',
+  trustCategoriesCount: 'different fields',
+  trustCustomCode: 'custom built, no templates',
+  ctaTitle: 'Have a project in mind?',
+  ctaSubtitle: "Write to me and tell me your idea. Let's design a digital solution tailored to your business.",
+  ctaButton: 'Start project'
 };
 
 type LanguageContextType = {
