@@ -5,6 +5,8 @@ export interface Project {
   url: string;
   technologies: string[];
   image: string;
+  categoria: "saas" | "ecommerce" | "landing" | "herramientas";
+  estado: "produccion" | "desarrollo" | "archivado";
 }
 
 export const projects: Project[] = [
@@ -14,7 +16,9 @@ export const projects: Project[] = [
     description: "Sistema web con shopping virtual modular, probador avanzado con IA para probarse ropa de forma hiperrealista, API de integración, sistema de cupones, recompensas, niveles y chatbot integrado.",
     url: "https://fashion-puce-gamma.vercel.app/",
     technologies: ["React", "TypeScript", "Next.js", "Tailwind", "AI", "API", "Chatbot"],
-    image: "/assets/tnb.PNG"
+    image: "/assets/tnb.PNG",
+    categoria: "saas",
+    estado: "produccion"
   },
    {
     id: 1,
@@ -22,7 +26,9 @@ export const projects: Project[] = [
     description: "E-commerce FiloSharp especializada en cuchillos artesanales.",
     url: "https://filo-sharp.vercel.app/",
     technologies: ["React", "TypeScript", "Node.js", "Express", "SQLite", "Vite", "Tailwind"],
-    image: "https://i.ibb.co/Q3rM4CBf/filosharp.jpg"
+    image: "https://i.ibb.co/Q3rM4CBf/filosharp.jpg",
+    categoria: "ecommerce",
+    estado: "produccion"
   },
   {
     id: 21,
@@ -30,7 +36,9 @@ export const projects: Project[] = [
     description: "Landing page para un escribano Platense especializado en homologación de títulos.",
     url: "https://arufeyasociados.com/",
     technologies: ["HTML", "CSS", "JavaScript"],
-    image: "/assets/arufe.PNG"
+    image: "/assets/arufe.PNG",
+    categoria: "landing",
+    estado: "produccion"
   },
   {
     id: 3,
@@ -38,7 +46,9 @@ export const projects: Project[] = [
     description: "Tecnología deportiva de élite",
     url: "https://www.sportekweb.com.ar/",
     technologies: ["React", "Tailwind"],
-    image: "https://i.ibb.co/RG6kZ5nb/sportek.jpg"
+    image: "https://i.ibb.co/RG6kZ5nb/sportek.jpg",
+    categoria: "ecommerce",
+    estado: "produccion"
   },
   {
     id: 4,
@@ -46,7 +56,9 @@ export const projects: Project[] = [
     description: "Empresa tecnológica de alto nivel",
     url: "https://www.hctgroup.com.ar/",
     technologies: ["React", "Tailwind"],
-    image: "https://i.ibb.co/svk8Bvy8/hct.jpg"
+    image: "https://i.ibb.co/svk8Bvy8/hct.jpg",
+    categoria: "landing",
+    estado: "produccion"
   },
   {
     id: 2,
@@ -54,7 +66,9 @@ export const projects: Project[] = [
     description: "E-commerce especializado en tecnología.",
     url: "https://tech-ecommerce-lemon.vercel.app/",
     technologies: ["React", "TypeScript", "Next.js", "Express", "Postgre/Neon", "Vite", "Tailwind"],
-    image: "https://i.ibb.co/67KycrMx/tech.jpg"
+    image: "https://i.ibb.co/67KycrMx/tech.jpg",
+    categoria: "ecommerce",
+    estado: "produccion"
   },
 
   {
@@ -63,7 +77,9 @@ export const projects: Project[] = [
     description: "E-commerce de indumentaria y artículos del hogar con tecnologías modernas.",
     url: "https://tigrehogar.vercel.app/",
     technologies: ["React", "TypeScript", "Node.js", "Express", "PostgreSQL", "Vite", "Tailwind", "Drizzle"],
-    image: "https://i.ibb.co/v4x3D32r/tigrehogar.jpg"
+    image: "https://i.ibb.co/v4x3D32r/tigrehogar.jpg",
+    categoria: "ecommerce",
+    estado: "produccion"
   },
   
    {
@@ -72,7 +88,9 @@ export const projects: Project[] = [
     description: "Sistema Integrado de Gestión para talleres mecanicos.",
     url: "https://meca-sys.vercel.app/",
     technologies: ["React", "TypeScript", "Node.js", "Express", "SQLite", "Vite", "Tailwind"],
-    image: "https://i.ibb.co/ZRvZffp6/tallersoft.jpg"
+    image: "https://i.ibb.co/ZRvZffp6/tallersoft.jpg",
+    categoria: "saas",
+    estado: "produccion"
   },
 
   {
@@ -81,7 +99,9 @@ export const projects: Project[] = [
     description: "Sistema integral de gestión para la biblioteca del IFSDyT 210.",
     url: "https://biblioteca-210-insti.vercel.app/libros/",
     technologies: ["Django", "HTML5", "CSS3", "Bootstrap","PostgreSQL"],
-    image: "https://i.ibb.co/ksHgfYxk/biblio-210.jpg"
+    image: "https://i.ibb.co/ksHgfYxk/biblio-210.jpg",
+    categoria: "saas",
+    estado: "produccion"
   },
 
    {
@@ -90,7 +110,9 @@ export const projects: Project[] = [
     description: "Sistema carreras, finales, materias, alumnos, directivos del IFSDyT 210.",
     url: "https://simef-back-ynfm.vercel.app/",
     technologies: ["Django", "HTML5", "CSS3", "Bootstrap","PostgreSQL"],
-    image: "https://i.ibb.co/Wpj9jsDd/simef.jpg"
+    image: "https://i.ibb.co/Wpj9jsDd/simef.jpg",
+    categoria: "saas",
+    estado: "produccion"
   },
 
     {
@@ -99,7 +121,9 @@ export const projects: Project[] = [
     description: "Programa Desktop para descargar videos de youtube en simultaneo, mejor calidad de video y sonido",
     url: "https://github.com/catriel458/YouTube_Downloader",
     technologies: ["Python", "Tkinter", "yt-dlp", "FFmpeg", "PyInstaller"],
-    image: "https://i.ibb.co/ycxGxdqS/yt.jpg"
+    image: "https://i.ibb.co/ycxGxdqS/yt.jpg",
+    categoria: "herramientas",
+    estado: "produccion"
   },
   
   
@@ -110,7 +134,9 @@ export const projects: Project[] = [
     description: "Analizador de PDFs Inteligente.",
     url: "https://github.com/catriel458/PdfAnalyzer",
     technologies: ["Python", "Tkinter", "PyPDF2", "Threading", "PyInstaller"],
-    image: "https://i.ibb.co/qMdxw2SH/Captura.jpg"
+    image: "https://i.ibb.co/qMdxw2SH/Captura.jpg",
+    categoria: "herramientas",
+    estado: "produccion"
   },
   
   {
@@ -119,7 +145,9 @@ export const projects: Project[] = [
     description: "Sistema de turnos para el colegio de médicos con diseño minimalista e intuitivo.",
     url: "https://github.com/catriel458/colegioMedicos",
     technologies: ["React", "TypeScript", "Node.js", "Express", "SQLite", "Vite", "Tailwind", "Drizzle"],
-    image: "https://images.unsplash.com/photo-1516549655169-df83a0774514?q=80&w=1470&auto=format&fit=crop"
+    image: "https://images.unsplash.com/photo-1516549655169-df83a0774514?q=80&w=1470&auto=format&fit=crop",
+    categoria: "saas",
+    estado: "desarrollo"
   },
   {
     id: 12,
@@ -127,7 +155,9 @@ export const projects: Project[] = [
     description: "Plataforma de coworking inmobiliario e inversiones.",
     url: "https://yoinvierto.com.ar/",
     technologies: ["React", "TypeScript", "Node.js", "Tailwind", "Firebase"],
-    image: "https://i.ibb.co/HDM1s07p/yoinvierto.jpg"
+    image: "https://i.ibb.co/HDM1s07p/yoinvierto.jpg",
+    categoria: "saas",
+    estado: "produccion"
   },
   
   {
@@ -136,7 +166,9 @@ export const projects: Project[] = [
     description: "Portal web del prestigioso cinema con los mejores estrenos y series.",
     url: "https://github.com/catriel458/cinema-paradiso",
     technologies: ["Django", "HTML", "CSS", "Bootstrap"],
-    image: "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?q=80&w=1470&auto=format&fit=crop"
+    image: "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?q=80&w=1470&auto=format&fit=crop",
+    categoria: "landing",
+    estado: "desarrollo"
   },
 
    {
@@ -145,7 +177,9 @@ export const projects: Project[] = [
     description: "Elegí entre miles de peliculas cual querés ver.",
     url: "https://que-pelicula-miro.vercel.app/",
     technologies: ["React", "Tailwind", "Framer Motion", "TMDb API"],
-    image: "https://i.ibb.co/xq9VX2GH/peliculas.jpg"
+    image: "https://i.ibb.co/xq9VX2GH/peliculas.jpg",
+    categoria: "herramientas",
+    estado: "produccion"
   },
 
   {
@@ -154,7 +188,9 @@ export const projects: Project[] = [
     description: "Elegí entre miles de juegos cual jugar.",
     url: "https://cyber-games-ten.vercel.app/",
     technologies: ["React", "RAWG"],
-    image: "https://i.ibb.co/KjkBdhd8/cybergames.jpg"
+    image: "https://i.ibb.co/KjkBdhd8/cybergames.jpg",
+    categoria: "herramientas",
+    estado: "produccion"
   },
   
    {
@@ -163,7 +199,9 @@ export const projects: Project[] = [
     description: "App Web que genera CV elegante y profesional a partir de un formulario.",
     url: "https://tucv.vercel.app/",
     technologies: ["React", "Tailwind"],
-    image: "https://i.ibb.co/5hR9xfL8/cv.jpg"
+    image: "https://i.ibb.co/5hR9xfL8/cv.jpg",
+    categoria: "herramientas",
+    estado: "produccion"
   },
 
    {
@@ -172,7 +210,9 @@ export const projects: Project[] = [
     description: "Editor de Imagenes dinámico.",
     url: "https://funnyeditor.vercel.app/",
     technologies: ["React", "Tailwind"],
-    image: "https://i.ibb.co/4n4GwZJ3/editor.jpg"
+    image: "https://i.ibb.co/4n4GwZJ3/editor.jpg",
+    categoria: "herramientas",
+    estado: "produccion"
   },
   
   {
@@ -181,7 +221,9 @@ export const projects: Project[] = [
     description: "Portafolio Personal con un diseño Cyberpunk atrayente.",
     url: "https://catriel.netlify.app/",
     technologies: ["HTML", "CSS", "JavaScript"],
-    image: "https://i.ibb.co/9mTXz5vQ/portafolio.jpg"
+    image: "https://i.ibb.co/9mTXz5vQ/portafolio.jpg",
+    categoria: "landing",
+    estado: "produccion"
   },
   
   {
@@ -190,7 +232,9 @@ export const projects: Project[] = [
     description: "E-commerce de la tienda holística que ofrece cursos de yoga y gemoterapia.",
     url: "https://cristalzen.netlify.app/",
     technologies: ["HTML", "CSS", "JavaScript"],
-    image: "https://i.ibb.co/ccGcX7sS/zen.jpg"
+    image: "https://i.ibb.co/ccGcX7sS/zen.jpg",
+    categoria: "ecommerce",
+    estado: "produccion"
   },
   {
     id: 20,
@@ -198,7 +242,9 @@ export const projects: Project[] = [
     description: "Portal web Platense de la reconocida academia privada que dicta cursos de informática.",
     url: "https://institutopandas.netlify.app/",
     technologies: ["HTML", "CSS", "JavaScript", "Bootstrap"],
-    image: "https://i.ibb.co/0jVnsGQy/pandas.jpg"
+    image: "https://i.ibb.co/0jVnsGQy/pandas.jpg",
+    categoria: "landing",
+    estado: "produccion"
   },
   {
     id: 22,
@@ -206,7 +252,9 @@ export const projects: Project[] = [
     description: "E-commerce sencillo para una pizzeria familiar con carrito de compras y catálogo.",
     url: "https://pizzarica.netlify.app/",
     technologies: ["HTML5", "CSS3", "JavaScript"],
-    image: "https://i.ibb.co/tM5TZsV0/pizza.jpg"
+    image: "https://i.ibb.co/tM5TZsV0/pizza.jpg",
+    categoria: "ecommerce",
+    estado: "produccion"
   },
   {
     id: 23,
@@ -214,6 +262,8 @@ export const projects: Project[] = [
     description: "Prueba técnica con JavaScript demostrando funcionalidades del lenguaje.",
     url: "https://supercalculadora97.netlify.app/",
     technologies: ["JavaScript", "HTML5", "CSS3"],
-    image: "https://i.ibb.co/tph6rQPc/calculadora.jpg"
+    image: "https://i.ibb.co/tph6rQPc/calculadora.jpg",
+    categoria: "herramientas",
+    estado: "produccion"
   }
 ];
