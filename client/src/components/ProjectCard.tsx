@@ -60,7 +60,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
 
         {/* Card Content: Description and Expandable Tech Stack */}
         <CardContent className="px-5 pb-4 flex-grow flex flex-col justify-between">
-          <p className="text-sm text-muted-foreground mb-1 line-clamp-1 h-5" title={project.description}>
+          <p className="text-sm text-muted-foreground mb-3 leading-relaxed" title={project.description}>
             {project.description}
           </p>
           
