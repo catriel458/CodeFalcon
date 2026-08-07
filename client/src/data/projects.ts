@@ -13,7 +13,7 @@ export const projects: Project[] = [
   {
     id: 24,
     title: "TnB: Try and Buy",
-    description: "Plataforma web de e-commerce con probador virtual con IA que permite probarse ropa de forma hiperrealista en tiempo real, aumentando ventas y reduciendo devoluciones.",
+    description: "Una web app completa que revoluciona la forma de comprar: permite a tus clientes probarse prendas en tiempo real de forma hiperrealista y realizar compras integrando un sistema inteligente de fidelización con puntos, cupones y rangos para maximizar la conversión.",
     url: "https://fashion-puce-gamma.vercel.app/",
     technologies: ["React", "TypeScript", "Next.js", "Tailwind", "AI", "API", "Chatbot"],
     image: "/assets/tnb.PNG",

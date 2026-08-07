@@ -78,8 +78,8 @@ const Projects = () => {
   };
 
   const heroDescription = language === "es"
-    ? "Plataforma revolucionaria de e-commerce con un probador virtual modular con IA para probarse prendas de forma hiperrealista en tiempo real, aumentando ventas y reduciendo devoluciones."
-    : "A revolutionary e-commerce platform featuring an AI-powered virtual dressing room for hyper-realistic real-time clothing trials, increasing sales and reducing returns.";
+    ? "Una web app completa que revoluciona la forma de comprar: permite a tus clientes probarse prendas en tiempo real de forma hiperrealista y realizar compras integrando un sistema inteligente de fidelización con puntos, cupones y rangos para maximizar la conversión."
+    : "A complete web app that revolutionizes the way people shop: allows your customers to try on clothes in real-time with hyper-realistic rendering, featuring an intelligent loyalty system with points, coupons, and user tiers to maximize conversions.";
 
   // Show hero only when "all" or "saas" is selected
   const showHero = heroProject && (activeCategory === "all" || activeCategory === "saas");
